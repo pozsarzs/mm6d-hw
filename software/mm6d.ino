@@ -17,8 +17,8 @@
 #include <WiFiClient.h>
 
 // constanst
-const char* wifi_password = "halacskamacska";
-const char* wifi_ssid     = "SzerafinGomba";
+const char* wifi_password = "";
+const char* wifi_ssid     = "";
 const int prt_in_alarm    = 0;
 const int prt_in_manu     = 0;
 const int prt_in_mode     = 0;
