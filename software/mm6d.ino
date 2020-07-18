@@ -1,5 +1,5 @@
 // +---------------------------------------------------------------------------+
-// | MM6D v0.1 * Air quality measuring device                                  |
+// | MM6D v0.1 * Remote controlled switching device                            |
 // | Copyright (C) 2020 Pozsár Zsolt <pozsar.zsolt@szerafingomba.hu>           |
 // | mm6d.ino                                                                  |
 // | Program for ESP8266 Huzzah Feather                                        |
@@ -16,213 +16,560 @@
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 
-// constanst
-const char* wifi_password = "";
-const char* wifi_ssid     = "";
-const int prt_in_alarm    = 0;
-const int prt_in_manu     = 0;
-const int prt_in_mode     = 0;
-const int prt_in_prot     = 0;
-const int prt_led_act     = 2;
-const int prt_led_err     = 0;
-const int prt_out_heat    = 0;
-const int prt_out_lamp    = 0;
-const int prt_out_vent    = 0;
-const String dev_info1    = "MM6D v0.1 * Remote controlled switching device";
-const String dev_info2    = "(C) 2020 Pozsár Zsolt";
-const String dev_info3    = "pozsar.zsolt@szerafingomba.hu";
-const String dev_info4    = "http://www.szerafingomba.hu/equipments/";
-const String httpreqrec   = "* HTTP request received.";
-const String loc_id       = "TH11";
-const int timeout         = 300000
+// settings
+const String swversion      = "0.1";
+const char* wifi_ssid       = "SzerafinGomba";
+const char* wifi_password   = "Hal4csk4Macsk4";
+const String www_username   = "admin";
+const String www_password   = "Tav1Rozs4";
+const String allowedaddress = "192.168.1.7";
+
+// GPIO ports
+const int prt_in_opmode     = 5;
+const int prt_in_swmanu     = 12;
+const int prt_in_ocprot     = 13;
+const int prt_led_blue      = 2;
+const int prt_led_red       = 0;
+const int prt_out_heat      = 16;
+const int prt_out_lamp      = 14;
+const int prt_out_vent      = 15;
+const int prt_buzzer        = 4;
+
+// ADC input
+const int prt_in_adc        = 0;
+const int alarmminlevel     = 0;
+const int alarmmaxlevel     = 512;
+
+// messages
+const String msg01          = "MM6D * Remote controlled switching device";
+const String msg02          = "Copyright (C) 2020";
+const String msg03          = "pozsar.zsolt@szerafingomba.hu";
+const String msg04          = "http://www.szerafingomba.hu/equipments/";
+const String msg05          = "* Initializing GPIO ports...";
+const String msg06          = "* Initializing sensors...";
+const String msg07          = "* Connecting to wireless network";
+const String msg08          = "done.";
+const String msg09          = "  my IP address:      ";
+const String msg10          = "  subnet mask:        ";
+const String msg11          = "  gateway IP address: ";
+const String msg12          = "* Starting webserver...";
+const String msg13          = "* HTTP request received from: ";
+const String msg14          = "";
+const String msg15          = "";
+const String msg16          = "MM6D";
+const String msg17          = "Authentication error!";
+const String msg18          = "* E03: Authentication error!";
+const String msg19          = "Not allowed client IP address!";
+const String msg20          = "* E04: Not allowed client IP address!";
+const String msg21          = "";
+const String msg22          = "";
+const String msg23          = "";
+const String msg24          = "";
+const String msg25          = "";
+const String msg26          = "";
+const String msg27          = "Done.";
+const String msg28          = "Pozsar Zsolt";
+const String msg29          = "  device MAC address: ";
+
+// general constants
+const int timeout           = 0;
 
 // variables
-int alarm, manualswitch, operationmode, protection;
-int heater, lamp, ventilator;
+int swmanu;
+int opmode;
+int ocprot;
+int alarm                   = 0;
+int error                   = 0;
+int heat                    = 0;
+int lamp                    = 0;
+int vent                    = 0;
+String clientaddress;
+String devicemacaddress;
 String line;
 String localipaddress;
+unsigned long prevtime1     = 0;
+unsigned long prevtime2     = 0;
 
 ESP8266WebServer server(80);
 
 // initializing function
 void setup(void)
 {
-  // initializing ports
-  pinMode(prt_in_alarm, INPUT);
-  pinMode(prt_in_manu, INPUT);
-  pinMode(prt_in_mode, INPUT);
-  pinMode(prt_in_prot, INPUT);
-  pinMode(prt_led_act, OUTPUT);
-  pinMode(prt_led_err, OUTPUT);
-  pinMode(prt_out_heat, OUTPUT);
-  pinMode(prt_out_lamp, OUTPUT);
-  pinMode(prt_out_vent, OUTPUT);
-  digitalWrite(prt_led_act, LOW);
-  digitalWrite(prt_led_err, LOW);
-  heater = 0;
-  lamp = 0;
-  ventilator = 0;
-  digitalWrite(prt_out_heat, heater);
-  digitalWrite(prt_out_lamp, lamp);
-  digitalWrite(prt_out_vent, ventilator);
   // setting serial port
   Serial.begin(115200);
   Serial.println("");
   Serial.println("");
-  Serial.println(dev_info1);
-  Serial.println(dev_info2 + " <" + dev_info3 + ">");
-  // connecting to wireless network
-  Serial.print("* Connecting to wireless network");
+  Serial.println(msg01 + " * v" + swversion );
+  Serial.println(msg02 +  " " + msg28 + " <" + msg03 + ">");
+  // initializing ports
+  Serial.print(msg05);
+  pinMode(prt_buzzer, OUTPUT);
+  pinMode(prt_in_swmanu, INPUT);
+  pinMode(prt_in_opmode, INPUT);
+  pinMode(prt_in_ocprot, INPUT);
+  pinMode(prt_led_blue, OUTPUT);
+  pinMode(prt_led_red, OUTPUT);
+  pinMode(prt_out_heat, OUTPUT);
+  pinMode(prt_out_lamp, OUTPUT);
+  pinMode(prt_out_vent, OUTPUT);
+  portwrite();
+  digitalWrite(prt_led_blue, LOW);
+  Serial.println(msg08);
+  // connect to wireless network
+  Serial.print(msg07);
   WiFi.begin(wifi_ssid, wifi_password);
   while (WiFi.status() != WL_CONNECTED)
   {
     delay(300);
     Serial.print(".");
   }
-  Serial.println("connected.");
+  Serial.println(msg08);
   localipaddress = WiFi.localIP().toString();
-  Serial.println("* IP address: " + localipaddress);
-  // starting webserver
+  devicemacaddress = WiFi.macAddress();
+  Serial.println(msg29 + devicemacaddress);
+  Serial.println(msg09 + localipaddress);
+  Serial.println(msg10 + WiFi.subnetMask().toString());
+  Serial.println(msg11 + WiFi.gatewayIP().toString());
+  // start webserver
+  Serial.print(msg12);
   server.on("/", []()
   {
-    Serial.println("* HTTP request received.");
-    blinkactled();
-    line = "<html><head><title>" + dev_info1 + "</title></head>"
-           "<body><b>" + dev_info1 + "</b>""<br>" + dev_info2 + " <a href=\"mailto:" + dev_info3 + "\">" + dev_info3 + "</a><br>"
-           "Homepage: <a href=\"" + dev_info4 + "\">" + dev_info4 + "</a><br><br>"
-           "Location: " + loc_id + "<br>"
-           "<hr><b>Plain text data and control pages:</b><br><br>"
+    Serial.println(msg13 + server.client().remoteIP().toString() + ".");
+    blinkblueled();
+    line = "<html><head><title>" + msg01 + "</title></head>"
+           "<body bgcolor=\"#e2f4fd\"><h2>" + msg01 + "</h2>""<br>"
+           "Software version: v" + swversion + "<br>"
+           "<hr><h3>Plain text data and control pages:</h3><br>"
            "<table border=\"0\" cellpadding=\"5\">"
-           "<tr><td><a href=\"http://" + localipaddress + "/get/all\">http://" + localipaddress + "/get/all</a></td><td>Get all status with location ID</td></tr>"
-           "<tr><td><a href=\"http://" + localipaddress + "/get/alarm\">http://" + localipaddress + "/get/alarm</a></td><td>Get status of alarm sensors</td></tr>"
-           "<tr><td><a href=\"http://" + localipaddress + "/get/manualswitch\">http://" + localipaddress + "/get/manualswitch></a></td><td>Get status of manual switch</td></tr>"
-           "<tr><td><a href=\"http://" + localipaddress + "/get/operationmode\">http://" + localipaddress + "/get/operationmode</a></td><td>Get operation mode</td></tr>"
-           "<tr><td><a href=\"http://" + localipaddress + "/get/protection\">http://" + localipaddress + "/get/protection</a></td><td>Get status of overcurrent protection</td></tr>"
-           "<tr><td><a href=\"http://" + localipaddress + "/set/all/off\">http://" + localipaddress + "/set/all/off</a></td><td>Switch off all outputs</td></tr>"
-           "<tr><td><a href=\"http://" + localipaddress + "/set/alarm/off\">http://" + localipaddress + "/set/alarm/off</a></td><td>Restore alarm input</td></tr>"
-           "<tr><td><a href=\"http://" + localipaddress + "/set/heater/off\">http://" + localipaddress + "/set/heater/off</a></td><td>Switch off heater</td></tr>"
-           "<tr><td><a href=\"http://" + localipaddress + "/set/heater/on\">http://" + localipaddress + "/set/heater/on</a></td><td>Switch on heater</td></tr>"
-           "<tr><td><a href=\"http://" + localipaddress + "/set/lamp/off\">http://" + localipaddress + "/set/lamp/off</a></td><td>Switch off lamp</td></tr>"
-           "<tr><td><a href=\"http://" + localipaddress + "/set/lamp/on\">http://" + localipaddress + "/set/lamp/on</a></td><td>Switch on lamp</td></tr>"
-           "<tr><td><a href=\"http://" + localipaddress + "/set/ventilator/off\">http://" + localipaddress + "/set/ventilator/off</a></td><td>Switch off ventilator</td></tr>"
-           "<tr><td><a href=\"http://" + localipaddress + "/set/ventilator/on\">http://" + localipaddress + "/set/ventilator/on</a></td><td>Switch on ventilator</td></tr>"
-           "</table><body></html>";
+           "<tr><td><a href=\"http://" + localipaddress + "/version\">http://" + localipaddress + "/version</a></td><td>Get software name and version</td></tr>"
+           "<tr><td colspan=\"2\">&nbsp;</td></tr>"
+           "<tr><td><a href=\"http://" + localipaddress + "/get/all\">http://" + localipaddress + "/get/all</a></td><td>Get all status<sup>*</sup></td></tr>"
+           "<tr><td><a href=\"http://" + localipaddress + "/get/alarm\">http://" + localipaddress + "/get/alarm</a></td><td>Get status of alarm sensors<sup>*</sup></td></tr>"
+           "<tr><td><a href=\"http://" + localipaddress + "/get/manualswitch\">http://" + localipaddress + "/get/manualswitch</a></td><td>Get status of manual switch<sup>*</sup></td></tr>"
+           "<tr><td><a href=\"http://" + localipaddress + "/get/operationmode\">http://" + localipaddress + "/get/operationmode</a></td><td>Get operation mode<sup>*</sup></td></tr>"
+           "<tr><td><a href=\"http://" + localipaddress + "/get/protection\">http://" + localipaddress + "/get/protection</a></td><td>Get status of overcurrent protection<sup>*</sup></td></tr>"
+           "<tr><td colspan=\"2\">&nbsp;</td></tr>"
+           "<tr><td><a href=\"http://" + localipaddress + "/set/all/off\">http://" + localipaddress + "/set/all/off</a></td><td>Switch off all outputs<sup>*</sup></td></tr>"
+           "<tr><td><a href=\"http://" + localipaddress + "/set/alarm/off\">http://" + localipaddress + "/set/alarm/off</a></td><td>Restore alarm input<sup>*</sup></td></tr>"
+           "<tr><td><a href=\"http://" + localipaddress + "/set/heater/off\">http://" + localipaddress + "/set/heater/off</a></td><td>Switch off heater<sup>*</sup></td></tr>"
+           "<tr><td><a href=\"http://" + localipaddress + "/set/heater/on\">http://" + localipaddress + "/set/heater/on</a></td><td>Switch on heater<sup>*</sup></td></tr>"
+           "<tr><td><a href=\"http://" + localipaddress + "/set/lamp/off\">http://" + localipaddress + "/set/lamp/off</a></td><td>Switch off lamp<sup>*</sup></td></tr>"
+           "<tr><td><a href=\"http://" + localipaddress + "/set/lamp/on\">http://" + localipaddress + "/set/lamp/on</a></td><td>Switch on lamp<sup>*</sup></td></tr>"
+           "<tr><td><a href=\"http://" + localipaddress + "/set/ventilator/off\">http://" + localipaddress + "/set/ventilator/off</a></td><td>Switch off ventilator<sup>*</sup></td></tr>"
+           "<tr><td><a href=\"http://" + localipaddress + "/set/ventilator/on\">http://" + localipaddress + "/set/ventilator/on</a></td><td>Switch on ventilator<sup>*</sup></td></tr>"
+           "</table><br><sup>*</sup>Use <i>username</i> and <i>password</i> arguments!<br>"
+           "<hr><center>" + msg02 + " <a href=\"mailto:" + msg03 + "\">" + msg28 + "</a> - <a href=\"" + msg04 + "\">Homepage</a><center><br><body></html>";
     server.send(200, "text/html", line);
+    delay(100);
+  });
+  server.on("/version", []()
+  {
+    Serial.println(msg13 + server.client().remoteIP().toString() + ".");
+    blinkblueled();
+    line = msg16 + "\n" + swversion;
+    server.send(200, "text/plain", line);
     delay(100);
   });
   server.on("/get/all", []()
   {
-    Serial.println(httpreqrec);
-    line = loc_id + "\n" + String((int)alarm) + "\n" + String((int)manualswitch) + "\n" + String((int)operationmode) + "\n" + String((int)protection);
-    server.send(200, "text/plain", line);
+    blinkblueled();
+    clientaddress = server.client().remoteIP().toString();
+    Serial.println(msg13 + clientaddress + ".");
+    if (clientaddress == allowedaddress)
+    {
+      if (checkusernameandpassword() == 1)
+      {
+        line = String((int)alarm) + "\n" + String((int)opmode) + "\n" +  String((int)swmanu) + "\n" + String((int)ocprot);
+        server.send(200, "text/plain", line);
+      } else
+      {
+        server.send(401, "text/plain", msg17);
+        Serial.println(msg18);
+      }
+    } else
+    {
+      server.send(401, "text/plain", msg19);
+      beep();
+      beep();
+      beep();
+      Serial.println(msg20);
+    }
   });
   server.on("/get/alarm", []()
   {
-    Serial.println(httpreqrec);
-    line = String((int)alarm);
-    server.send(200, "text/plain", line);
-  });
-  server.on("/get/manualswitch", []()
-  {
-    Serial.println(httpreqrec);
-    line = String((int)manualswitch;
-    server.send(200, "text/plain", line);
+    blinkblueled();
+    clientaddress = server.client().remoteIP().toString();
+    Serial.println(msg13 + clientaddress + ".");
+    if (clientaddress == allowedaddress)
+    {
+      if (checkusernameandpassword() == 1)
+      {
+        line = String((int)alarm);
+        server.send(200, "text/plain", line);
+      } else
+      {
+        server.send(401, "text/plain", msg17);
+        Serial.println(msg18);
+      }
+    } else
+    {
+      server.send(401, "text/plain", msg19);
+      beep();
+      beep();
+      beep();
+      Serial.println(msg20);
+    }
   });
   server.on("/get/operationmode", []()
   {
-    Serial.println(httpreqrec);
-    line = String((int)operationmode);
-    server.send(200, "text/plain", line);
+    blinkblueled();
+    clientaddress = server.client().remoteIP().toString();
+    Serial.println(msg13 + clientaddress + ".");
+    if (clientaddress == allowedaddress)
+    {
+      if (checkusernameandpassword() == 1)
+      {
+        line = String((int)opmode);
+        server.send(200, "text/plain", line);
+      } else
+      {
+        server.send(401, "text/plain", msg17);
+        Serial.println(msg18);
+      }
+    } else
+    {
+      server.send(401, "text/plain", msg19);
+      beep();
+      beep();
+      beep();
+      Serial.println(msg20);
+    }
+  });
+  server.on("/get/manualswitch", []()
+  {
+    blinkblueled();
+    clientaddress = server.client().remoteIP().toString();
+    Serial.println(msg13 + clientaddress + ".");
+    if (clientaddress == allowedaddress)
+    {
+      if (checkusernameandpassword() == 1)
+      {
+        line = String((int)swmanu);
+        server.send(200, "text/plain", line);
+      } else
+      {
+        server.send(401, "text/plain", msg17);
+        Serial.println(msg18);
+      }
+    } else
+    {
+      server.send(401, "text/plain", msg19);
+      beep();
+      beep();
+      beep();
+      Serial.println(msg20);
+    }
   });
   server.on("/get/protection", []()
   {
-    Serial.println(httpreqrec);
-    line = String((int)protection);
-    server.send(200, "text/plain", line);
+    blinkblueled();
+    clientaddress = server.client().remoteIP().toString();
+    Serial.println(msg13 + clientaddress + ".");
+    if (clientaddress == allowedaddress)
+    {
+      if (checkusernameandpassword() == 1)
+      {
+        line = String((int)ocprot);
+        server.send(200, "text/plain", line);
+      } else
+      {
+        server.send(401, "text/plain", msg17);
+        Serial.println(msg18);
+      }
+    } else
+    {
+      server.send(401, "text/plain", msg19);
+      beep();
+      beep();
+      beep();
+      Serial.println(msg20);
+    }
   });
   server.on("/set/all/off", []()
   {
-    Serial.println(httpreqrec);
-    blinkactled();
-    heater = 0;
-    lamp = 0;
-    ventilator = 0;
-    server.send(200, "text/plain", "* All outputs are switched off.");
+    blinkblueled();
+    clientaddress = server.client().remoteIP().toString();
+    Serial.println(msg13 + clientaddress + ".");
+    if (clientaddress == allowedaddress)
+    {
+      if (checkusernameandpassword() == 1)
+      {
+        heat = 0;
+        lamp = 0;
+        vent = 0;
+        server.send(200, "text/plain", "* All outputs are switched off.");
+      } else
+      {
+        server.send(401, "text/plain", msg17);
+        Serial.println(msg18);
+      }
+    } else
+    {
+      server.send(401, "text/plain", msg19);
+      beep();
+      beep();
+      beep();
+      Serial.println(msg20);
+    }
   });
   server.on("/set/alarm/off", []()
   {
-    Serial.println(httpreqrec);
-    alarm = 0;
-    server.send(200, "text/plain", "* Alarm input is restored.");
+    blinkblueled();
+    clientaddress = server.client().remoteIP().toString();
+    Serial.println(msg13 + clientaddress + ".");
+    if (clientaddress == allowedaddress)
+    {
+      if (checkusernameandpassword() == 1)
+      {
+        alarm = 0;
+        server.send(200, "text/plain", "* Alarm input is restored.");
+      } else
+      {
+        server.send(401, "text/plain", msg17);
+        Serial.println(msg18);
+      }
+    } else
+    {
+      server.send(401, "text/plain", msg19);
+      beep();
+      beep();
+      beep();
+      Serial.println(msg20);
+    }
   });
   server.on("/set/heater/off", []()
   {
-    Serial.println(httpreqrec);
-    blinkactled();
-    heater = 0;
-    server.send(200, "text/plain", "* Heater is switched off.");
+    blinkblueled();
+    clientaddress = server.client().remoteIP().toString();
+    Serial.println(msg13 + clientaddress + ".");
+    if (clientaddress == allowedaddress)
+    {
+      if (checkusernameandpassword() == 1)
+      {
+        heat = 0;
+        server.send(200, "text/plain", "* Heater is switched off.");
+      } else
+      {
+        server.send(401, "text/plain", msg17);
+        Serial.println(msg18);
+      }
+    } else
+    {
+      server.send(401, "text/plain", msg19);
+      beep();
+      beep();
+      beep();
+      Serial.println(msg20);
+    }
   });
   server.on("/set/heater/on", []()
   {
-    Serial.println(httpreqrec);
-    blinkactled();
-    heater = 1;
-    server.send(200, "text/plain", "* Heater is switched on.");
+    blinkblueled();
+    clientaddress = server.client().remoteIP().toString();
+    Serial.println(msg13 + clientaddress + ".");
+    if (clientaddress == allowedaddress)
+    {
+      if (checkusernameandpassword() == 1)
+      {
+        heat = 1;
+        server.send(200, "text/plain", "* Heater is switched on.");
+      } else
+      {
+        server.send(401, "text/plain", msg17);
+        Serial.println(msg18);
+      }
+    } else
+    {
+      server.send(401, "text/plain", msg19);
+      beep();
+      beep();
+      beep();
+      Serial.println(msg20);
+    }
   });
   server.on("/set/lamp/off", []()
   {
-    Serial.println(httpreqrec);
-    blinkactled();
-    lamp = 0;
-    server.send(200, "text/plain", "* Lamp is switched off.");
+    blinkblueled();
+    clientaddress = server.client().remoteIP().toString();
+    Serial.println(msg13 + clientaddress + ".");
+    if (clientaddress == allowedaddress)
+    {
+      if (checkusernameandpassword() == 1)
+      {
+        lamp = 0;
+        server.send(200, "text/plain", "* Lamp is switched off.");
+      } else
+      {
+        server.send(401, "text/plain", msg17);
+        Serial.println(msg18);
+      }
+    } else
+    {
+      server.send(401, "text/plain", msg19);
+      beep();
+      beep();
+      beep();
+      Serial.println(msg20);
+    }
   });
   server.on("/set/lamp/on", []()
   {
-    Serial.println(httpreqrec);
-    blinkactled();
-    lamp = 1;
-    server.send(200, "text/plain", "* Lamp is switched on.");
+    blinkblueled();
+    clientaddress = server.client().remoteIP().toString();
+    Serial.println(msg13 + clientaddress + ".");
+    if (clientaddress == allowedaddress)
+    {
+      if (checkusernameandpassword() == 1)
+      {
+        lamp = 1;
+        server.send(200, "text/plain", "* Lamp is switched on.");
+      } else
+      {
+        server.send(401, "text/plain", msg17);
+        Serial.println(msg18);
+      }
+    } else
+    {
+      server.send(401, "text/plain", msg19);
+      beep();
+      beep();
+      beep();
+      Serial.println(msg20);
+    }
   });
   server.on("/set/ventilator/off", []()
   {
-    Serial.println(httpreqrec);
-    blinkactled();
-    ventilator = 0;
-    server.send(200, "text/plain", "* Ventilator is switched off.");
+    blinkblueled();
+    clientaddress = server.client().remoteIP().toString();
+    Serial.println(msg13 + clientaddress + ".");
+    if (clientaddress == allowedaddress)
+    {
+      if (checkusernameandpassword() == 1)
+      {
+        vent = 0;
+        server.send(200, "text/plain", "* Ventilator is switched off.");
+      } else
+      {
+        server.send(401, "text/plain", msg17);
+        Serial.println(msg18);
+      }
+    } else
+    {
+      server.send(401, "text/plain", msg19);
+      beep();
+      beep();
+      beep();
+      Serial.println(msg20);
+    }
   });
   server.on("/set/ventilator/on", []()
   {
-    Serial.println(httpreqrec);
-    blinkactled();
-    ventilator = 1;
-    server.send(200, "text/plain", "* Ventilator is switched on.");
+    blinkblueled();
+    clientaddress = server.client().remoteIP().toString();
+    Serial.println(msg13 + clientaddress + ".");
+    if (clientaddress == allowedaddress)
+    {
+      if (checkusernameandpassword() == 1)
+      {
+        vent = 1;
+        server.send(200, "text/plain", "* Ventilator is switched on.");
+      } else
+      {
+        server.send(401, "text/plain", msg17);
+        Serial.println(msg18);
+      }
+    } else
+    {
+      server.send(401, "text/plain", msg19);
+      beep();
+      beep();
+      beep();
+      Serial.println(msg20);
+    }
   });
   server.begin();
-  Serial.println("* Webserver started.");
+  Serial.println(msg08);
 }
 
 // loop function
 void loop(void)
 {
+  int adcvalue;
+
   server.handleClient();
-  gets();
-  sets();
+  portread();
+  adcvalue = analogRead(prt_in_adc);
+  delay(100);
+  if ((adcvalue < alarmminlevel) || (adcvalue > alarmmaxlevel))
+  {
+    alarm = 1;
+  }
+  error = 0;
+  if ((swmanu == 1) || (ocprot == 1) || (alarm == 1))
+  {
+    error = 1;
+  }
+  if ((ocprot == 1) || (alarm == 1))
+  {
+    beep();
+  }
+  portwrite();
 }
 
-// blink blue "ACT" LED
-void blinkactled()
+// blink blue LED
+void blinkblueled()
 {
-  digitalWrite(prt_led_act, HIGH);
+  digitalWrite(prt_led_blue, HIGH);
   delay(500);
-  digitalWrite(prt_led_act, LOW);
+  digitalWrite(prt_led_blue, LOW);
 }
 
-//
-void gets()
+// read inputs
+void portread()
 {
+  swmanu = digitalRead(prt_in_swmanu);
+  ocprot = digitalRead(prt_in_ocprot);
+  opmode = digitalRead(prt_in_opmode);
 }
 
-//
-void sets()
+// write outputs
+void portwrite()
 {
+  digitalWrite(prt_led_red, error);
+  digitalWrite(prt_out_lamp, lamp);
+  digitalWrite(prt_out_vent, vent);
+  digitalWrite(prt_out_heat, heat);
+}
+
+// authentication
+int checkusernameandpassword()
+{
+  if (server.arg("username") == www_username && server.arg("password") == www_password)
+  {
+    return 1;
+  } else
+  {
+    beep();
+    beep();
+    return 0;
+  }
+}
+
+// beep
+void beep()
+{
+  tone(prt_buzzer, 880);
+  delay (100);
+  noTone(prt_buzzer);
+  delay (100);
 }
