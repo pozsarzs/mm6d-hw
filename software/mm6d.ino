@@ -18,11 +18,10 @@
 
 // settings
 const String swversion      = "0.1";
-const char* wifi_ssid       = "SzerafinGomba";
-const char* wifi_password   = "Hal4csk4Macsk4";
-const String www_username   = "admin";
-const String www_password   = "Tav1Rozs4";
-const String allowedaddress = "192.168.1.7";
+const char* wifi_ssid       = "";
+const char* wifi_password   = "";
+const String www_username   = "";
+const String allowedaddress = "";
 
 // GPIO ports
 const int prt_in_opmode     = 5;
@@ -178,7 +177,7 @@ void setup(void)
     Serial.println(msg13 + clientaddress + ".");
     if (clientaddress == allowedaddress)
     {
-      if (checkusernameandpassword() == 1)
+      if (checkusername() == 1)
       {
         line = String((int)alarm) + "\n" + String((int)opmode) + "\n" +  String((int)swmanu) + "\n" + String((int)ocprot);
         server.send(200, "text/plain", line);
@@ -203,7 +202,7 @@ void setup(void)
     Serial.println(msg13 + clientaddress + ".");
     if (clientaddress == allowedaddress)
     {
-      if (checkusernameandpassword() == 1)
+      if (checkusername() == 1)
       {
         line = String((int)alarm);
         server.send(200, "text/plain", line);
@@ -228,7 +227,7 @@ void setup(void)
     Serial.println(msg13 + clientaddress + ".");
     if (clientaddress == allowedaddress)
     {
-      if (checkusernameandpassword() == 1)
+      if (checkusername() == 1)
       {
         line = String((int)opmode);
         server.send(200, "text/plain", line);
@@ -253,7 +252,7 @@ void setup(void)
     Serial.println(msg13 + clientaddress + ".");
     if (clientaddress == allowedaddress)
     {
-      if (checkusernameandpassword() == 1)
+      if (checkusername() == 1)
       {
         line = String((int)swmanu);
         server.send(200, "text/plain", line);
@@ -278,7 +277,7 @@ void setup(void)
     Serial.println(msg13 + clientaddress + ".");
     if (clientaddress == allowedaddress)
     {
-      if (checkusernameandpassword() == 1)
+      if (checkusername() == 1)
       {
         line = String((int)ocprot);
         server.send(200, "text/plain", line);
@@ -303,7 +302,7 @@ void setup(void)
     Serial.println(msg13 + clientaddress + ".");
     if (clientaddress == allowedaddress)
     {
-      if (checkusernameandpassword() == 1)
+      if (checkusername() == 1)
       {
         heat = 0;
         lamp = 0;
@@ -330,7 +329,7 @@ void setup(void)
     Serial.println(msg13 + clientaddress + ".");
     if (clientaddress == allowedaddress)
     {
-      if (checkusernameandpassword() == 1)
+      if (checkusername() == 1)
       {
         alarm = 0;
         server.send(200, "text/plain", "* Alarm input is restored.");
@@ -355,7 +354,7 @@ void setup(void)
     Serial.println(msg13 + clientaddress + ".");
     if (clientaddress == allowedaddress)
     {
-      if (checkusernameandpassword() == 1)
+      if (checkusername() == 1)
       {
         heat = 0;
         server.send(200, "text/plain", "* Heater is switched off.");
@@ -380,7 +379,7 @@ void setup(void)
     Serial.println(msg13 + clientaddress + ".");
     if (clientaddress == allowedaddress)
     {
-      if (checkusernameandpassword() == 1)
+      if (checkusername() == 1)
       {
         heat = 1;
         server.send(200, "text/plain", "* Heater is switched on.");
@@ -405,7 +404,7 @@ void setup(void)
     Serial.println(msg13 + clientaddress + ".");
     if (clientaddress == allowedaddress)
     {
-      if (checkusernameandpassword() == 1)
+      if (checkusername() == 1)
       {
         lamp = 0;
         server.send(200, "text/plain", "* Lamp is switched off.");
@@ -430,7 +429,7 @@ void setup(void)
     Serial.println(msg13 + clientaddress + ".");
     if (clientaddress == allowedaddress)
     {
-      if (checkusernameandpassword() == 1)
+      if (checkusername() == 1)
       {
         lamp = 1;
         server.send(200, "text/plain", "* Lamp is switched on.");
@@ -455,7 +454,7 @@ void setup(void)
     Serial.println(msg13 + clientaddress + ".");
     if (clientaddress == allowedaddress)
     {
-      if (checkusernameandpassword() == 1)
+      if (checkusername() == 1)
       {
         vent = 0;
         server.send(200, "text/plain", "* Ventilator is switched off.");
@@ -480,7 +479,7 @@ void setup(void)
     Serial.println(msg13 + clientaddress + ".");
     if (clientaddress == allowedaddress)
     {
-      if (checkusernameandpassword() == 1)
+      if (checkusername() == 1)
       {
         vent = 1;
         server.send(200, "text/plain", "* Ventilator is switched on.");
@@ -559,9 +558,9 @@ void portwrite()
 }
 
 // authentication
-int checkusernameandpassword()
+int checkusername()
 {
-  if (server.arg("username") == www_username && server.arg("password") == www_password)
+  if (server.arg("username") == www_username)
   {
     return 1;
   } else
