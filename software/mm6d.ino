@@ -61,8 +61,8 @@ const String msg17          = "Authentication error!";
 const String msg18          = "* E03: Authentication error!";
 const String msg19          = "Not allowed client IP address!";
 const String msg20          = "* E04: Not allowed client IP address!";
-const String msg21          = "";
-const String msg22          = "";
+const String msg21          = "Page not found!";
+const String msg22          = "* E05: Page not found!";
 const String msg23          = "";
 const String msg24          = "";
 const String msg25          = "";
@@ -132,6 +132,7 @@ void setup(void)
   Serial.println(msg11 + WiFi.gatewayIP().toString());
   // start webserver
   Serial.print(msg12);
+  server.onNotFound(handleNotFound);
   server.on("/", []()
   {
     Serial.println(msg13 + server.client().remoteIP().toString() + ".");
@@ -524,6 +525,12 @@ void loop(void)
     beep();
   }
   portwrite();
+}
+
+void handleNotFound()
+{
+  server.send(404, "text/plain", msg21);
+  Serial.println(msg22);
 }
 
 // blink blue LED
