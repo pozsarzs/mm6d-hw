@@ -5,21 +5,18 @@
       function goToPage() {
         var page = document.querySelector('input[name = "page"]:checked').value;
         var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
         var ipaddress = document.getElementById('ipaddress').value;
         window.open ("http://" + ipaddress + page + "?username=" + username + "&password=" + password, target='right');
       }
     </script>
-    <center><h2>MM7D test page</h2></center><br>
-    <label for="ipaddress">IP address of controller:</label><br>
-    <input type="text" id="ipaddress" /><br>
+    <center><h2>MM6D test page</h2></center><br>
     <br>
     <fieldset>
-      <legend>&nbsp;Authentication&nbsp;</legend>
+      <legend>&nbsp;Controller&nbsp;</legend>
+      <label for="ipaddress">IP address of controller:</label><br>
+      <input type="text" id="ipaddress" /><br>
       <label for="username">Username:</label><br>
       <input type="text" id="username" /><br>
-      <label for="password">Password:</label><br>
-      <input type="password" id="password" /><br>
     </fieldset>
     <br>
     <fieldset>

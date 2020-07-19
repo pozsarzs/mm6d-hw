@@ -157,7 +157,7 @@ void setup(void)
            "<tr><td><a href=\"http://" + localipaddress + "/set/lamp/on\">http://" + localipaddress + "/set/lamp/on</a></td><td>Switch on lamp<sup>*</sup></td></tr>"
            "<tr><td><a href=\"http://" + localipaddress + "/set/ventilator/off\">http://" + localipaddress + "/set/ventilator/off</a></td><td>Switch off ventilator<sup>*</sup></td></tr>"
            "<tr><td><a href=\"http://" + localipaddress + "/set/ventilator/on\">http://" + localipaddress + "/set/ventilator/on</a></td><td>Switch on ventilator<sup>*</sup></td></tr>"
-           "</table><br><sup>*</sup>Use <i>username</i> and <i>password</i> arguments!<br>"
+           "</table><br><sup>*</sup>Use <i>username</i> argument!<br>"
            "<hr><center>" + msg02 + " <a href=\"mailto:" + msg03 + "\">" + msg28 + "</a> - <a href=\"" + msg04 + "\">Homepage</a><center><br><body></html>";
     server.send(200, "text/html", line);
     delay(100);
