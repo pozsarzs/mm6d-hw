@@ -22,22 +22,22 @@ const char* wifi_ssid       = "";
 const char* wifi_password   = "";
 const String www_username   = "";
 const String allowedaddress = "";
+const int alarmminlevel     = 0;
+const int alarmmaxlevel     = 512;
 
 // GPIO ports
+const int prt_buzzer        = 4;
+const int prt_in_ocprot     = 13;
 const int prt_in_opmode     = 5;
 const int prt_in_swmanu     = 12;
-const int prt_in_ocprot     = 13;
 const int prt_led_blue      = 2;
 const int prt_led_red       = 0;
 const int prt_out_heat      = 16;
 const int prt_out_lamp      = 14;
 const int prt_out_vent      = 15;
-const int prt_buzzer        = 4;
 
 // ADC input
 const int prt_in_adc        = 0;
-const int alarmminlevel     = 0;
-const int alarmmaxlevel     = 512;
 
 // messages
 const String msg01          = "MM6D * Remote controlled switching device";
@@ -53,7 +53,7 @@ const String msg10          = "  subnet mask:        ";
 const String msg11          = "  gateway IP address: ";
 const String msg12          = "* Starting webserver...";
 const String msg13          = "* HTTP request received from: ";
-const String msg14          = "";
+const String msg14          = "* E06: Control timeout error!";
 const String msg15          = "";
 const String msg16          = "MM6D";
 const String msg17          = "Authentication error!";
@@ -71,23 +71,25 @@ const String msg28          = "Pozsar Zsolt";
 const String msg29          = "  device MAC address: ";
 
 // general constants
-const int timeout           = 0;
+const int interval          = 0;
 
 // variables
-int swmanu;
-int opmode;
-int ocprot;
+
 int alarm                   = 0;
 int error                   = 0;
 int heat                    = 0;
 int lamp                    = 0;
+int ocprot;
+int opmode;
+int swmanu;
+int timeout;
 int vent                    = 0;
 String clientaddress;
 String devicemacaddress;
 String line;
 String localipaddress;
-unsigned long prevtime1     = 0;
-unsigned long prevtime2     = 0;
+unsigned long currtime;
+unsigned long prevtime      = 0;
 
 ESP8266WebServer server(80);
 
@@ -179,6 +181,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
+        prevtime = millis()
         line = String((int)alarm) + "\n" + String((int)opmode) + "\n" +  String((int)swmanu) + "\n" + String((int)ocprot);
         server.send(200, "text/plain", line);
       } else
@@ -204,6 +207,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
+        prevtime = millis()
         line = String((int)alarm);
         server.send(200, "text/plain", line);
       } else
@@ -229,6 +233,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
+        prevtime = millis()
         line = String((int)opmode);
         server.send(200, "text/plain", line);
       } else
@@ -254,6 +259,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
+        prevtime = millis()
         line = String((int)swmanu);
         server.send(200, "text/plain", line);
       } else
@@ -279,6 +285,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
+        prevtime = millis()
         line = String((int)ocprot);
         server.send(200, "text/plain", line);
       } else
@@ -304,6 +311,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
+        prevtime = millis()
         heat = 0;
         lamp = 0;
         vent = 0;
@@ -331,6 +339,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
+        prevtime = millis()
         alarm = 0;
         server.send(200, "text/plain", "* Alarm input is restored.");
       } else
@@ -356,6 +365,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
+        prevtime = millis()
         heat = 0;
         server.send(200, "text/plain", "* Heater is switched off.");
       } else
@@ -381,6 +391,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
+        prevtime = millis()
         heat = 1;
         server.send(200, "text/plain", "* Heater is switched on.");
       } else
@@ -406,6 +417,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
+        prevtime = millis()
         lamp = 0;
         server.send(200, "text/plain", "* Lamp is switched off.");
       } else
@@ -431,6 +443,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
+        prevtime = millis()
         lamp = 1;
         server.send(200, "text/plain", "* Lamp is switched on.");
       } else
@@ -456,6 +469,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
+        prevtime = millis()
         vent = 0;
         server.send(200, "text/plain", "* Ventilator is switched off.");
       } else
@@ -481,6 +495,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
+        prevtime = millis()
         vent = 1;
         server.send(200, "text/plain", "* Ventilator is switched on.");
       } else
@@ -507,6 +522,17 @@ void loop(void)
   int adcvalue;
 
   server.handleClient();
+  currtime = millis();
+  if (currtime - prevtime >= interval)
+  {
+    timeout = 1;
+    digitalWrite(prt_led_blue, HIGH);
+  } else
+  {
+    timeout = 0;
+    digitalWrite(prt_led_blue, LOW);
+  }   
+  Serial.print(msg14);
   portread();
   adcvalue = analogRead(prt_in_adc);
   delay(100);
@@ -515,7 +541,7 @@ void loop(void)
     alarm = 1;
   }
   error = 0;
-  if ((swmanu == 1) || (ocprot == 1) || (alarm == 1))
+  if ((swmanu == 1) || (ocprot == 1) || (alarm == 1) || (timeout == 1))
   {
     error = 1;
   }
