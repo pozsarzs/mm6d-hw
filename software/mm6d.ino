@@ -17,7 +17,6 @@
 #include <WiFiClient.h>
 
 // settings
-const String swversion      = "0.1";
 const char* wifi_ssid       = "";
 const char* wifi_password   = "";
 const String www_username   = "";
@@ -72,9 +71,9 @@ const String msg29          = "  device MAC address: ";
 
 // general constants
 const int interval          = 0;
+const String swversion      = "0.1";
 
 // variables
-
 int alarm                   = 0;
 int error                   = 0;
 int heat                    = 0;
