@@ -2,11 +2,19 @@ Short information
 -----------------
 MM6D * Remote controlled switching device
 Copyright (C) 2020 Pozsár Zsolt <pozsar.zsolt@szerafingomba.hu>
-- Documentation version: 1.0
-- Documentation licence: CC-BY-NC-4.0
-- Documentation language: en
-- Hardware version: v200612
-- Software version: v0.1
-- Software licence: EUPL v1.1
-- Software language: en
-- Homepage: <http://www.szerafingomba.hu/equipments/>
+Homepage: <http://www.szerafingomba.hu/equipments/>
+
+Documentation
+ - version:             1.0
+ - licence:             CC-BY-NC-4.0
+ - language:            en
+
+Hardware
+ - version:             v200612
+ - architecture:        xtensa
+ - operation system:    -
+
+Software
+ - version:             v0.1
+ - licence:             EUPL v1.1
+ - language:            en
