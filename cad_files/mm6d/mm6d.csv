@@ -1,11 +1,12 @@
 Source,/home/pozsarzs/Git/mm6d/cad_files/mm6d/mm6d.sch
 Kicad Rev,Eeschema 4.0.5+dfsg1-4
-Generated Date,2020. júl. 23., csütörtök, 19:53:04 CEST
+Generated Date,2020. júl. 24., péntek, 21:18:39 CEST
 
 Title,MM6D Remote controlled switching box
 Company,Pozsar Zsolt - http://www.szerafingomba.hu
 Revision,200612
 Date Issue,2020-06-12
+Comment,Printed circuit board
 Comment,Draw no.: 59/11/2
 
 Reference,Value,Library,Library Ref
@@ -13,7 +14,7 @@ C101,470u,mm6d-cache,device:CP_Small
 C102,2.2u,mm6d-cache,device:CP_Small
 P103,CONN_01X02,conn,CONN_01X02
 P104,CONN_01X02,conn,CONN_01X02
-D107,1N4001,device,D
+D105,1N4001,device,D
 U101-JP102,CONN_01X12,conn,CONN_01X12
 U101-JP101,CONN_01X16,conn,CONN_01X16
 R101,1.5k,device,R
@@ -21,11 +22,9 @@ D101,1N4001,pzs_others,diode
 U101,4N25,opto,4N25
 R102,1.5k,device,R
 D102,1N4001,pzs_others,diode
-D105,yellow,pzs_devices,LED-CIRCLE
 U102,4N25,opto,4N25
 R103,1.5k,device,R
 D103,1N4001,pzs_others,diode
-D106,red,pzs_devices,LED-CIRCLE
 U103,4N25,opto,4N25
 R104,1.5k,device,R
 D104,1N4001,pzs_others,diode
@@ -36,24 +35,24 @@ R107,4.7k,device,R
 R108,4.7k,device,R
 P101,CONN_01X05,conn,CONN_01X05
 R114,1k,device,R
-D113,1N4007,pzs_others,diode
-D109,green,pzs_devices,LED-CIRCLE
+D111,1N4007,pzs_others,diode
+D107,green,pzs_devices,LED-CIRCLE
 R110,390,device,R
 R115,1k,device,R
-D114,1N4007,pzs_others,diode
-D110,green,pzs_devices,LED-CIRCLE
+D112,1N4007,pzs_others,diode
+D108,green,pzs_devices,LED-CIRCLE
 R111,390,device,R
 R116,1k,device,R
-D115,1N4007,pzs_others,diode
-D111,green,pzs_devices,LED-CIRCLE
+D113,1N4007,pzs_others,diode
+D109,green,pzs_devices,LED-CIRCLE
 R112,390,device,R
 R117,1k,device,R
-D116,1N4007,pzs_others,diode
-D112,red,pzs_devices,LED-CIRCLE
+D114,1N4007,pzs_others,diode
+D110,red,pzs_devices,LED-CIRCLE
 R113,390,device,R
 P106,CONN_01X05,conn,CONN_01X05
 R109,390,device,R
-D108,blue,pzs_devices,LED-CIRCLE
+D106,blue,pzs_devices,LED-CIRCLE
 P102,CONN_01X03,conn,CONN_01X03
 P105,CONN_01X02,conn,CONN_01X02
 Q107,BD135,device,Q_NPN_ECB
