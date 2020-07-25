@@ -5,7 +5,7 @@
     (tool "Eeschema 4.0.5+dfsg1-4")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
-        (title "MM6D Remote controlled switching box")
+        (title "MM6D Remote controlled switching device")
         (company "Pozsar Zsolt - http://www.szerafingomba.hu")
         (rev 200612)
         (date 2020-06-12)

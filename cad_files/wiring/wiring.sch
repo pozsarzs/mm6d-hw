@@ -36,7 +36,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "MM6D Remote controlled switching box"
+Title "MM6D Remote controlled switching device"
 Date "2020-06-12"
 Rev "200612"
 Comp "Pozsar Zsolt - http://www.szerafingomba.hu"
@@ -800,23 +800,23 @@ $EndComp
 $Comp
 L LED-CIRCLE D10
 U 1 1 5F1C6BFD
-P 5750 5550
-F 0 "D10" H 5750 5700 50  0000 C CNN
-F 1 "yellow" H 5750 5375 50  0000 C CNN
-F 2 "" H 5750 5550 50  0000 C CNN
-F 3 "" H 5750 5550 50  0000 C CNN
-	1    5750 5550
+P 5800 5550
+F 0 "D10" H 5800 5700 50  0000 C CNN
+F 1 "yellow" H 5800 5375 50  0000 C CNN
+F 2 "" H 5800 5550 50  0000 C CNN
+F 3 "" H 5800 5550 50  0000 C CNN
+	1    5800 5550
 	-1   0    0    -1  
 $EndComp
 $Comp
 L 0V #PWR10
 U 1 1 5F1C6C03
-P 6025 5650
-F 0 "#PWR10" H 6025 5400 50  0001 C CNN
-F 1 "0V" H 6025 5500 50  0001 C CNN
-F 2 "" H 6025 5650 50  0000 C CNN
-F 3 "" H 6025 5650 50  0000 C CNN
-	1    6025 5650
+P 6075 5650
+F 0 "#PWR10" H 6075 5400 50  0001 C CNN
+F 1 "0V" H 6075 5500 50  0001 C CNN
+F 2 "" H 6075 5650 50  0000 C CNN
+F 3 "" H 6075 5650 50  0000 C CNN
+	1    6075 5650
 	1    0    0    -1  
 $EndComp
 Text Notes 5575 5300 0    60   ~ 0
@@ -925,12 +925,12 @@ $EndComp
 $Comp
 L 0V #PWR4
 U 1 1 5F1CF34F
-P 3000 6800
-F 0 "#PWR4" H 3000 6550 50  0001 C CNN
-F 1 "0V" H 3000 6650 50  0001 C CNN
-F 2 "" H 3000 6800 50  0000 C CNN
-F 3 "" H 3000 6800 50  0000 C CNN
-	1    3000 6800
+P 2850 8650
+F 0 "#PWR4" H 2850 8400 50  0001 C CNN
+F 1 "0V" H 2850 8500 50  0001 C CNN
+F 2 "" H 2850 8650 50  0000 C CNN
+F 3 "" H 2850 8650 50  0000 C CNN
+	1    2850 8650
 	0    1    -1   0   
 $EndComp
 Text Notes 1975 7350 0    60   ~ 0
@@ -1032,9 +1032,9 @@ Wire Wire Line
 Wire Wire Line
 	7425 5850 7425 3800
 Wire Wire Line
-	3100 6800 3100 6900
+	2950 8650 2950 8750
 Wire Wire Line
-	3100 6800 3000 6800
+	2950 8650 2850 8650
 Wire Wire Line
 	3300 6750 3300 6900
 Connection ~ 4500 3800
@@ -1075,20 +1075,17 @@ Connection ~ 4325 6000
 Wire Wire Line
 	4325 5550 5025 5550
 Wire Wire Line
-	5325 5550 5550 5550
+	5325 5550 5600 5550
 Wire Wire Line
-	6025 5550 6025 5650
+	6075 5550 6075 5650
 Wire Wire Line
-	6025 5550 5950 5550
+	6075 5550 6000 5550
 Wire Wire Line
 	5825 6650 5825 6550
 Wire Wire Line
 	5825 6650 6425 6650
-Connection ~ 10875 3100
 Wire Wire Line
-	10875 3200 6225 3200
-Wire Wire Line
-	6225 3200 6225 6650
+	6225 1100 6225 6650
 Connection ~ 5125 6000
 Wire Wire Line
 	4325 5550 4325 6200
@@ -1172,9 +1169,9 @@ Wire Wire Line
 	1175 5400 1775 5400
 Connection ~ 5225 2350
 Wire Wire Line
-	5925 5100 5925 2350
+	5925 2350 5925 5100
 Wire Wire Line
-	1175 5100 5925 5100
+	5925 5100 1175 5100
 Wire Wire Line
 	1275 5000 1275 5200
 Wire Wire Line
@@ -1199,9 +1196,9 @@ Wire Wire Line
 Wire Wire Line
 	1275 4200 1275 4300
 Wire Wire Line
-	6125 2400 8575 2400
+	6125 2350 8575 2350
 Wire Wire Line
-	6125 3600 6125 2400
+	6125 3600 6125 2350
 Wire Wire Line
 	1175 3600 6125 3600
 Wire Wire Line
@@ -1211,9 +1208,7 @@ Wire Wire Line
 Wire Wire Line
 	7125 5850 7025 5850
 Wire Wire Line
-	5225 825  5225 2150
-Wire Wire Line
-	5225 2150 4075 2150
+	4075 2150 7525 2150
 Wire Wire Line
 	3975 1100 4075 1100
 Wire Wire Line
@@ -1233,14 +1228,14 @@ Wire Wire Line
 	2975 1100 3025 1100
 Connection ~ 3425 1500
 Wire Wire Line
-	3425 1100 3425 1500
+	3425 1500 3425 1100
 Wire Wire Line
-	3325 1100 3425 1100
+	3425 1100 3325 1100
 Connection ~ 2125 1300
 Wire Wire Line
-	2125 1100 2125 1300
+	2125 1300 2125 1100
 Wire Wire Line
-	2225 1100 2125 1100
+	2125 1100 2225 1100
 Wire Wire Line
 	1675 2850 2025 2850
 Wire Wire Line
@@ -1263,7 +1258,7 @@ Wire Wire Line
 Wire Wire Line
 	9325 1300 9325 2600
 Wire Wire Line
-	7525 900  7525 3450
+	7525 2150 7525 3450
 Wire Wire Line
 	8225 3950 8225 3000
 Wire Wire Line
@@ -1305,7 +1300,7 @@ Wire Wire Line
 Wire Wire Line
 	7025 3400 7025 5200
 Wire Wire Line
-	4900 3400 7025 3400
+	6725 3400 7025 3400
 Wire Wire Line
 	6725 1100 6725 3500
 Wire Wire Line
@@ -1364,8 +1359,6 @@ Wire Wire Line
 Wire Wire Line
 	10875 3100 10675 3100
 Wire Wire Line
-	10875 1100 10875 3200
-Wire Wire Line
 	4825 1100 10875 1100
 Wire Wire Line
 	9575 3000 9575 3100
@@ -1388,11 +1381,9 @@ Wire Wire Line
 Wire Wire Line
 	9675 2550 9675 2650
 Wire Wire Line
-	5225 900  7525 900 
-Wire Wire Line
 	1175 3300 1275 3300
 Wire Wire Line
-	8575 2400 8575 2650
+	8575 2350 8575 2650
 Wire Wire Line
 	10575 2250 10575 2650
 Wire Wire Line
@@ -1452,7 +1443,7 @@ Wire Wire Line
 Connection ~ 3425 2950
 Connection ~ 3625 2950
 Wire Wire Line
-	5925 2350 4975 2350
+	4975 2350 5925 2350
 Wire Wire Line
 	5225 2350 5225 2500
 Wire Wire Line
@@ -1465,17 +1456,28 @@ Connection ~ 4575 2950
 $Comp
 L +12V #PWR8
 U 1 1 5F1DAD60
-P 5225 825
-F 0 "#PWR8" H 5225 675 50  0001 C CNN
-F 1 "+12V" H 5225 965 50  0000 C CNN
-F 2 "" H 5225 825 50  0000 C CNN
-F 3 "" H 5225 825 50  0000 C CNN
-	1    5225 825 
+P 5975 -75
+F 0 "#PWR8" H 5975 -225 50  0001 C CNN
+F 1 "+12V" H 5975 65  50  0000 C CNN
+F 2 "" H 5975 -75 50  0000 C CNN
+F 3 "" H 5975 -75 50  0000 C CNN
+	1    5975 -75 
 	1    0    0    -1  
 $EndComp
-Connection ~ 5225 900 
 Text Notes 7100 6250 0    60   ~ 0
 C   R   G
 Text Notes 7075 6375 0    60   ~ 0
 Status lamp
+Connection ~ 6225 1100
+Wire Wire Line
+	4900 3400 6025 3400
+Wire Wire Line
+	6025 3400 6025 1100
+Connection ~ 6025 1100
+Wire Wire Line
+	10875 1100 10875 3100
+Wire Wire Line
+	3100 6900 3100 3700
+Wire Wire Line
+	3100 3700 1175 3700
 $EndSCHEMATC

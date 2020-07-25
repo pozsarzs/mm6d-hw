@@ -36,7 +36,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "MM6D Remote controlled switching box"
+Title "MM6D Remote controlled switching device"
 Date "2020-06-12"
 Rev "200612"
 Comp "Pozsar Zsolt - http://www.szerafingomba.hu"
