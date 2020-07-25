@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/pozsarzs/Git/mm6d/cad_files/wiring/wiring.sch</source>
+    <date>2020. júl. 25., szombat, 11:43:33 CEST</date>
+    <tool>Eeschema 4.0.5+dfsg1-4</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>MM6D Remote controlled switching box</title>
+        <company>Pozsar Zsolt - http://www.szerafingomba.hu</company>
+        <rev>200612</rev>
+        <date>2020-06-12</date>
+        <source>wiring.sch</source>
+        <comment number="1" value="Internal wiring"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value="Draw no.: 59/11/8"/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="P101">
+      <value>CONN_01X05</value>
+      <libsource lib="conn" part="CONN_01X05"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AEA43</tstamp>
+    </comp>
+    <comp ref="P104">
+      <value>CONN_01X02</value>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AEA68</tstamp>
+    </comp>
+    <comp ref="P105">
+      <value>CONN_01X02</value>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AEAED</tstamp>
+    </comp>
+    <comp ref="P103">
+      <value>CONN_01X02</value>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AEB0A</tstamp>
+    </comp>
+    <comp ref="P102">
+      <value>CONN_01X03</value>
+      <libsource lib="conn" part="CONN_01X03"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AEB30</tstamp>
+    </comp>
+    <comp ref="P106">
+      <value>CONN_01X05</value>
+      <libsource lib="conn" part="CONN_01X05"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AEB6F</tstamp>
+    </comp>
+    <comp ref="P4">
+      <value>DB9</value>
+      <libsource lib="conn" part="DB9"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AEBB0</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AECB1</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AEDC4</tstamp>
+    </comp>
+    <comp ref="P3">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AEDF3</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>47k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AEEAF</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>1N4007</value>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AEFFD</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>white</value>
+      <libsource lib="pzs_devices" part="LED-CIRCLE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AF03C</tstamp>
+    </comp>
+    <comp ref="F6">
+      <value>B2A</value>
+      <libsource lib="pzs_others" part="overcurrent_breaker"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AF3B1</tstamp>
+    </comp>
+    <comp ref="F7">
+      <value>B2A</value>
+      <libsource lib="pzs_others" part="overcurrent_breaker"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AF4A3</tstamp>
+    </comp>
+    <comp ref="F8">
+      <value>B10A</value>
+      <libsource lib="pzs_others" part="overcurrent_breaker"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AF4EC</tstamp>
+    </comp>
+    <comp ref="K1">
+      <value>Finder 40.52</value>
+      <fields>
+        <field name="Field4">12V  650mW</field>
+      </fields>
+      <libsource lib="pzs_others" part="electromagnetic_actor_1"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AF755</tstamp>
+    </comp>
+    <comp ref="P18">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B024C</tstamp>
+    </comp>
+    <comp ref="P15">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B0433</tstamp>
+    </comp>
+    <comp ref="P12">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B04A4</tstamp>
+    </comp>
+    <comp ref="P9">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B051A</tstamp>
+    </comp>
+    <comp ref="P17">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B1C6E</tstamp>
+    </comp>
+    <comp ref="P16">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B1CF4</tstamp>
+    </comp>
+    <comp ref="P14">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B28D6</tstamp>
+    </comp>
+    <comp ref="P13">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B28DC</tstamp>
+    </comp>
+    <comp ref="P11">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B2B80</tstamp>
+    </comp>
+    <comp ref="P10">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B2B86</tstamp>
+    </comp>
+    <comp ref="P7">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B2D00</tstamp>
+    </comp>
+    <comp ref="AK3">
+      <value>auxcontalt</value>
+      <libsource lib="pzs_others" part="auxcontalt"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B8257</tstamp>
+    </comp>
+    <comp ref="AK1">
+      <value>auxcontalt</value>
+      <libsource lib="pzs_others" part="auxcontalt"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B84F4</tstamp>
+    </comp>
+    <comp ref="AK2">
+      <value>auxcontalt</value>
+      <libsource lib="pzs_others" part="auxcontalt"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1B85B7</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>1,5k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BBBB6</tstamp>
+    </comp>
+    <comp ref="D11">
+      <value>red</value>
+      <libsource lib="pzs_devices" part="LED-CIRCLE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BBBBC</tstamp>
+    </comp>
+    <comp ref="Tr1">
+      <value>230/12V 20VA</value>
+      <libsource lib="pzs_others" part="transformer_1P_1S"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BD617</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>D</value>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BD80C</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>D</value>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BD8C3</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>D</value>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BD95C</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>D</value>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BD9F8</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>1000u</value>
+      <libsource lib="device" part="CP_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BE99F</tstamp>
+    </comp>
+    <comp ref="F4">
+      <value>F0.5A</value>
+      <libsource lib="device" part="Fuse"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BEB72</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>7805</value>
+      <libsource lib="regul" part="7805"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BF59D</tstamp>
+    </comp>
+    <comp ref="F3">
+      <value>T0.5A</value>
+      <libsource lib="device" part="Fuse"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BF710</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>1u Ta</value>
+      <libsource lib="device" part="CP_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BF874</tstamp>
+    </comp>
+    <comp ref="F5">
+      <value>F0.8A</value>
+      <libsource lib="device" part="Fuse"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BEA56</tstamp>
+    </comp>
+    <comp ref="F1">
+      <value>Fuse</value>
+      <libsource lib="device" part="Fuse"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1C0102</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>1.5k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1C190A</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>white</value>
+      <libsource lib="pzs_devices" part="LED-CIRCLE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1C1910</tstamp>
+    </comp>
+    <comp ref="SW1a1">
+      <value>auxcontalt</value>
+      <libsource lib="pzs_others" part="auxcontalt"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CB528</tstamp>
+    </comp>
+    <comp ref="SW1b1">
+      <value>auxcontalt</value>
+      <libsource lib="pzs_others" part="auxcontalt"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CB71B</tstamp>
+    </comp>
+    <comp ref="SW2a1">
+      <value>auxcontalt</value>
+      <libsource lib="pzs_others" part="auxcontalt"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CBF48</tstamp>
+    </comp>
+    <comp ref="SW2b1">
+      <value>auxcontalt</value>
+      <libsource lib="pzs_others" part="auxcontalt"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CBF4E</tstamp>
+    </comp>
+    <comp ref="SW3a1">
+      <value>auxcontalt</value>
+      <libsource lib="pzs_others" part="auxcontalt"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CC0AD</tstamp>
+    </comp>
+    <comp ref="SW3b1">
+      <value>auxcontalt</value>
+      <libsource lib="pzs_others" part="auxcontalt"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CC0B3</tstamp>
+    </comp>
+    <comp ref="BT1">
+      <value>3.7V 500mAh</value>
+      <fields>
+        <field name="Field4">LiPoly accumulator</field>
+      </fields>
+      <libsource lib="device" part="Battery"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CEF2B</tstamp>
+    </comp>
+    <comp ref="LS1">
+      <value>Piezo speaker</value>
+      <libsource lib="device" part="Speaker_Ultrasound"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CF608</tstamp>
+    </comp>
+    <comp ref="K2">
+      <value>Finder 40.52</value>
+      <fields>
+        <field name="Field4">12V  650mW</field>
+      </fields>
+      <libsource lib="pzs_others" part="electromagnetic_actor_1"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1C165C</tstamp>
+    </comp>
+    <comp ref="K3">
+      <value>Finder 40.52</value>
+      <fields>
+        <field name="Field4">12V  650mW</field>
+      </fields>
+      <libsource lib="pzs_others" part="electromagnetic_actor_1"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1C1732</tstamp>
+    </comp>
+    <comp ref="K4">
+      <value>Finder 40.51</value>
+      <fields>
+        <field name="Field4">12V  650mW</field>
+      </fields>
+      <libsource lib="pzs_others" part="electromagnetic_actor_1"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1C1811</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>1,5k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1C6BF7</tstamp>
+    </comp>
+    <comp ref="D10">
+      <value>yellow</value>
+      <libsource lib="pzs_devices" part="LED-CIRCLE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1C6BFD</tstamp>
+    </comp>
+    <comp ref="SW4">
+      <value>auxcontalt</value>
+      <libsource lib="pzs_others" part="auxcontalt"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1C7A72</tstamp>
+    </comp>
+    <comp ref="F2">
+      <value>F0.05A</value>
+      <libsource lib="device" part="Fuse"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CA035</tstamp>
+    </comp>
+    <comp ref="P6">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CAA50</tstamp>
+    </comp>
+    <comp ref="P5">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CB87C</tstamp>
+    </comp>
+    <comp ref="D8">
+      <value>1N4001</value>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CC812</tstamp>
+    </comp>
+    <comp ref="D9">
+      <value>1N4001</value>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CC947</tstamp>
+    </comp>
+    <comp ref="BT2">
+      <value>9V</value>
+      <fields>
+        <field name="Field4">6F22 battery</field>
+      </fields>
+      <libsource lib="device" part="Battery"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CCA80</tstamp>
+    </comp>
+    <comp ref="K1a1">
+      <value>auxcontalt</value>
+      <libsource lib="pzs_others" part="auxcontalt"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1D5FA0</tstamp>
+    </comp>
+    <comp ref="K2a1">
+      <value>auxcontalt</value>
+      <libsource lib="pzs_others" part="auxcontalt"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1D61A6</tstamp>
+    </comp>
+    <comp ref="K3a1">
+      <value>auxcontalt</value>
+      <libsource lib="pzs_others" part="auxcontalt"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1D629D</tstamp>
+    </comp>
+    <comp ref="K4a1">
+      <value>auxcontalt</value>
+      <libsource lib="pzs_others" part="auxcontalt"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1D63A1</tstamp>
+    </comp>
+    <comp ref="P8">
+      <value>screw_conn</value>
+      <libsource lib="pzs_others" part="screw_conn"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1D8D2E</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="regul" part="7805">
+      <aliases>
+        <alias>LM7805</alias>
+        <alias>LM7812</alias>
+        <alias>78L05</alias>
+      </aliases>
+      <description>Linear Regulator +5V</description>
+      <docs>regulator\lm78xx.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">7805</field>
+      </fields>
+      <pins>
+        <pin num="GND" name="GND" type="input"/>
+        <pin num="VI" name="VI" type="input"/>
+        <pin num="VO" name="VO" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Battery">
+      <description>Battery (multiple cells)</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">Battery</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X02">
+      <description>Connector, single row, 01x02</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X03">
+      <description>Connector, single row, 01x03</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X03</fp>
+        <fp>Pin_Header_Angled_1X03</fp>
+        <fp>Socket_Strip_Straight_1X03</fp>
+        <fp>Socket_Strip_Angled_1X03</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X05">
+      <description>Connector, single row, 01x05</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X05</fp>
+        <fp>Pin_Header_Angled_1X05</fp>
+        <fp>Socket_Strip_Straight_1X05</fp>
+        <fp>Socket_Strip_Angled_1X05</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X05</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="CP_Small">
+      <description>Polarised capacitor</description>
+      <footprints>
+        <fp>CP*</fp>
+        <fp>C_Axial*</fp>
+        <fp>C_Radial*</fp>
+        <fp>TantalC*</fp>
+        <fp>C*elec</fp>
+        <fp>c_elec*</fp>
+        <fp>SMD*_Pol</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="D">
+      <description>Diode</description>
+      <footprints>
+        <fp>Diode_*</fp>
+        <fp>D-*</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="DB9">
+      <footprints>
+        <fp>DB9*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">DB9</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
+        <pin num="9" name="P9" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Fuse">
+      <description>Fuse, generic</description>
+      <footprints>
+        <fp>*Fuse*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Fuse</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pzs_devices" part="LED-CIRCLE">
+      <description>LED generic</description>
+      <footprints>
+        <fp>LED*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED-CIRCLE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="Speaker_Crystal">
+      <aliases>
+        <alias>Speaker_Ultrasound</alias>
+      </aliases>
+      <description>crystal speaker/transducer</description>
+      <fields>
+        <field name="Reference">LS</field>
+        <field name="Value">Speaker_Crystal</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="pzs_others" part="auxcontalt">
+      <fields>
+        <field name="Reference">AK</field>
+        <field name="Value">auxcontalt</field>
+      </fields>
+      <pins>
+        <pin num="~" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pzs_others" part="electromagnetic_actor_1">
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">electromagnetic_actor_1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="-" type="passive"/>
+        <pin num="2" name="+" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pzs_others" part="overcurrent_breaker">
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">overcurrent_breaker</field>
+      </fields>
+      <pins>
+        <pin num="~" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pzs_others" part="screw_conn">
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">screw_conn</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pzs_others" part="transformer_1P_1S">
+      <fields>
+        <field name="Reference">Tr</field>
+        <field name="Value">transformer_1P_1S</field>
+      </fields>
+      <pins>
+        <pin num="~" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="pzs_others">
+      <uri>/home/pozsarzs/Git/mm6d/cad_files/wiring/pzs_others.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="regul">
+      <uri>/usr/share/kicad/library/regul.lib</uri>
+    </library>
+    <library logical="pzs_devices">
+      <uri>/home/pozsarzs/Git/mm6d/cad_files/wiring/pzs_devices.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(AK1-Pad~)">
+      <node ref="P101" pin="4"/>
+    </net>
+    <net code="2" name="Net-(C2-Pad1)">
+      <node ref="P103" pin="2"/>
+      <node ref="C2" pin="1"/>
+      <node ref="U1" pin="VO"/>
+    </net>
+    <net code="3" name="Net-(BT1-Pad2)">
+      <node ref="BT1" pin="2"/>
+      <node ref="P105" pin="1"/>
+    </net>
+    <net code="4" name="Net-(BT1-Pad1)">
+      <node ref="BT1" pin="1"/>
+      <node ref="P105" pin="2"/>
+    </net>
+    <net code="5" name="Net-(LS1-Pad1)">
+      <node ref="LS1" pin="1"/>
+      <node ref="P104" pin="1"/>
+    </net>
+    <net code="6" name="Net-(LS1-Pad2)">
+      <node ref="P104" pin="2"/>
+      <node ref="LS1" pin="2"/>
+    </net>
+    <net code="7" name="Net-(P102-Pad1)">
+      <node ref="P4" pin="5"/>
+      <node ref="P102" pin="1"/>
+    </net>
+    <net code="8" name="Net-(F1-Pad1)">
+      <node ref="F1" pin="1"/>
+    </net>
+    <net code="9" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1"/>
+      <node ref="D6" pin="2"/>
+    </net>
+    <net code="10" name="Net-(D1-Pad2)">
+      <node ref="R1" pin="1"/>
+      <node ref="D1" pin="2"/>
+    </net>
+    <net code="11" name="Net-(D7-Pad2)">
+      <node ref="D7" pin="2"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="12" name="Net-(D10-Pad2)">
+      <node ref="D10" pin="2"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="13" name="Net-(R3-Pad2)">
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="14" name="Net-(P101-Pad2)">
+      <node ref="P101" pin="2"/>
+    </net>
+    <net code="15" name="Net-(P102-Pad3)">
+      <node ref="P102" pin="3"/>
+      <node ref="P4" pin="2"/>
+    </net>
+    <net code="16" name="Net-(P102-Pad2)">
+      <node ref="P4" pin="3"/>
+      <node ref="P102" pin="2"/>
+    </net>
+    <net code="17" name="Net-(K2-Pad2)">
+      <node ref="P106" pin="2"/>
+      <node ref="K2" pin="2"/>
+    </net>
+    <net code="18" name="Net-(P101-Pad3)">
+      <node ref="P101" pin="3"/>
+      <node ref="SW1b1" pin="~"/>
+    </net>
+    <net code="19" name="Net-(SW1b1-Pad~)">
+      <node ref="SW2b1" pin="~"/>
+      <node ref="SW1b1" pin="~"/>
+    </net>
+    <net code="20" name="Net-(SW2b1-Pad~)">
+      <node ref="SW2b1" pin="~"/>
+      <node ref="SW3b1" pin="~"/>
+    </net>
+    <net code="21" name="Net-(D2-Pad2)">
+      <node ref="D3" pin="1"/>
+      <node ref="Tr1" pin="~"/>
+      <node ref="D2" pin="2"/>
+    </net>
+    <net code="22" name="GND">
+      <node ref="P7" pin="1"/>
+      <node ref="D7" pin="1"/>
+      <node ref="D11" pin="1"/>
+      <node ref="D3" pin="2"/>
+      <node ref="P101" pin="1"/>
+      <node ref="D10" pin="1"/>
+      <node ref="BT2" pin="2"/>
+      <node ref="P5" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="P103" pin="1"/>
+      <node ref="SW1a1" pin="~"/>
+      <node ref="D5" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="U1" pin="GND"/>
+    </net>
+    <net code="23" name="Net-(D11-Pad2)">
+      <node ref="D11" pin="2"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="24" name="Net-(AK1-Pad~)">
+      <node ref="AK1" pin="~"/>
+      <node ref="R4" pin="2"/>
+    </net>
+    <net code="25" name="+12V">
+      <node ref="P106" pin="1"/>
+      <node ref="F4" pin="1"/>
+    </net>
+    <net code="26" name="Net-(AK1-Pad~)">
+      <node ref="AK2" pin="~"/>
+      <node ref="AK1" pin="~"/>
+    </net>
+    <net code="27" name="Net-(AK2-Pad~)">
+      <node ref="AK3" pin="~"/>
+      <node ref="AK2" pin="~"/>
+    </net>
+    <net code="28" name="Net-(F5-Pad1)">
+      <node ref="F5" pin="1"/>
+      <node ref="U1" pin="VI"/>
+    </net>
+    <net code="29" name="Net-(C1-Pad1)">
+      <node ref="F5" pin="2"/>
+      <node ref="C1" pin="1"/>
+      <node ref="F4" pin="2"/>
+      <node ref="F3" pin="2"/>
+      <node ref="D4" pin="1"/>
+      <node ref="D2" pin="1"/>
+    </net>
+    <net code="30" name="Net-(D4-Pad2)">
+      <node ref="Tr1" pin="~"/>
+      <node ref="D4" pin="2"/>
+      <node ref="D5" pin="1"/>
+    </net>
+    <net code="31" name="Net-(F1-Pad2)">
+      <node ref="R1" pin="2"/>
+      <node ref="P1" pin="1"/>
+      <node ref="F1" pin="2"/>
+    </net>
+    <net code="32" name="Net-(P10-Pad1)">
+      <node ref="P3" pin="1"/>
+      <node ref="P16" pin="1"/>
+      <node ref="P13" pin="1"/>
+      <node ref="P10" pin="1"/>
+    </net>
+    <net code="33" name="Net-(D6-Pad1)">
+      <node ref="P17" pin="1"/>
+      <node ref="P14" pin="1"/>
+      <node ref="P11" pin="1"/>
+      <node ref="Tr1" pin="~"/>
+      <node ref="D6" pin="1"/>
+      <node ref="P2" pin="1"/>
+    </net>
+    <net code="34" name="Net-(K4a1-Pad~)">
+      <node ref="P18" pin="1"/>
+    </net>
+    <net code="35" name="Net-(K3a1-Pad~)">
+      <node ref="P15" pin="1"/>
+    </net>
+    <net code="36" name="Net-(K2a1-Pad~)">
+      <node ref="P12" pin="1"/>
+    </net>
+    <net code="37" name="Net-(K1-Pad2)">
+      <node ref="P106" pin="5"/>
+      <node ref="K1" pin="2"/>
+    </net>
+    <net code="38" name="Net-(K4-Pad2)">
+      <node ref="SW3a1" pin="~"/>
+      <node ref="K4" pin="2"/>
+      <node ref="P106" pin="4"/>
+    </net>
+    <net code="39" name="Net-(K3-Pad2)">
+      <node ref="SW2a1" pin="~"/>
+      <node ref="K3" pin="2"/>
+      <node ref="P106" pin="3"/>
+    </net>
+    <net code="40" name="Net-(AK3-Pad~)">
+      <node ref="R2" pin="2"/>
+      <node ref="SW3b1" pin="~"/>
+      <node ref="D8" pin="2"/>
+      <node ref="K2" pin="1"/>
+      <node ref="K1" pin="1"/>
+      <node ref="F3" pin="1"/>
+      <node ref="K4" pin="1"/>
+      <node ref="AK3" pin="~"/>
+      <node ref="K3" pin="1"/>
+      <node ref="SW4" pin="~"/>
+    </net>
+    <net code="41" name="Net-(P4-Pad8)">
+      <node ref="P4" pin="8"/>
+    </net>
+    <net code="42" name="Net-(P4-Pad7)">
+      <node ref="P4" pin="7"/>
+    </net>
+    <net code="43" name="Net-(P4-Pad6)">
+      <node ref="P4" pin="6"/>
+    </net>
+    <net code="44" name="Net-(P4-Pad4)">
+      <node ref="P4" pin="4"/>
+    </net>
+    <net code="45" name="Net-(P4-Pad1)">
+      <node ref="P4" pin="1"/>
+    </net>
+    <net code="46" name="Net-(P4-Pad9)">
+      <node ref="P4" pin="9"/>
+    </net>
+    <net code="47" name="Net-(P101-Pad5)">
+      <node ref="P101" pin="5"/>
+    </net>
+    <net code="48" name="Net-(K1a1-Pad~)">
+      <node ref="K1a1" pin="~"/>
+      <node ref="P9" pin="1"/>
+    </net>
+    <net code="49" name="Net-(F8-Pad~)">
+      <node ref="F8" pin="~"/>
+      <node ref="K4a1" pin="~"/>
+    </net>
+    <net code="50" name="Net-(K3a1-Pad~)">
+      <node ref="K3a1" pin="~"/>
+    </net>
+    <net code="51" name="Net-(F7-Pad~)">
+      <node ref="K3a1" pin="~"/>
+      <node ref="F7" pin="~"/>
+    </net>
+    <net code="52" name="Net-(K2a1-Pad~)">
+      <node ref="K2a1" pin="~"/>
+    </net>
+    <net code="53" name="Net-(F6-Pad~)">
+      <node ref="F6" pin="~"/>
+      <node ref="K2a1" pin="~"/>
+    </net>
+    <net code="54" name="Net-(K4a1-Pad~)">
+      <node ref="K4a1" pin="~"/>
+    </net>
+    <net code="55" name="Net-(BT2-Pad1)">
+      <node ref="BT2" pin="1"/>
+      <node ref="D9" pin="2"/>
+    </net>
+    <net code="56" name="Net-(D8-Pad1)">
+      <node ref="D9" pin="1"/>
+      <node ref="D8" pin="1"/>
+      <node ref="F2" pin="1"/>
+    </net>
+    <net code="57" name="Net-(F2-Pad2)">
+      <node ref="P6" pin="1"/>
+      <node ref="F2" pin="2"/>
+    </net>
+    <net code="58" name="Net-(K1a1-Pad~)">
+      <node ref="P8" pin="1"/>
+      <node ref="K1a1" pin="~"/>
+    </net>
+    <net code="59" name="Net-(SW3a1-Pad~)">
+      <node ref="SW3a1" pin="~"/>
+    </net>
+    <net code="60" name="Net-(SW2a1-Pad~)">
+      <node ref="SW2a1" pin="~"/>
+    </net>
+    <net code="61" name="Net-(SW1a1-Pad~)">
+      <node ref="SW1a1" pin="~"/>
+    </net>
+    <net code="62" name="Net-(SW4-Pad~)">
+      <node ref="SW4" pin="~"/>
+    </net>
+  </nets>
+</export>
