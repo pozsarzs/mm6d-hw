@@ -1,6 +1,6 @@
 Source,/home/pozsarzs/Git/mm6d/cad_files/mm6d/mm6d.sch
 Kicad Rev,Eeschema 4.0.5+dfsg1-4
-Generated Date,2020. júl. 24., péntek, 21:18:39 CEST
+Generated Date,2020. júl. 27., hétfő, 08:05:20 CEST
 
 Title,MM6D Remote controlled switching device
 Company,Pozsar Zsolt - http://www.szerafingomba.hu
@@ -63,3 +63,4 @@ Q101,BC182,device,Q_NPN_EBC
 Q102,BC182,device,Q_NPN_EBC
 Q103,BC182,device,Q_NPN_EBC
 Q104,BC182,device,Q_NPN_EBC
+R118,1.8k,device,R

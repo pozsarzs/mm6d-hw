@@ -818,7 +818,7 @@ Wire Wire Line
 Wire Wire Line
 	4600 5350 4000 5350
 Wire Wire Line
-	4600 2650 4600 5350
+	4600 2650 4600 5550
 Wire Wire Line
 	4000 3050 4150 3050
 Wire Wire Line
@@ -1187,4 +1187,29 @@ Text Notes 6150 5650 0    60   ~ 0
 Activity
 Wire Wire Line
 	9150 2200 9150 5050
+$Comp
+L R R118
+U 1 1 5F1E719C
+P 4600 5700
+F 0 "R118" V 4725 5675 50  0000 C CNN
+F 1 "1.8k" V 4475 5675 50  0000 C CNN
+F 2 "Discret:R3" V 4530 5700 50  0001 C CNN
+F 3 "" H 4600 5700 50  0000 C CNN
+	1    4600 5700
+	-1   0    0    1   
+$EndComp
+Connection ~ 4600 5350
+$Comp
+L pzs_others:0V #PWR?
+U 1 1 5F1E7647
+P 4600 6000
+F 0 "#PWR?" H 4600 5750 50  0001 C CNN
+F 1 "0V" H 4600 5850 50  0001 C CNN
+F 2 "" H 4600 6000 50  0000 C CNN
+F 3 "" H 4600 6000 50  0000 C CNN
+	1    4600 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 5850 4600 6000
 $EndSCHEMATC

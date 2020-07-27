@@ -17,7 +17,7 @@
 #include <WiFiClient.h>
 
 // settings
-const char* wifi_ssid       = "";
+const char* wifi_ssid       = "SzerafinGomba";
 const char* wifi_password   = "";
 const String www_username   = "";
 const String allowedaddress = "";
@@ -52,7 +52,7 @@ const String msg10          = "  subnet mask:        ";
 const String msg11          = "  gateway IP address: ";
 const String msg12          = "* Starting webserver...";
 const String msg13          = "* HTTP request received from: ";
-const String msg14          = "* E06: Control timeout error!";
+const String msg14          = "* E01: Control timeout error!";
 const String msg15          = "";
 const String msg16          = "MM6D";
 const String msg17          = "Authentication error!";
@@ -526,12 +526,12 @@ void loop(void)
   {
     timeout = 1;
     digitalWrite(prt_led_blue, HIGH);
+    Serial.print(msg14);
   } else
   {
     timeout = 0;
     digitalWrite(prt_led_blue, LOW);
   }   
-  Serial.print(msg14);
   portread();
   adcvalue = analogRead(prt_in_adc);
   delay(100);
