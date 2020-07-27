@@ -17,7 +17,7 @@
 #include <WiFiClient.h>
 
 // settings
-const char* wifi_ssid       = "SzerafinGomba";
+const char* wifi_ssid       = "";
 const char* wifi_password   = "";
 const String www_username   = "";
 const String allowedaddress = "";
@@ -61,7 +61,7 @@ const String msg19          = "Not allowed client IP address!";
 const String msg20          = "* E04: Not allowed client IP address!";
 const String msg21          = "Page not found!";
 const String msg22          = "* E05: Page not found!";
-const String msg23          = "";
+const String msg23          = "* E02: Overcurrent protection error!";
 const String msg24          = "";
 const String msg25          = "";
 const String msg26          = "";
@@ -180,7 +180,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
-        prevtime = millis()
+        prevtime = millis();
         line = String((int)alarm) + "\n" + String((int)opmode) + "\n" +  String((int)swmanu) + "\n" + String((int)ocprot);
         server.send(200, "text/plain", line);
       } else
@@ -206,7 +206,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
-        prevtime = millis()
+        prevtime = millis();
         line = String((int)alarm);
         server.send(200, "text/plain", line);
       } else
@@ -232,7 +232,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
-        prevtime = millis()
+        prevtime = millis();
         line = String((int)opmode);
         server.send(200, "text/plain", line);
       } else
@@ -258,7 +258,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
-        prevtime = millis()
+        prevtime = millis();
         line = String((int)swmanu);
         server.send(200, "text/plain", line);
       } else
@@ -284,7 +284,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
-        prevtime = millis()
+        prevtime = millis();
         line = String((int)ocprot);
         server.send(200, "text/plain", line);
       } else
@@ -310,7 +310,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
-        prevtime = millis()
+        prevtime = millis();
         heat = 0;
         lamp = 0;
         vent = 0;
@@ -338,7 +338,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
-        prevtime = millis()
+        prevtime = millis();
         alarm = 0;
         server.send(200, "text/plain", "* Alarm input is restored.");
       } else
@@ -364,7 +364,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
-        prevtime = millis()
+        prevtime = millis();
         heat = 0;
         server.send(200, "text/plain", "* Heater is switched off.");
       } else
@@ -390,7 +390,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
-        prevtime = millis()
+        prevtime = millis();
         heat = 1;
         server.send(200, "text/plain", "* Heater is switched on.");
       } else
@@ -416,7 +416,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
-        prevtime = millis()
+        prevtime = millis();
         lamp = 0;
         server.send(200, "text/plain", "* Lamp is switched off.");
       } else
@@ -442,7 +442,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
-        prevtime = millis()
+        prevtime = millis();
         lamp = 1;
         server.send(200, "text/plain", "* Lamp is switched on.");
       } else
@@ -468,7 +468,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
-        prevtime = millis()
+        prevtime = millis();
         vent = 0;
         server.send(200, "text/plain", "* Ventilator is switched off.");
       } else
@@ -494,7 +494,7 @@ void setup(void)
     {
       if (checkusername() == 1)
       {
-        prevtime = millis()
+        prevtime = millis();
         vent = 1;
         server.send(200, "text/plain", "* Ventilator is switched on.");
       } else
@@ -531,19 +531,27 @@ void loop(void)
   {
     timeout = 0;
     digitalWrite(prt_led_blue, LOW);
-  }   
+  }
   portread();
   adcvalue = analogRead(prt_in_adc);
   delay(100);
+  // alarm
   if ((adcvalue < alarmminlevel) || (adcvalue > alarmmaxlevel))
   {
     alarm = 1;
   }
+  // warning and error
   error = 0;
   if ((swmanu == 1) || (ocprot == 1) || (alarm == 1) || (timeout == 1))
   {
     error = 1;
   }
+  // error message
+  if (ocprot == 1)
+  {
+    Serial.println(msg23);
+  }
+  // error sound
   if ((ocprot == 1) || (alarm == 1))
   {
     beep();
