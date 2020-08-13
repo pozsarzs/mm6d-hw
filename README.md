@@ -22,5 +22,6 @@ GitHub: <https://github.com/pozsarzs/mm6d>
  - version:            v0.1
  - language:           en
  - licence:            EUPL v1.1
+ - user interface:     CUI via serial console and webpage
 
 *WARNING! It is not yet useable, because it is under development. WARNING!*  
