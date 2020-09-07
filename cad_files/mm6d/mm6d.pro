@@ -1,4 +1,4 @@
-update=2020. júl. 24., péntek, 21:19:54 CEST
+update=2020. szept.  7., hétfő, 20:55:29 CEST
 version=1
 last_client=kicad
 [pcbnew]

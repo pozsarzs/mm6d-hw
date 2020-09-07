@@ -10,75 +10,73 @@ Comment,Internal wiring
 Comment,Draw no.: 59/11/8
 
 Reference,Value,Field4,Library,Library Ref
-P101,CONN_01X05,conn,CONN_01X05
-P104,CONN_01X02,conn,CONN_01X02
-P105,CONN_01X02,conn,CONN_01X02
-P103,CONN_01X02,conn,CONN_01X02
-P102,CONN_01X03,conn,CONN_01X03
-P106,CONN_01X05,conn,CONN_01X05
-P4,DB9,conn,DB9
-P1,screw_conn,pzs_others,screw_conn
-P2,screw_conn,pzs_others,screw_conn
-P3,screw_conn,pzs_others,screw_conn
-R1,47k,device,R
-D6,1N4007,device,D
+AK4,auxcontalt,pzs_others,auxcontalt
+AK5,auxcontalt,pzs_others,auxcontalt
+AK6,auxcontalt,pzs_others,auxcontalt
+BT1,3.7V 500mAh,LiPoly accumulator,device,Battery
+BT2,9V,6F22 battery,device,Battery
+C1,1000u,device,CP_Small
+C2,1u Ta,device,CP_Small
 D1,white,pzs_devices,LED-CIRCLE
-F6,B2A,pzs_others,overcurrent_breaker
-F7,B2A,pzs_others,overcurrent_breaker
-F8,B10A,pzs_others,overcurrent_breaker
-K1,Finder 40.52,12V  650mW,pzs_others,electromagnetic_actor_1
-P18,screw_conn,pzs_others,screw_conn
-P15,screw_conn,pzs_others,screw_conn
-P12,screw_conn,pzs_others,screw_conn
-P9,screw_conn,pzs_others,screw_conn
-P17,screw_conn,pzs_others,screw_conn
-P16,screw_conn,pzs_others,screw_conn
-P14,screw_conn,pzs_others,screw_conn
-P13,screw_conn,pzs_others,screw_conn
-P11,screw_conn,pzs_others,screw_conn
-P10,screw_conn,pzs_others,screw_conn
-P7,screw_conn,pzs_others,screw_conn
-AK3,auxcontalt,pzs_others,auxcontalt
-AK1,auxcontalt,pzs_others,auxcontalt
-AK2,auxcontalt,pzs_others,auxcontalt
-R4,1,5k,device,R
-D11,red,pzs_devices,LED-CIRCLE
-Tr1,230/12V 20VA,pzs_others,transformer_1P_1S
 D2,D,device,D
 D3,D,device,D
 D4,D,device,D
 D5,D,device,D
-C1,1000u,device,CP_Small
-F4,F0.5A,device,Fuse
-U1,7805,regul,7805
-F3,T0.5A,device,Fuse
-C2,1u Ta,device,CP_Small
-F5,F0.8A,device,Fuse
-F1,Fuse,device,Fuse
-R2,1.5k,device,R
+D6,1N4007,device,D
 D7,white,pzs_devices,LED-CIRCLE
+D8,1N4001,device,D
+D9,1N4001,device,D
+D10,yellow,pzs_devices,LED-CIRCLE
+D11,red,pzs_devices,LED-CIRCLE
+F1,0.5A,device,Fuse
+F2,0.5A,device,Fuse
+F3,0.5A,device,Fuse
+F4,B2A,pzs_others,overcurrent_breaker
+F5,B2A,pzs_others,overcurrent_breaker
+F6,B10A,pzs_others,overcurrent_breaker
+K1a,auxcontalt,pzs_others,auxcontalt
+K1,Finder 40.51.9.012.0000,pzs_others,electromagnetic_actor_1
+K2a,auxcontalt,pzs_others,auxcontalt
+K2,Finder 40.51.9.012.0000,pzs_others,electromagnetic_actor_1
+K3a,auxcontalt,pzs_others,auxcontalt
+K3,Finder 40.51.9.012.0000,pzs_others,electromagnetic_actor_1
+K4a,auxcontalt,pzs_others,auxcontalt
+K4,Finder 40.51.9.012.0000,pzs_others,electromagnetic_actor_1
+LS1,Piezo speaker,device,Speaker_Ultrasound
+P1,screw_conn,pzs_others,screw_conn
+P2,screw_conn,pzs_others,screw_conn
+P3,screw_conn,pzs_others,screw_conn
+P4,DB9,conn,DB9
+P5,screw_conn,pzs_others,screw_conn
+P6,screw_conn,pzs_others,screw_conn
+P7,screw_conn,pzs_others,screw_conn
+P8,screw_conn,pzs_others,screw_conn
+P9,screw_conn,pzs_others,screw_conn
+P10,screw_conn,pzs_others,screw_conn
+P11,screw_conn,pzs_others,screw_conn
+P12,screw_conn,pzs_others,screw_conn
+P13,screw_conn,pzs_others,screw_conn
+P14,screw_conn,pzs_others,screw_conn
+P15,screw_conn,pzs_others,screw_conn
+P16,screw_conn,pzs_others,screw_conn
+P17,screw_conn,pzs_others,screw_conn
+P18,screw_conn,pzs_others,screw_conn
+P19,CONN_01X05,conn,CONN_01X05
+P101,CONN_01X05,conn,CONN_01X05
+P102,CONN_01X03,conn,CONN_01X03
+P103,CONN_01X02,conn,CONN_01X02
+P104,CONN_01X02,conn,CONN_01X02
+P105,CONN_01X02,conn,CONN_01X02
+P106,CONN_01X05,conn,CONN_01X05
+R1,47k,device,R
+R2,1.5k,device,R
+R3,1,5k,device,R
+R4,1,5k,device,R
 SW1a,auxcontalt,pzs_others,auxcontalt
 SW1b,auxcontalt,pzs_others,auxcontalt
 SW2a,auxcontalt,pzs_others,auxcontalt
 SW2b,auxcontalt,pzs_others,auxcontalt
 SW3a,auxcontalt,pzs_others,auxcontalt
 SW3b,auxcontalt,pzs_others,auxcontalt
-BT1,3.7V 500mAh,LiPoly accumulator,device,Battery
-LS1,Piezo speaker,device,Speaker_Ultrasound
-K2,Finder 40.52,12V  650mW,pzs_others,electromagnetic_actor_1
-K3,Finder 40.52,12V  650mW,pzs_others,electromagnetic_actor_1
-K4,Finder 40.51,12V  650mW,pzs_others,electromagnetic_actor_1
-R3,1,5k,device,R
-D10,yellow,pzs_devices,LED-CIRCLE
 SW4,auxcontalt,pzs_others,auxcontalt
-F2,F0.05A,device,Fuse
-P6,screw_conn,pzs_others,screw_conn
-P5,screw_conn,pzs_others,screw_conn
-D8,1N4001,device,D
-D9,1N4001,device,D
-BT2,9V,6F22 battery,device,Battery
-K1a,auxcontalt,pzs_others,auxcontalt
-K2a,auxcontalt,pzs_others,auxcontalt
-K3a,auxcontalt,pzs_others,auxcontalt
-K4a,auxcontalt,pzs_others,auxcontalt
-P8,screw_conn,pzs_others,screw_conn
+U2,7805,regul,7805
