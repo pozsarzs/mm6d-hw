@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/pozsarzs/Git/mm6d-hw/cad_files/display/display.sch</source>
+    <date>2020. okt. 26., hétfő, 10:14:57 CET</date>
+    <tool>Eeschema 4.0.5+dfsg1-4</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>MM6D Remote controlled switching device</title>
+        <company>Pozsar Zsolt - http://www.szerafingomba.hu</company>
+        <rev>200612</rev>
+        <date>2020-06-12</date>
+        <source>display.sch</source>
+        <comment number="1" value="Display board"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value="Draw no.: 59/11/4"/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="R201">
+      <value>47k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AEEAF</tstamp>
+    </comp>
+    <comp ref="D212">
+      <value>1N4007</value>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AEFFD</tstamp>
+    </comp>
+    <comp ref="D201">
+      <value>white</value>
+      <libsource lib="pzs_devices" part="LED-CIRCLE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1AF03C</tstamp>
+    </comp>
+    <comp ref="R208">
+      <value>1,5k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BBBB6</tstamp>
+    </comp>
+    <comp ref="D207">
+      <value>red</value>
+      <libsource lib="pzs_devices" part="LED-CIRCLE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1BBBBC</tstamp>
+    </comp>
+    <comp ref="R203">
+      <value>1.5k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1C190A</tstamp>
+    </comp>
+    <comp ref="D203">
+      <value>white</value>
+      <libsource lib="pzs_devices" part="LED-CIRCLE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1C1910</tstamp>
+    </comp>
+    <comp ref="R207">
+      <value>1,5k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1C6BF7</tstamp>
+    </comp>
+    <comp ref="D208">
+      <value>yellow</value>
+      <libsource lib="pzs_devices" part="LED-CIRCLE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1C6BFD</tstamp>
+    </comp>
+    <comp ref="D210">
+      <value>1N4001</value>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CC812</tstamp>
+    </comp>
+    <comp ref="D211">
+      <value>1N4001</value>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CC947</tstamp>
+    </comp>
+    <comp ref="BT201">
+      <value>9V</value>
+      <fields>
+        <field name="Field4">6F22</field>
+      </fields>
+      <libsource lib="device" part="Battery"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F1CCA80</tstamp>
+    </comp>
+    <comp ref="P201">
+      <value>CONN_01X02</value>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F81A1FB</tstamp>
+    </comp>
+    <comp ref="D209">
+      <value>blue</value>
+      <libsource lib="pzs_devices" part="LED-CIRCLE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F81AC4E</tstamp>
+    </comp>
+    <comp ref="R206">
+      <value>1,5k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F7E9A89</tstamp>
+    </comp>
+    <comp ref="D206">
+      <value>green</value>
+      <libsource lib="pzs_devices" part="LED-CIRCLE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F7E9A8F</tstamp>
+    </comp>
+    <comp ref="R205">
+      <value>1,5k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F7E9BE3</tstamp>
+    </comp>
+    <comp ref="D205">
+      <value>green</value>
+      <libsource lib="pzs_devices" part="LED-CIRCLE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F7E9BE9</tstamp>
+    </comp>
+    <comp ref="R204">
+      <value>1,5k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F7E9D3D</tstamp>
+    </comp>
+    <comp ref="D204">
+      <value>green</value>
+      <libsource lib="pzs_devices" part="LED-CIRCLE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F7E9D43</tstamp>
+    </comp>
+    <comp ref="D202">
+      <value>red</value>
+      <libsource lib="pzs_devices" part="LED-CIRCLE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F7F615E</tstamp>
+    </comp>
+    <comp ref="R202">
+      <value>1.5k</value>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F7F6998</tstamp>
+    </comp>
+    <comp ref="P205">
+      <value>CONN_01X02</value>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F95DF9F</tstamp>
+    </comp>
+    <comp ref="P204">
+      <value>CONN_01X06</value>
+      <libsource lib="conn" part="CONN_01X06"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F95E0A1</tstamp>
+    </comp>
+    <comp ref="P203">
+      <value>CONN_01X01</value>
+      <libsource lib="conn" part="CONN_01X01"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F95EDE5</tstamp>
+    </comp>
+    <comp ref="P206">
+      <value>CONN_01X03</value>
+      <libsource lib="conn" part="CONN_01X03"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F969BAC</tstamp>
+    </comp>
+    <comp ref="P207">
+      <value>CONN_01X03</value>
+      <libsource lib="conn" part="CONN_01X03"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F969DAF</tstamp>
+    </comp>
+    <comp ref="P208">
+      <value>CONN_01X01</value>
+      <libsource lib="conn" part="CONN_01X01"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F96B08E</tstamp>
+    </comp>
+    <comp ref="P209">
+      <value>CONN_01X01</value>
+      <libsource lib="conn" part="CONN_01X01"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F96B12A</tstamp>
+    </comp>
+    <comp ref="P202">
+      <value>CONN_01X01</value>
+      <libsource lib="conn" part="CONN_01X01"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F96D0B3</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="device" part="Battery">
+      <description>Battery (multiple cells)</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">Battery</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X01">
+      <description>Connector, single row, 01x01</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X01</fp>
+        <fp>Pin_Header_Angled_1X01</fp>
+        <fp>Socket_Strip_Straight_1X01</fp>
+        <fp>Socket_Strip_Angled_1X01</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X01</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X02">
+      <description>Connector, single row, 01x02</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X03">
+      <description>Connector, single row, 01x03</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X03</fp>
+        <fp>Pin_Header_Angled_1X03</fp>
+        <fp>Socket_Strip_Straight_1X03</fp>
+        <fp>Socket_Strip_Angled_1X03</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X06">
+      <description>Connector, single row, 01x06</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X06</fp>
+        <fp>Pin_Header_Angled_1X06</fp>
+        <fp>Socket_Strip_Straight_1X06</fp>
+        <fp>Socket_Strip_Angled_1X06</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X06</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="D">
+      <description>Diode</description>
+      <footprints>
+        <fp>Diode_*</fp>
+        <fp>D-*</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pzs_devices" part="LED-CIRCLE">
+      <description>LED generic</description>
+      <footprints>
+        <fp>LED*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED-CIRCLE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="pzs_devices">
+      <uri>/home/pozsarzs/Git/mm6d-hw/cad_files/display/pzs_devices.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(D204-Pad1)">
+      <node ref="P204" pin="1"/>
+      <node ref="P204" pin="2"/>
+      <node ref="D204" pin="1"/>
+    </net>
+    <net code="2" name="Net-(D205-Pad1)">
+      <node ref="D205" pin="1"/>
+      <node ref="P204" pin="4"/>
+      <node ref="P204" pin="3"/>
+    </net>
+    <net code="3" name="Net-(D206-Pad1)">
+      <node ref="P204" pin="6"/>
+      <node ref="D206" pin="1"/>
+      <node ref="P204" pin="5"/>
+    </net>
+    <net code="4" name="Net-(D212-Pad2)">
+      <node ref="P205" pin="2"/>
+      <node ref="D212" pin="2"/>
+    </net>
+    <net code="5" name="Net-(D201-Pad1)">
+      <node ref="D201" pin="1"/>
+      <node ref="P205" pin="1"/>
+    </net>
+    <net code="6" name="Net-(D202-Pad2)">
+      <node ref="R202" pin="1"/>
+      <node ref="D202" pin="2"/>
+    </net>
+    <net code="7" name="Net-(D202-Pad1)">
+      <node ref="D202" pin="1"/>
+      <node ref="P203" pin="1"/>
+    </net>
+    <net code="8" name="Net-(D212-Pad1)">
+      <node ref="R201" pin="2"/>
+      <node ref="D212" pin="1"/>
+    </net>
+    <net code="9" name="Net-(P208-Pad1)">
+      <node ref="P208" pin="1"/>
+      <node ref="R207" pin="1"/>
+    </net>
+    <net code="10" name="Net-(P209-Pad1)">
+      <node ref="P209" pin="1"/>
+      <node ref="R208" pin="2"/>
+    </net>
+    <net code="11" name="Net-(D209-Pad2)">
+      <node ref="D209" pin="2"/>
+      <node ref="P201" pin="2"/>
+    </net>
+    <net code="12" name="Net-(D210-Pad1)">
+      <node ref="D211" pin="1"/>
+      <node ref="D210" pin="1"/>
+      <node ref="P202" pin="1"/>
+    </net>
+    <net code="13" name="Net-(BT201-Pad1)">
+      <node ref="BT201" pin="1"/>
+      <node ref="D211" pin="2"/>
+    </net>
+    <net code="14" name="Net-(D209-Pad1)">
+      <node ref="P201" pin="1"/>
+      <node ref="D209" pin="1"/>
+    </net>
+    <net code="15" name="/+12V">
+      <node ref="R204" pin="2"/>
+      <node ref="R205" pin="2"/>
+      <node ref="R203" pin="2"/>
+      <node ref="P206" pin="3"/>
+      <node ref="P206" pin="2"/>
+      <node ref="P206" pin="1"/>
+      <node ref="D210" pin="2"/>
+      <node ref="R206" pin="2"/>
+      <node ref="R202" pin="2"/>
+    </net>
+    <net code="16" name="Net-(D206-Pad2)">
+      <node ref="D206" pin="2"/>
+      <node ref="R206" pin="1"/>
+    </net>
+    <net code="17" name="Net-(D205-Pad2)">
+      <node ref="R205" pin="1"/>
+      <node ref="D205" pin="2"/>
+    </net>
+    <net code="18" name="Net-(D201-Pad2)">
+      <node ref="R201" pin="1"/>
+      <node ref="D201" pin="2"/>
+    </net>
+    <net code="19" name="Net-(D204-Pad2)">
+      <node ref="R204" pin="1"/>
+      <node ref="D204" pin="2"/>
+    </net>
+    <net code="20" name="Net-(D203-Pad2)">
+      <node ref="D203" pin="2"/>
+      <node ref="R203" pin="1"/>
+    </net>
+    <net code="21" name="Net-(D207-Pad2)">
+      <node ref="R207" pin="2"/>
+      <node ref="D207" pin="2"/>
+    </net>
+    <net code="22" name="Net-(D208-Pad2)">
+      <node ref="R208" pin="1"/>
+      <node ref="D208" pin="2"/>
+    </net>
+    <net code="23" name="Net-(BT201-Pad2)">
+      <node ref="P207" pin="3"/>
+      <node ref="D208" pin="1"/>
+      <node ref="D203" pin="1"/>
+      <node ref="P207" pin="1"/>
+      <node ref="BT201" pin="2"/>
+      <node ref="P207" pin="2"/>
+      <node ref="D207" pin="1"/>
+    </net>
+  </nets>
+</export>

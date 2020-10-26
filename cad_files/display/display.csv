@@ -1,0 +1,42 @@
+Source,/home/pozsarzs/Git/mm6d-hw/cad_files/display/display.sch
+Kicad Rev,Eeschema 4.0.5+dfsg1-4
+Generated Date,2020. okt. 26., hétfő, 10:14:57 CET
+
+Title,MM6D Remote controlled switching device
+Company,Pozsar Zsolt - http://www.szerafingomba.hu
+Revision,200612
+Date Issue,2020-06-12
+Comment,Display board
+Comment,Draw no.: 59/11/4
+
+Reference,Value,Field4,Library,Library Ref
+R201,47k,device,R
+D212,1N4007,device,D
+D201,white,pzs_devices,LED-CIRCLE
+R208,1,5k,device,R
+D207,red,pzs_devices,LED-CIRCLE
+R203,1.5k,device,R
+D203,white,pzs_devices,LED-CIRCLE
+R207,1,5k,device,R
+D208,yellow,pzs_devices,LED-CIRCLE
+D210,1N4001,device,D
+D211,1N4001,device,D
+BT201,9V,6F22,device,Battery
+P201,CONN_01X02,conn,CONN_01X02
+D209,blue,pzs_devices,LED-CIRCLE
+R206,1,5k,device,R
+D206,green,pzs_devices,LED-CIRCLE
+R205,1,5k,device,R
+D205,green,pzs_devices,LED-CIRCLE
+R204,1,5k,device,R
+D204,green,pzs_devices,LED-CIRCLE
+D202,red,pzs_devices,LED-CIRCLE
+R202,1.5k,device,R
+P205,CONN_01X02,conn,CONN_01X02
+P204,CONN_01X06,conn,CONN_01X06
+P203,CONN_01X01,conn,CONN_01X01
+P206,CONN_01X03,conn,CONN_01X03
+P207,CONN_01X03,conn,CONN_01X03
+P208,CONN_01X01,conn,CONN_01X01
+P209,CONN_01X01,conn,CONN_01X01
+P202,CONN_01X01,conn,CONN_01X01
