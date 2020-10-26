@@ -195,7 +195,7 @@ F 1 "CONN_01X02" V 3725 1850 50  0001 C CNN
 F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 3625 1850 50  0001 C CNN
 F 3 "" H 3625 1850 50  0000 C CNN
 	1    3625 1850
-	0    -1   -1   0   
+	0    1    -1   0   
 $EndComp
 $Comp
 L LED-CIRCLE D209
@@ -370,17 +370,6 @@ Wire Wire Line
 Wire Wire Line
 	6425 2500 6525 2500
 $Comp
-L CONN_01X02 P205
-U 1 1 5F95DF9F
-P 6475 1850
-F 0 "P205" V 6600 1825 50  0000 C CNN
-F 1 "CONN_01X02" V 6575 1850 50  0001 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 6475 1850 50  0001 C CNN
-F 3 "" H 6475 1850 50  0000 C CNN
-	1    6475 1850
-	0    -1   -1   0   
-$EndComp
-$Comp
 L CONN_01X06 P204
 U 1 1 5F95E0A1
 P 4675 1850
@@ -438,9 +427,7 @@ Wire Wire Line
 Wire Wire Line
 	4950 2500 4950 2275
 Wire Wire Line
-	4950 2275 6425 2275
-Wire Wire Line
-	6425 2275 6425 2050
+	4950 2275 6325 2275
 $Comp
 L CONN_01X03 P206
 U 1 1 5F969BAC
@@ -515,7 +502,7 @@ Wire Wire Line
 Wire Wire Line
 	6775 2050 6775 5275
 Wire Wire Line
-	4225 5025 4225 3050
+	4225 3050 4225 5025
 Wire Wire Line
 	7425 5525 5925 5525
 Connection ~ 7425 5025
@@ -540,4 +527,17 @@ Text Label 6775 2450 1    50   ~ 0
 +12V
 Wire Wire Line
 	7425 2050 7425 5525
+$Comp
+L CONN_01X03 P205
+U 1 1 5F96B4A5
+P 6425 1850
+F 0 "P205" V 6550 1850 50  0000 C CNN
+F 1 "CONN_01X03" V 6525 1850 50  0001 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x03" H 6425 1850 50  0001 C CNN
+F 3 "" H 6425 1850 50  0000 C CNN
+	1    6425 1850
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	6325 2275 6325 2050
 $EndSCHEMATC

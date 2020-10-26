@@ -1,6 +1,6 @@
 Source,/home/pozsarzs/Git/mm6d-hw/cad_files/display/display.sch
 Kicad Rev,Eeschema 4.0.5+dfsg1-4
-Generated Date,2020. okt. 26., hétfő, 10:14:57 CET
+Generated Date,2020. okt. 26., hétfő, 12:19:54 CET
 
 Title,MM6D Remote controlled switching device
 Company,Pozsar Zsolt - http://www.szerafingomba.hu
@@ -32,7 +32,6 @@ R204,1,5k,device,R
 D204,green,pzs_devices,LED-CIRCLE
 D202,red,pzs_devices,LED-CIRCLE
 R202,1.5k,device,R
-P205,CONN_01X02,conn,CONN_01X02
 P204,CONN_01X06,conn,CONN_01X06
 P203,CONN_01X01,conn,CONN_01X01
 P206,CONN_01X03,conn,CONN_01X03
@@ -40,3 +39,4 @@ P207,CONN_01X03,conn,CONN_01X03
 P208,CONN_01X01,conn,CONN_01X01
 P209,CONN_01X01,conn,CONN_01X01
 P202,CONN_01X01,conn,CONN_01X01
+P205,CONN_01X03,conn,CONN_01X03
