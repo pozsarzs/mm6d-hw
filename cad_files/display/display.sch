@@ -1,0 +1,639 @@
+EESchema Schematic File Version 2
+LIBS:pzs_others
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:pzs_devices
+LIBS:display-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "MM6D Remote controlled switching device"
+Date "2020-06-12"
+Rev "200612"
+Comp "Pozsar Zsolt - http://www.szerafingomba.hu"
+Comment1 "Display board"
+Comment2 ""
+Comment3 ""
+Comment4 "Draw no.: 59/11/4"
+$EndDescr
+$Comp
+L R R1
+U 1 1 5F1AEEAF
+P 6425 2500
+F 0 "R1" V 6325 2500 50  0000 C CNN
+F 1 "47k" V 6525 2500 50  0000 C CNN
+F 2 "" V 6355 2500 50  0000 C CNN
+F 3 "" H 6425 2500 50  0000 C CNN
+	1    6425 2500
+	0    -1   1    0   
+$EndComp
+$Comp
+L D D12
+U 1 1 5F1AEFFD
+P 6850 2500
+F 0 "D12" H 6850 2600 50  0000 C CNN
+F 1 "1N4007" H 6850 2400 50  0000 C CNN
+F 2 "" H 6850 2500 50  0000 C CNN
+F 3 "" H 6850 2500 50  0000 C CNN
+	1    6850 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED-CIRCLE D1
+U 1 1 5F1AF03C
+P 5825 2500
+F 0 "D1" H 6100 2550 50  0000 C CNN
+F 1 "white" H 6050 2450 50  0000 C CNN
+F 2 "" H 5825 2500 50  0000 C CNN
+F 3 "" H 5825 2500 50  0000 C CNN
+	1    5825 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L 0V #PWR01
+U 1 1 5F1BB233
+P 4275 1850
+F 0 "#PWR01" H 4275 1600 50  0001 C CNN
+F 1 "0V" H 4275 1700 50  0001 C CNN
+F 2 "" H 4275 1850 50  0000 C CNN
+F 3 "" H 4275 1850 50  0000 C CNN
+	1    4275 1850
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R8
+U 1 1 5F1BBBB6
+P 6450 4425
+F 0 "R8" V 6350 4425 50  0000 C CNN
+F 1 "1,5k" V 6550 4425 50  0000 C CNN
+F 2 "" V 6380 4425 50  0000 C CNN
+F 3 "" H 6450 4425 50  0000 C CNN
+	1    6450 4425
+	0    -1   1    0   
+$EndComp
+$Comp
+L LED-CIRCLE D7
+U 1 1 5F1BBBBC
+P 5825 4150
+F 0 "D7" H 6100 4200 50  0000 C CNN
+F 1 "red" H 6100 4100 50  0000 C CNN
+F 2 "" H 5825 4150 50  0000 C CNN
+F 3 "" H 5825 4150 50  0000 C CNN
+	1    5825 4150
+	1    0    0    -1  
+$EndComp
+Text Notes 4950 4225 0    50   ~ 0
+Protection\nerror
+$Comp
+L R R3
+U 1 1 5F1C190A
+P 6450 3050
+F 0 "R3" V 6350 3050 50  0000 C CNN
+F 1 "1.5k" V 6550 3050 50  0000 C CNN
+F 2 "" V 6380 3050 50  0000 C CNN
+F 3 "" H 6450 3050 50  0000 C CNN
+	1    6450 3050
+	0    -1   1    0   
+$EndComp
+$Comp
+L LED-CIRCLE D3
+U 1 1 5F1C1910
+P 5825 3050
+F 0 "D3" H 6100 3100 50  0000 C CNN
+F 1 "white" H 6050 3000 50  0000 C CNN
+F 2 "" H 5825 3050 50  0000 C CNN
+F 3 "" H 5825 3050 50  0000 C CNN
+	1    5825 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L auxcontalt SW1a1
+U 1 1 5F1CB528
+P 4500 6550
+F 0 "SW1a1" V 4075 6550 50  0000 C CNN
+F 1 "auxcontalt" H 4450 6400 50  0001 C CNN
+F 2 "" H 4525 6550 50  0001 C CNN
+F 3 "" H 4525 6550 50  0001 C CNN
+	1    4500 6550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L auxcontalt SW1b1
+U 1 1 5F1CB71B
+P 4900 6550
+F 0 "SW1b1" V 4475 6550 50  0000 C CNN
+F 1 "auxcontalt" H 4850 6400 50  0001 C CNN
+F 2 "" H 4925 6550 50  0001 C CNN
+F 3 "" H 4925 6550 50  0001 C CNN
+	1    4900 6550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L auxcontalt SW2a1
+U 1 1 5F1CBF48
+P 5300 6550
+F 0 "SW2a1" V 4875 6550 50  0000 C CNN
+F 1 "auxcontalt" H 5250 6400 50  0001 C CNN
+F 2 "" H 5325 6550 50  0001 C CNN
+F 3 "" H 5325 6550 50  0001 C CNN
+	1    5300 6550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L auxcontalt SW2b1
+U 1 1 5F1CBF4E
+P 5700 6550
+F 0 "SW2b1" V 5275 6550 50  0000 C CNN
+F 1 "auxcontalt" H 5650 6400 50  0001 C CNN
+F 2 "" H 5725 6550 50  0001 C CNN
+F 3 "" H 5725 6550 50  0001 C CNN
+	1    5700 6550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L auxcontalt SW3a1
+U 1 1 5F1CC0AD
+P 6100 6550
+F 0 "SW3a1" V 5675 6550 50  0000 C CNN
+F 1 "auxcontalt" H 6050 6400 50  0001 C CNN
+F 2 "" H 6125 6550 50  0001 C CNN
+F 3 "" H 6125 6550 50  0001 C CNN
+	1    6100 6550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L auxcontalt SW3b1
+U 1 1 5F1CC0B3
+P 6500 6550
+F 0 "SW3b1" V 6075 6550 50  0000 C CNN
+F 1 "auxcontalt" H 6450 6400 50  0001 C CNN
+F 2 "" H 6525 6550 50  0001 C CNN
+F 3 "" H 6525 6550 50  0001 C CNN
+	1    6500 6550
+	0    -1   -1   0   
+$EndComp
+Text Notes 4950 2475 0    50   ~ 0
+Mains
+Text Notes 4950 3125 0    50   ~ 0
+Auxiliary\nvoltage
+Text Notes 4275 6275 0    60   ~ 0
+Manual\n mode
+$Comp
+L R R7
+U 1 1 5F1C6BF7
+P 6450 4150
+F 0 "R7" V 6375 4150 50  0000 C CNN
+F 1 "1,5k" V 6550 4150 50  0000 C CNN
+F 2 "" V 6380 4150 50  0000 C CNN
+F 3 "" H 6450 4150 50  0000 C CNN
+	1    6450 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L LED-CIRCLE D8
+U 1 1 5F1C6BFD
+P 5825 4425
+F 0 "D8" H 6100 4475 50  0000 C CNN
+F 1 "yellow" H 6050 4375 50  0000 C CNN
+F 2 "" H 5825 4425 50  0000 C CNN
+F 3 "" H 5825 4425 50  0000 C CNN
+	1    5825 4425
+	1    0    0    -1  
+$EndComp
+Text Notes 4950 4500 0    50   ~ 0
+Manual\nmode
+$Comp
+L auxcontalt SW4
+U 1 1 5F1C7A72
+P 7100 6550
+F 0 "SW4" V 6675 6550 50  0000 C CNN
+F 1 "auxcontalt" H 7050 6400 50  0001 C CNN
+F 2 "" H 7125 6550 50  0001 C CNN
+F 3 "" H 7125 6550 50  0001 C CNN
+	1    7100 6550
+	0    -1   -1   0   
+$EndComp
+Text Notes 7050 6275 0    60   ~ 0
+Operation\n  mode
+NoConn ~ 7200 6400
+NoConn ~ 6000 6400
+NoConn ~ 5200 6400
+NoConn ~ 4400 6400
+$Comp
+L D D11
+U 1 1 5F1CC812
+P 3925 3600
+F 0 "D11" V 3925 3450 50  0000 C CNN
+F 1 "1N4001" V 4050 3375 50  0000 C CNN
+F 2 "" H 3925 3600 50  0000 C CNN
+F 3 "" H 3925 3600 50  0000 C CNN
+	1    3925 3600
+	0    -1   1    0   
+$EndComp
+$Comp
+L D D10
+U 1 1 5F1CC947
+P 3675 3600
+F 0 "D10" V 3675 3750 50  0000 C CNN
+F 1 "1N4001" V 3800 3800 50  0000 C CNN
+F 2 "" H 3675 3600 50  0000 C CNN
+F 3 "" H 3675 3600 50  0000 C CNN
+	1    3675 3600
+	0    -1   1    0   
+$EndComp
+$Comp
+L Battery BT2
+U 1 1 5F1CCA80
+P 3675 4000
+F 0 "BT2" H 3625 3675 50  0000 L CNN
+F 1 "9V" H 3450 4000 50  0000 L CNN
+F 2 "" V 3675 4060 50  0000 C CNN
+F 3 "" V 3675 4060 50  0000 C CNN
+F 4 "6F22 battery" H 3700 3550 50  0000 C CNN "Field4"
+	1    3675 4000
+	1    0    0    -1  
+$EndComp
+Text Notes 3675 6875 0    60   ~ 12
+front panel
+$Comp
+L CONN_01X02 P106
+U 1 1 5F81A1FB
+P 2400 2650
+F 0 "P106" H 2400 2800 50  0000 C CNN
+F 1 "CONN_01X02" V 2500 2650 50  0001 C CNN
+F 2 "" H 2400 2650 50  0000 C CNN
+F 3 "" H 2400 2650 50  0000 C CNN
+	1    2400 2650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L LED-CIRCLE D9
+U 1 1 5F81AC4E
+P 3750 2600
+F 0 "D9" H 3750 2450 50  0000 C CNN
+F 1 "blue" H 4000 2550 50  0000 C CNN
+F 2 "" H 3750 2600 50  0000 C CNN
+F 3 "" H 3750 2600 50  0000 C CNN
+	1    3750 2600
+	1    0    0    1   
+$EndComp
+Text Notes 3600 2850 0    60   ~ 0
+Active
+$Comp
+L R R6
+U 1 1 5F7E9A89
+P 6450 3875
+F 0 "R6" V 6375 3875 50  0000 C CNN
+F 1 "1,5k" V 6550 3875 50  0000 C CNN
+F 2 "" V 6380 3875 50  0000 C CNN
+F 3 "" H 6450 3875 50  0000 C CNN
+	1    6450 3875
+	0    -1   1    0   
+$EndComp
+$Comp
+L LED-CIRCLE D6
+U 1 1 5F7E9A8F
+P 5825 3875
+F 0 "D6" H 6100 3925 50  0000 C CNN
+F 1 "green" H 6050 3825 50  0000 C CNN
+F 2 "" H 5825 3875 50  0000 C CNN
+F 3 "" H 5825 3875 50  0000 C CNN
+	1    5825 3875
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 5F7E9BE3
+P 6450 3600
+F 0 "R5" V 6375 3600 50  0000 C CNN
+F 1 "1,5k" V 6550 3600 50  0000 C CNN
+F 2 "" V 6380 3600 50  0000 C CNN
+F 3 "" H 6450 3600 50  0000 C CNN
+	1    6450 3600
+	0    -1   1    0   
+$EndComp
+$Comp
+L LED-CIRCLE D5
+U 1 1 5F7E9BE9
+P 5825 3600
+F 0 "D5" H 6100 3650 50  0000 C CNN
+F 1 "green" H 6050 3550 50  0000 C CNN
+F 2 "" H 5825 3600 50  0000 C CNN
+F 3 "" H 5825 3600 50  0000 C CNN
+	1    5825 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 5F7E9D3D
+P 6450 3325
+F 0 "R4" V 6375 3325 50  0000 C CNN
+F 1 "1,5k" V 6550 3325 50  0000 C CNN
+F 2 "" V 6380 3325 50  0000 C CNN
+F 3 "" H 6450 3325 50  0000 C CNN
+	1    6450 3325
+	0    -1   1    0   
+$EndComp
+$Comp
+L LED-CIRCLE D4
+U 1 1 5F7E9D43
+P 5825 3325
+F 0 "D4" H 6100 3375 50  0000 C CNN
+F 1 "green" H 6050 3275 50  0000 C CNN
+F 2 "" H 5825 3325 50  0000 C CNN
+F 3 "" H 5825 3325 50  0000 C CNN
+	1    5825 3325
+	1    0    0    -1  
+$EndComp
+Text Notes 4950 3950 0    50   ~ 0
+Heater\non
+Text Notes 4950 3675 0    50   ~ 0
+Ventilator\non
+Text Notes 4950 2850 0    50   ~ 0
+Alarm\nError
+Wire Wire Line
+	6300 4150 6025 4150
+Wire Wire Line
+	7225 4150 6600 4150
+Wire Wire Line
+	6025 2500 6275 2500
+Wire Wire Line
+	4250 6850 6100 6850
+Wire Wire Line
+	5300 6850 5300 6750
+Wire Notes Line
+	4470 6570 4860 6570
+Wire Notes Line
+	5270 6570 5660 6570
+Wire Notes Line
+	6070 6570 6460 6570
+Wire Wire Line
+	4500 6750 4500 6850
+Wire Wire Line
+	6100 6850 6100 6750
+Connection ~ 5300 6850
+Wire Wire Line
+	7350 -850 7350 4250
+Wire Wire Line
+	4900 6750 4900 6800
+Wire Wire Line
+	4900 6800 5125 6800
+Wire Wire Line
+	5125 6800 5125 6300
+Wire Wire Line
+	5125 6300 5600 6300
+Wire Wire Line
+	5600 6300 5600 6400
+Wire Wire Line
+	5700 6750 5700 6800
+Wire Wire Line
+	5700 6800 5925 6800
+Wire Wire Line
+	5925 6800 5925 6300
+Wire Wire Line
+	5925 6300 6400 6300
+Wire Wire Line
+	6400 6300 6400 6400
+Wire Wire Line
+	6600 6200 6600 6400
+Wire Wire Line
+	5000 6200 6700 6200
+Wire Wire Line
+	5800 6200 5800 6400
+Wire Wire Line
+	5000 6200 5000 6400
+Connection ~ 5800 6200
+Wire Wire Line
+	6500 6850 7100 6850
+Wire Wire Line
+	6500 6850 6500 6750
+Wire Wire Line
+	6025 4425 6300 4425
+Wire Wire Line
+	4275 4250 3675 4250
+Wire Wire Line
+	4275 4425 5625 4425
+Wire Wire Line
+	7100 6850 7100 6750
+Connection ~ 6900 6850
+Wire Notes Line
+	3475 2350 7550 2350
+Wire Notes Line
+	7550 2350 7525 6875
+Wire Wire Line
+	6900 6850 6925 4250
+Wire Wire Line
+	6925 4250 7350 4250
+Wire Wire Line
+	6725 4425 6600 4425
+Connection ~ 6600 6200
+Wire Wire Line
+	6025 3050 6300 3050
+Wire Wire Line
+	6600 3050 7350 3050
+Wire Wire Line
+	4275 1850 4275 4250
+Wire Wire Line
+	4275 4250 4250 6850
+Wire Wire Line
+	4275 3050 5625 3050
+Connection ~ 4275 4250
+Wire Wire Line
+	5625 4150 4275 4150
+Wire Wire Line
+	3675 3800 3675 3750
+Wire Wire Line
+	3675 3450 3675 3350
+Wire Wire Line
+	3675 3350 4150 3350
+Wire Wire Line
+	3925 3350 3925 3450
+Wire Wire Line
+	7350 4025 3925 4025
+Wire Wire Line
+	3925 4025 3925 3750
+Connection ~ 7350 4025
+Wire Wire Line
+	3675 4250 3675 4200
+Wire Wire Line
+	5625 2500 4725 2500
+Connection ~ 5925 3075
+Connection ~ 3925 3350
+Connection ~ 4500 6850
+Wire Wire Line
+	2600 2600 3550 2600
+Wire Wire Line
+	2600 2700 4025 2700
+Wire Wire Line
+	4025 2700 4025 2600
+Wire Wire Line
+	4025 2600 3950 2600
+Wire Wire Line
+	6025 3875 6300 3875
+Wire Wire Line
+	6025 3600 6300 3600
+Wire Wire Line
+	6025 3325 6300 3325
+Connection ~ 4275 4150
+Connection ~ 4275 3050
+Connection ~ 7350 3050
+Wire Wire Line
+	7350 3325 6600 3325
+Wire Wire Line
+	7350 3600 6600 3600
+Wire Wire Line
+	7350 3875 6600 3875
+Connection ~ 7350 3325
+Connection ~ 7350 3600
+Connection ~ 7350 3875
+$Comp
+L LED-CIRCLE D2
+U 1 1 5F7F615E
+P 5825 2775
+F 0 "D2" H 6100 2825 50  0000 C CNN
+F 1 "red" H 6050 2725 50  0000 C CNN
+F 2 "" H 5825 2775 50  0000 C CNN
+F 3 "" H 5825 2775 50  0000 C CNN
+	1    5825 2775
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5F7F6998
+P 6425 2775
+F 0 "R2" V 6325 2775 50  0000 C CNN
+F 1 "1.5k" V 6525 2775 50  0000 C CNN
+F 2 "" V 6355 2775 50  0000 C CNN
+F 3 "" H 6425 2775 50  0000 C CNN
+	1    6425 2775
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	6025 2775 6275 2775
+Wire Wire Line
+	6575 2775 7350 2775
+Connection ~ 7350 2775
+Wire Wire Line
+	5625 2775 4525 2775
+Wire Wire Line
+	4525 2775 4525 1950
+Wire Wire Line
+	6575 2500 6700 2500
+Wire Wire Line
+	7000 2500 7100 2500
+Wire Notes Line
+	3475 2350 3475 5350
+$Comp
+L CONN_01X02 P?
+U 1 1 5F95DF9F
+P 6900 1175
+F 0 "P?" H 6900 1325 50  0000 C CNN
+F 1 "CONN_01X02" V 7000 1175 50  0001 C CNN
+F 2 "" H 6900 1175 50  0000 C CNN
+F 3 "" H 6900 1175 50  0000 C CNN
+	1    6900 1175
+	0    1    -1   0   
+$EndComp
+$Comp
+L CONN_01X06 P?
+U 1 1 5F95E0A1
+P 5250 1850
+F 0 "P?" H 5250 2200 50  0000 C CNN
+F 1 "CONN_01X06" V 5350 1850 50  0000 C CNN
+F 2 "" H 5250 1850 50  0000 C CNN
+F 3 "" H 5250 1850 50  0000 C CNN
+	1    5250 1850
+	0    -1   -1   0   
+$EndComp
+Text Notes 4950 3400 0    50   ~ 0
+Lamp\non
+$Comp
+L CONN_01X01 P?
+U 1 1 5F95E8FA
+P 6675 5200
+F 0 "P?" H 6675 5300 50  0000 C CNN
+F 1 "CONN_01X01" V 6775 5200 50  0000 C CNN
+F 2 "" H 6675 5200 50  0000 C CNN
+F 3 "" H 6675 5200 50  0000 C CNN
+	1    6675 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X01 P?
+U 1 1 5F95EAB1
+P 7750 4150
+F 0 "P?" H 7750 4250 50  0000 C CNN
+F 1 "CONN_01X01" V 7850 4150 50  0000 C CNN
+F 2 "" H 7750 4150 50  0000 C CNN
+F 3 "" H 7750 4150 50  0000 C CNN
+	1    7750 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P?
+U 1 1 5F95EDE5
+P 4525 1750
+F 0 "P?" H 4525 1850 50  0000 C CNN
+F 1 "CONN_01X01" V 4625 1750 50  0000 C CNN
+F 2 "" H 4525 1750 50  0000 C CNN
+F 3 "" H 4525 1750 50  0000 C CNN
+	1    4525 1750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5000 2050 5000 3325
+Wire Wire Line
+	5000 2150 5100 2150
+Wire Wire Line
+	5100 2150 5100 2050
+Wire Wire Line
+	5200 2050 5200 3600
+Wire Wire Line
+	5200 2150 5300 2150
+Wire Wire Line
+	5300 2150 5300 2050
+Wire Wire Line
+	5400 2050 5400 3875
+Wire Wire Line
+	5400 2150 5500 2150
+Wire Wire Line
+	5500 2150 5500 2050
+Wire Wire Line
+	5000 3325 5625 3325
+Connection ~ 5000 2150
+Wire Wire Line
+	5200 3600 5625 3600
+Connection ~ 5200 2150
+Wire Wire Line
+	5400 3875 5625 3875
+Connection ~ 5400 2150
+$EndSCHEMATC

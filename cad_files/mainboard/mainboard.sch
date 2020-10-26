@@ -30,7 +30,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:pzs_devices
-LIBS:mm6d-cache
+LIBS:mainboard-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -40,7 +40,7 @@ Title "MM6D Remote controlled switching device"
 Date "2020-06-12"
 Rev "200612"
 Comp "Pozsar Zsolt - http://www.szerafingomba.hu"
-Comment1 "Printed circuit board"
+Comment1 "Main board"
 Comment2 ""
 Comment3 ""
 Comment4 "Draw no.: 59/11/2"
