@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/pozsarzs/Git/mm6d-hw/cad_files/mm6d/mm6d.sch</source>
-    <date>2020. okt.  7., szerda, 20:43:16 CEST</date>
+    <source>/home/pozsarzs/Git/mm6d-hw/cad_files/mainboard/mainboard.sch</source>
+    <date>2020. okt. 29., csütörtök, 19:48:44 CET</date>
     <tool>Eeschema 4.0.5+dfsg1-4</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -10,8 +10,8 @@
         <company>Pozsar Zsolt - http://www.szerafingomba.hu</company>
         <rev>200612</rev>
         <date>2020-06-12</date>
-        <source>mm6d.sch</source>
-        <comment number="1" value="Printed circuit board"/>
+        <source>mainboard.sch</source>
+        <comment number="1" value="Main board"/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
         <comment number="4" value="Draw no.: 59/11/2"/>
@@ -19,40 +19,26 @@
     </sheet>
   </design>
   <components>
-    <comp ref="C101">
-      <value>470u</value>
-      <footprint>Capacitors_THT:C_Radial_D8_L11.5_P3.5</footprint>
-      <libsource lib="mm6d-cache" part="device:CP_Small"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5EF7C17E</tstamp>
-    </comp>
-    <comp ref="C102">
+    <comp ref="C104">
       <value>2.2u</value>
       <footprint>Capacitors_THT:C_Rect_L7_W4.5_P5</footprint>
-      <libsource lib="mm6d-cache" part="device:CP_Small"/>
+      <libsource lib="mainboard-cache" part="device:CP_Small"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5EFA265C</tstamp>
     </comp>
-    <comp ref="P103">
+    <comp ref="P102">
       <value>CONN_01X02</value>
       <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
       <libsource lib="conn" part="CONN_01X02"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F0DF004</tstamp>
     </comp>
-    <comp ref="P104">
+    <comp ref="P107">
       <value>CONN_01X02</value>
       <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
       <libsource lib="conn" part="CONN_01X02"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F0DF119</tstamp>
-    </comp>
-    <comp ref="D105">
-      <value>1N4001</value>
-      <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
-      <libsource lib="device" part="D"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5F0E9A5B</tstamp>
     </comp>
     <comp ref="U105-JP102">
       <value>CONN_01X12</value>
@@ -75,14 +61,14 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F19C9D8</tstamp>
     </comp>
-    <comp ref="D101">
+    <comp ref="D109">
       <value>1N4001</value>
       <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
       <libsource lib="pzs_others" part="diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F19CAC7</tstamp>
     </comp>
-    <comp ref="U101">
+    <comp ref="U102">
       <value>4N25</value>
       <footprint>Housings_DIP:DIP-6_W7.62mm_LongPads</footprint>
       <libsource lib="opto" part="4N25"/>
@@ -96,14 +82,14 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F19DE7F</tstamp>
     </comp>
-    <comp ref="D102">
+    <comp ref="D110">
       <value>1N4001</value>
       <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
       <libsource lib="pzs_others" part="diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F19DE85</tstamp>
     </comp>
-    <comp ref="U102">
+    <comp ref="U103">
       <value>4N25</value>
       <footprint>Housings_DIP:DIP-6_W7.62mm_LongPads</footprint>
       <libsource lib="opto" part="4N25"/>
@@ -117,14 +103,14 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F19E0C3</tstamp>
     </comp>
-    <comp ref="D103">
+    <comp ref="D111">
       <value>1N4001</value>
       <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
       <libsource lib="pzs_others" part="diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F19E0C9</tstamp>
     </comp>
-    <comp ref="U103">
+    <comp ref="U104">
       <value>4N25</value>
       <footprint>Housings_DIP:DIP-6_W7.62mm_LongPads</footprint>
       <libsource lib="opto" part="4N25"/>
@@ -138,14 +124,14 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F19E0E5</tstamp>
     </comp>
-    <comp ref="D104">
+    <comp ref="D112">
       <value>1N4001</value>
       <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
       <libsource lib="pzs_others" part="diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F19E0EB</tstamp>
     </comp>
-    <comp ref="U104">
+    <comp ref="U105">
       <value>4N25</value>
       <footprint>Housings_DIP:DIP-6_W7.62mm_LongPads</footprint>
       <libsource lib="opto" part="4N25"/>
@@ -180,7 +166,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F19E543</tstamp>
     </comp>
-    <comp ref="P101">
+    <comp ref="P104">
       <value>CONN_01X05</value>
       <footprint>Socket_Strips:Socket_Strip_Straight_1x05</footprint>
       <libsource lib="conn" part="CONN_01X05"/>
@@ -194,7 +180,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F1A00F9</tstamp>
     </comp>
-    <comp ref="D106">
+    <comp ref="D113">
       <value>1N4007</value>
       <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
       <libsource lib="pzs_others" part="diode"/>
@@ -208,7 +194,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F1A2704</tstamp>
     </comp>
-    <comp ref="D107">
+    <comp ref="D114">
       <value>1N4007</value>
       <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
       <libsource lib="pzs_others" part="diode"/>
@@ -222,7 +208,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F1A2985</tstamp>
     </comp>
-    <comp ref="D108">
+    <comp ref="D115">
       <value>1N4007</value>
       <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
       <libsource lib="pzs_others" part="diode"/>
@@ -236,14 +222,14 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F1A29B6</tstamp>
     </comp>
-    <comp ref="D109">
+    <comp ref="D116">
       <value>1N4007</value>
       <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
       <libsource lib="pzs_others" part="diode"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F1A29BC</tstamp>
     </comp>
-    <comp ref="P107">
+    <comp ref="P105">
       <value>CONN_01X05</value>
       <footprint>Socket_Strips:Socket_Strip_Straight_1x05</footprint>
       <libsource lib="conn" part="CONN_01X05"/>
@@ -257,14 +243,14 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F1AEBA9</tstamp>
     </comp>
-    <comp ref="P102">
+    <comp ref="P106">
       <value>CONN_01X03</value>
       <footprint>Socket_Strips:Socket_Strip_Straight_1x03</footprint>
       <libsource lib="conn" part="CONN_01X03"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F19F5B8</tstamp>
     </comp>
-    <comp ref="P105">
+    <comp ref="P108">
       <value>CONN_01X02</value>
       <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
       <libsource lib="conn" part="CONN_01X02"/>
@@ -334,24 +320,110 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F1E719C</tstamp>
     </comp>
-    <comp ref="P106">
+    <comp ref="P109">
       <value>CONN_01X02</value>
       <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
       <libsource lib="conn" part="CONN_01X02"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F7DF47E</tstamp>
     </comp>
-    <comp ref="U106">
+    <comp ref="U101">
       <value>7805</value>
+      <footprint>TO_SOT_Packages_THT:TO-220_Neutral123_Horizontal_LargePads</footprint>
       <libsource lib="regul" part="7805"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F7F5564</tstamp>
     </comp>
     <comp ref="C103">
       <value>4.7u</value>
-      <libsource lib="mm6d-cache" part="device:CP_Small"/>
+      <footprint>Capacitors_THT:C_Rect_L7_W4.5_P5</footprint>
+      <libsource lib="mainboard-cache" part="device:CP_Small"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F7F5742</tstamp>
+    </comp>
+    <comp ref="D101">
+      <value>1N4001</value>
+      <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
+      <libsource lib="pzs_others" part="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9B8B1C</tstamp>
+    </comp>
+    <comp ref="C101">
+      <value>470u</value>
+      <footprint>Capacitors_THT:C_Radial_D8_L11.5_P3.5</footprint>
+      <libsource lib="mainboard-cache" part="device:CP_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9B8FC7</tstamp>
+    </comp>
+    <comp ref="C102">
+      <value>470u</value>
+      <footprint>Capacitors_THT:C_Radial_D8_L11.5_P3.5</footprint>
+      <libsource lib="mainboard-cache" part="device:CP_Small"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9BA5D1</tstamp>
+    </comp>
+    <comp ref="P101">
+      <value>CONN_01X02</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9BC6FA</tstamp>
+    </comp>
+    <comp ref="P103">
+      <value>CONN_01X02</value>
+      <footprint>Socket_Strips:Socket_Strip_Straight_1x02</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9BC908</tstamp>
+    </comp>
+    <comp ref="D103">
+      <value>1N4001</value>
+      <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
+      <libsource lib="pzs_others" part="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9CA194</tstamp>
+    </comp>
+    <comp ref="D105">
+      <value>1N4001</value>
+      <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
+      <libsource lib="pzs_others" part="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9CA258</tstamp>
+    </comp>
+    <comp ref="D107">
+      <value>1N4001</value>
+      <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
+      <libsource lib="pzs_others" part="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9CA31B</tstamp>
+    </comp>
+    <comp ref="D108">
+      <value>1N4001</value>
+      <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
+      <libsource lib="pzs_others" part="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9CA41D</tstamp>
+    </comp>
+    <comp ref="D106">
+      <value>1N4001</value>
+      <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
+      <libsource lib="pzs_others" part="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9CA52B</tstamp>
+    </comp>
+    <comp ref="D102">
+      <value>1N4001</value>
+      <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
+      <libsource lib="pzs_others" part="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9CA5F7</tstamp>
+    </comp>
+    <comp ref="D104">
+      <value>1N4001</value>
+      <footprint>Diodes_THT:Diode_DO-41_SOD81_Horizontal_RM10</footprint>
+      <libsource lib="pzs_others" part="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5F9CA6D2</tstamp>
     </comp>
   </components>
   <libparts>
@@ -504,25 +576,6 @@
         <pin num="16" name="P16" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="D">
-      <description>Diode</description>
-      <footprints>
-        <fp>Diode_*</fp>
-        <fp>D-*</fp>
-        <fp>*SingleDiode</fp>
-        <fp>*_Diode_*</fp>
-        <fp>*SingleDiode*</fp>
-        <fp>D_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">D</field>
-      </fields>
-      <pins>
-        <pin num="1" name="K" type="passive"/>
-        <pin num="2" name="A" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="device" part="Q_NPN_EBC">
       <description>Transistor NPN (general)</description>
       <fields>
@@ -562,7 +615,7 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="mm6d-cache" part="device:CP_Small">
+    <libpart lib="mainboard-cache" part="device:CP_Small">
       <footprints>
         <fp>CP_*</fp>
       </footprints>
@@ -586,15 +639,6 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="mm6d-cache">
-      <uri>/home/pozsarzs/Git/mm6d-hw/cad_files/mm6d/mm6d-cache.lib</uri>
-    </library>
-    <library logical="regul">
-      <uri>/usr/share/kicad/library/regul.lib</uri>
-    </library>
-    <library logical="pzs_others">
-      <uri>/home/pozsarzs/Git/mm6d-hw/cad_files/mm6d/pzs_others.lib</uri>
-    </library>
     <library logical="device">
       <uri>/usr/share/kicad/library/device.lib</uri>
     </library>
@@ -604,261 +648,292 @@
     <library logical="conn">
       <uri>/usr/share/kicad/library/conn.lib</uri>
     </library>
+    <library logical="regul">
+      <uri>/usr/share/kicad/library/regul.lib</uri>
+    </library>
+    <library logical="pzs_others">
+      <uri>/home/pozsarzs/Git/mm6d-hw/cad_files/mainboard/pzs_others.lib</uri>
+    </library>
+    <library logical="mainboard-cache">
+      <uri>/home/pozsarzs/Git/mm6d-hw/cad_files/mainboard/mainboard-cache.lib</uri>
+    </library>
   </libraries>
   <nets>
-    <net code="1" name="Net-(Q104-Pad2)">
-      <node ref="R114" pin="2"/>
-      <node ref="Q104" pin="2"/>
-    </net>
-    <net code="2" name="Net-(Q104-Pad1)">
-      <node ref="Q108" pin="3"/>
-      <node ref="Q104" pin="1"/>
-    </net>
-    <net code="3" name="Net-(D106-Pad~)">
-      <node ref="P107" pin="1"/>
-    </net>
-    <net code="4" name="Net-(Q103-Pad2)">
-      <node ref="R113" pin="2"/>
-      <node ref="Q103" pin="2"/>
-    </net>
-    <net code="5" name="Net-(Q103-Pad1)">
-      <node ref="Q103" pin="1"/>
-      <node ref="Q107" pin="3"/>
-    </net>
-    <net code="6" name="Net-(D107-Pad~)">
-      <node ref="Q106" pin="2"/>
-      <node ref="Q102" pin="3"/>
-      <node ref="P107" pin="3"/>
-      <node ref="D107" pin="~"/>
-    </net>
-    <net code="7" name="Net-(D109-Pad~)">
+    <net code="1" name="Net-(D116-Pad~)">
+      <node ref="P105" pin="5"/>
       <node ref="Q104" pin="3"/>
-      <node ref="P107" pin="5"/>
       <node ref="Q108" pin="2"/>
-      <node ref="D109" pin="~"/>
     </net>
-    <net code="8" name="Net-(D108-Pad~)">
-      <node ref="P107" pin="4"/>
+    <net code="2" name="Net-(D115-Pad~)">
+      <node ref="P105" pin="4"/>
       <node ref="Q103" pin="3"/>
       <node ref="Q107" pin="2"/>
-      <node ref="D108" pin="~"/>
     </net>
-    <net code="9" name="Net-(Q102-Pad2)">
-      <node ref="Q102" pin="2"/>
-      <node ref="R112" pin="2"/>
+    <net code="3" name="Net-(D114-Pad~)">
+      <node ref="Q102" pin="3"/>
+      <node ref="P105" pin="3"/>
+      <node ref="Q106" pin="2"/>
     </net>
-    <net code="10" name="Net-(D106-Pad~)">
-      <node ref="Q101" pin="3"/>
+    <net code="4" name="Net-(D113-Pad~)">
       <node ref="Q105" pin="2"/>
-      <node ref="P107" pin="2"/>
-      <node ref="D106" pin="~"/>
-    </net>
-    <net code="11" name="Net-(P101-Pad4)">
-      <node ref="R103" pin="2"/>
-      <node ref="P101" pin="4"/>
-    </net>
-    <net code="12" name="Net-(P101-Pad3)">
-      <node ref="P101" pin="3"/>
-      <node ref="R102" pin="2"/>
-    </net>
-    <net code="13" name="Net-(P101-Pad2)">
-      <node ref="P101" pin="2"/>
-      <node ref="R101" pin="2"/>
-    </net>
-    <net code="14" name="Net-(R105-Pad1)">
-      <node ref="U101" pin="5"/>
-      <node ref="R105" pin="1"/>
-      <node ref="U105-JP102" pin="11"/>
-    </net>
-    <net code="15" name="Net-(Q102-Pad1)">
-      <node ref="Q102" pin="1"/>
-      <node ref="Q106" pin="3"/>
-    </net>
-    <net code="16" name="Net-(Q101-Pad2)">
-      <node ref="R111" pin="2"/>
-      <node ref="Q101" pin="2"/>
-    </net>
-    <net code="17" name="+3V3">
-      <node ref="R105" pin="2"/>
-      <node ref="U105-JP101" pin="15"/>
-      <node ref="R108" pin="2"/>
-      <node ref="R107" pin="2"/>
-      <node ref="R106" pin="2"/>
-    </net>
-    <net code="18" name="Net-(Q101-Pad1)">
-      <node ref="Q105" pin="3"/>
-      <node ref="Q101" pin="1"/>
-    </net>
-    <net code="19" name="Net-(P101-Pad5)">
-      <node ref="R104" pin="2"/>
-      <node ref="P101" pin="5"/>
-    </net>
-    <net code="20" name="Net-(P105-Pad2)">
+      <node ref="Q101" pin="3"/>
       <node ref="P105" pin="2"/>
-      <node ref="U105-JP102" pin="1"/>
     </net>
-    <net code="21" name="GND">
-      <node ref="C101" pin="2"/>
-      <node ref="D105" pin="2"/>
-      <node ref="P103" pin="1"/>
-      <node ref="P104" pin="1"/>
-      <node ref="U101" pin="4"/>
-      <node ref="U102" pin="4"/>
-      <node ref="U103" pin="4"/>
-      <node ref="U104" pin="4"/>
-      <node ref="P102" pin="1"/>
-      <node ref="U105-JP101" pin="13"/>
-      <node ref="P105" pin="1"/>
-      <node ref="Q107" pin="1"/>
-      <node ref="Q108" pin="1"/>
-      <node ref="R109" pin="1"/>
-      <node ref="Q106" pin="1"/>
-      <node ref="Q105" pin="1"/>
-      <node ref="P106" pin="1"/>
-      <node ref="U106" pin="GND"/>
-      <node ref="C103" pin="2"/>
+    <net code="5" name="Net-(Q104-Pad2)">
+      <node ref="Q104" pin="2"/>
+      <node ref="R114" pin="2"/>
     </net>
-    <net code="22" name="+5V">
-      <node ref="U105-JP102" pin="3"/>
-      <node ref="U106" pin="VO"/>
-      <node ref="C103" pin="1"/>
+    <net code="6" name="Net-(R111-Pad1)">
+      <node ref="U105-JP102" pin="4"/>
+      <node ref="R111" pin="1"/>
     </net>
-    <net code="23" name="Net-(P106-Pad2)">
+    <net code="7" name="Net-(P109-Pad1)">
       <node ref="R110" pin="2"/>
-      <node ref="P106" pin="2"/>
+      <node ref="P109" pin="1"/>
     </net>
-    <net code="24" name="Net-(R110-Pad1)">
-      <node ref="R110" pin="1"/>
+    <net code="8" name="Net-(R110-Pad1)">
       <node ref="U105-JP102" pin="10"/>
+      <node ref="R110" pin="1"/>
     </net>
-    <net code="25" name="Net-(C102-Pad1)">
-      <node ref="C102" pin="1"/>
+    <net code="9" name="Net-(C104-Pad1)">
+      <node ref="C104" pin="1"/>
       <node ref="U105-JP102" pin="12"/>
     </net>
-    <net code="26" name="Net-(R113-Pad1)">
+    <net code="10" name="Net-(R113-Pad1)">
       <node ref="U105-JP102" pin="9"/>
       <node ref="R113" pin="1"/>
     </net>
-    <net code="27" name="Net-(R112-Pad1)">
+    <net code="11" name="Net-(R112-Pad1)">
       <node ref="U105-JP102" pin="7"/>
       <node ref="R112" pin="1"/>
     </net>
-    <net code="28" name="Net-(R111-Pad1)">
-      <node ref="R111" pin="1"/>
-      <node ref="U105-JP102" pin="4"/>
-    </net>
-    <net code="29" name="Net-(R114-Pad1)">
+    <net code="12" name="Net-(R114-Pad1)">
       <node ref="U105-JP102" pin="8"/>
       <node ref="R114" pin="1"/>
     </net>
-    <net code="30" name="Net-(C101-Pad1)">
-      <node ref="C101" pin="1"/>
-      <node ref="D105" pin="1"/>
-      <node ref="U106" pin="VI"/>
-      <node ref="P103" pin="2"/>
+    <net code="13" name="Net-(D113-Pad~)">
+      <node ref="D113" pin="~"/>
+      <node ref="D114" pin="~"/>
+      <node ref="P105" pin="1"/>
+      <node ref="D115" pin="~"/>
+      <node ref="D116" pin="~"/>
     </net>
-    <net code="31" name="Net-(P102-Pad2)">
-      <node ref="U105-JP101" pin="2"/>
+    <net code="14" name="Net-(P104-Pad4)">
+      <node ref="P104" pin="4"/>
+      <node ref="R103" pin="2"/>
+    </net>
+    <net code="15" name="Net-(Q101-Pad1)">
+      <node ref="Q105" pin="3"/>
+      <node ref="Q101" pin="1"/>
+    </net>
+    <net code="16" name="Net-(P104-Pad5)">
+      <node ref="R104" pin="2"/>
+      <node ref="P104" pin="5"/>
+    </net>
+    <net code="17" name="Net-(P104-Pad3)">
+      <node ref="P104" pin="3"/>
+      <node ref="R102" pin="2"/>
+    </net>
+    <net code="18" name="Net-(P104-Pad2)">
+      <node ref="P104" pin="2"/>
+      <node ref="R101" pin="2"/>
+    </net>
+    <net code="19" name="Net-(Q104-Pad1)">
+      <node ref="Q108" pin="3"/>
+      <node ref="Q104" pin="1"/>
+    </net>
+    <net code="20" name="Net-(Q103-Pad2)">
+      <node ref="R113" pin="2"/>
+      <node ref="Q103" pin="2"/>
+    </net>
+    <net code="21" name="Net-(Q103-Pad1)">
+      <node ref="Q107" pin="3"/>
+      <node ref="Q103" pin="1"/>
+    </net>
+    <net code="22" name="Net-(Q102-Pad2)">
+      <node ref="R112" pin="2"/>
+      <node ref="Q102" pin="2"/>
+    </net>
+    <net code="23" name="Net-(Q102-Pad1)">
+      <node ref="Q106" pin="3"/>
+      <node ref="Q102" pin="1"/>
+    </net>
+    <net code="24" name="Net-(Q101-Pad2)">
+      <node ref="R111" pin="2"/>
+      <node ref="Q101" pin="2"/>
+    </net>
+    <net code="25" name="GND">
+      <node ref="P108" pin="1"/>
+      <node ref="C102" pin="2"/>
+      <node ref="Q105" pin="1"/>
+      <node ref="Q106" pin="1"/>
+      <node ref="Q108" pin="1"/>
+      <node ref="U103" pin="4"/>
+      <node ref="U105" pin="4"/>
+      <node ref="R109" pin="1"/>
+      <node ref="U104" pin="4"/>
+      <node ref="C101" pin="2"/>
+      <node ref="U105-JP101" pin="13"/>
+      <node ref="C103" pin="2"/>
+      <node ref="U101" pin="GND"/>
+      <node ref="P109" pin="2"/>
+      <node ref="U102" pin="4"/>
+      <node ref="P107" pin="1"/>
+      <node ref="P106" pin="1"/>
+      <node ref="Q107" pin="1"/>
+      <node ref="P103" pin="1"/>
+    </net>
+    <net code="26" name="Net-(D107-Pad~)">
       <node ref="P102" pin="2"/>
+      <node ref="D108" pin="~"/>
     </net>
-    <net code="32" name="Net-(P102-Pad3)">
-      <node ref="P102" pin="3"/>
+    <net code="27" name="/+3.3V">
+      <node ref="R108" pin="2"/>
+      <node ref="R107" pin="2"/>
+      <node ref="R106" pin="2"/>
+      <node ref="R105" pin="2"/>
+      <node ref="U105-JP101" pin="15"/>
+    </net>
+    <net code="28" name="/+5V">
+      <node ref="C103" pin="1"/>
+      <node ref="U105-JP102" pin="3"/>
+      <node ref="U101" pin="VO"/>
+    </net>
+    <net code="29" name="Net-(D103-Pad~)">
+      <node ref="D104" pin="~"/>
+      <node ref="P101" pin="2"/>
+    </net>
+    <net code="30" name="Net-(D101-Pad~)">
+      <node ref="D102" pin="~"/>
+      <node ref="P101" pin="1"/>
+    </net>
+    <net code="31" name="Net-(C102-Pad1)">
+      <node ref="U101" pin="VI"/>
+      <node ref="C102" pin="1"/>
+      <node ref="D107" pin="~"/>
+    </net>
+    <net code="32" name="Net-(D105-Pad~)">
+      <node ref="D105" pin="~"/>
+      <node ref="P102" pin="1"/>
+      <node ref="D106" pin="~"/>
+    </net>
+    <net code="33" name="Net-(P108-Pad2)">
+      <node ref="P108" pin="2"/>
+      <node ref="U105-JP102" pin="1"/>
+    </net>
+    <net code="34" name="Net-(P106-Pad2)">
+      <node ref="P106" pin="2"/>
+      <node ref="U105-JP101" pin="2"/>
+    </net>
+    <net code="35" name="Net-(P106-Pad3)">
       <node ref="U105-JP101" pin="3"/>
+      <node ref="P106" pin="3"/>
     </net>
-    <net code="33" name="Net-(R106-Pad1)">
-      <node ref="U105-JP102" pin="5"/>
-      <node ref="U102" pin="5"/>
-      <node ref="R106" pin="1"/>
+    <net code="36" name="Net-(C101-Pad1)">
+      <node ref="P103" pin="2"/>
+      <node ref="D103" pin="~"/>
+      <node ref="C101" pin="1"/>
+      <node ref="D101" pin="~"/>
     </net>
-    <net code="34" name="Net-(R108-Pad1)">
-      <node ref="R108" pin="1"/>
-      <node ref="R109" pin="2"/>
-      <node ref="U105-JP101" pin="12"/>
-      <node ref="U104" pin="5"/>
-    </net>
-    <net code="35" name="Net-(R107-Pad1)">
-      <node ref="R107" pin="1"/>
-      <node ref="U105-JP102" pin="6"/>
-      <node ref="U103" pin="5"/>
-    </net>
-    <net code="36" name="Net-(U101-Pad6)">
-      <node ref="U101" pin="6"/>
-    </net>
-    <net code="37" name="Net-(U105-JP102-Pad2)">
-      <node ref="U105-JP102" pin="2"/>
-    </net>
-    <net code="38" name="Net-(U105-JP101-Pad7)">
-      <node ref="U105-JP101" pin="7"/>
-    </net>
-    <net code="39" name="Net-(U105-JP101-Pad8)">
-      <node ref="U105-JP101" pin="8"/>
-    </net>
-    <net code="40" name="Net-(U105-JP101-Pad9)">
-      <node ref="U105-JP101" pin="9"/>
-    </net>
-    <net code="41" name="Net-(U105-JP101-Pad10)">
-      <node ref="U105-JP101" pin="10"/>
-    </net>
-    <net code="42" name="Net-(U105-JP101-Pad11)">
-      <node ref="U105-JP101" pin="11"/>
-    </net>
-    <net code="43" name="Net-(U105-JP101-Pad14)">
-      <node ref="U105-JP101" pin="14"/>
-    </net>
-    <net code="44" name="Net-(U105-JP101-Pad16)">
-      <node ref="U105-JP101" pin="16"/>
-    </net>
-    <net code="45" name="Net-(U103-Pad6)">
-      <node ref="U103" pin="6"/>
-    </net>
-    <net code="46" name="Net-(U104-Pad6)">
+    <net code="37" name="Net-(U104-Pad6)">
       <node ref="U104" pin="6"/>
     </net>
-    <net code="47" name="Net-(D101-Pad~)">
-      <node ref="U102" pin="2"/>
-      <node ref="U104" pin="2"/>
-      <node ref="P101" pin="1"/>
-      <node ref="U103" pin="2"/>
-      <node ref="U101" pin="2"/>
+    <net code="38" name="Net-(U105-Pad6)">
+      <node ref="U105" pin="6"/>
     </net>
-    <net code="48" name="Net-(U102-Pad6)">
+    <net code="39" name="Net-(U103-Pad6)">
+      <node ref="U103" pin="6"/>
+    </net>
+    <net code="40" name="Net-(U102-Pad6)">
       <node ref="U102" pin="6"/>
     </net>
-    <net code="49" name="Net-(C102-Pad2)">
-      <node ref="C102" pin="2"/>
-      <node ref="P104" pin="2"/>
+    <net code="41" name="Net-(R108-Pad1)">
+      <node ref="R109" pin="2"/>
+      <node ref="R108" pin="1"/>
+      <node ref="U105" pin="5"/>
+      <node ref="U105-JP101" pin="12"/>
     </net>
-    <net code="50" name="Net-(U105-JP101-Pad6)">
-      <node ref="U105-JP101" pin="6"/>
+    <net code="42" name="Net-(R107-Pad1)">
+      <node ref="U104" pin="5"/>
+      <node ref="R107" pin="1"/>
+      <node ref="U105-JP102" pin="6"/>
     </net>
-    <net code="51" name="Net-(U105-JP101-Pad5)">
-      <node ref="U105-JP101" pin="5"/>
+    <net code="43" name="Net-(R106-Pad1)">
+      <node ref="R106" pin="1"/>
+      <node ref="U105-JP102" pin="5"/>
+      <node ref="U103" pin="5"/>
     </net>
-    <net code="52" name="Net-(U105-JP101-Pad4)">
+    <net code="44" name="Net-(R105-Pad1)">
+      <node ref="U102" pin="5"/>
+      <node ref="R105" pin="1"/>
+      <node ref="U105-JP102" pin="11"/>
+    </net>
+    <net code="45" name="Net-(U105-JP101-Pad4)">
       <node ref="U105-JP101" pin="4"/>
     </net>
-    <net code="53" name="Net-(U105-JP101-Pad1)">
+    <net code="46" name="Net-(U105-JP101-Pad1)">
       <node ref="U105-JP101" pin="1"/>
     </net>
-    <net code="54" name="Net-(D104-Pad~)">
-      <node ref="U104" pin="1"/>
-      <node ref="D104" pin="~"/>
-      <node ref="R104" pin="1"/>
+    <net code="47" name="Net-(U105-JP101-Pad5)">
+      <node ref="U105-JP101" pin="5"/>
     </net>
-    <net code="55" name="Net-(D103-Pad~)">
-      <node ref="U103" pin="1"/>
-      <node ref="D103" pin="~"/>
-      <node ref="R103" pin="1"/>
+    <net code="48" name="Net-(U105-JP102-Pad2)">
+      <node ref="U105-JP102" pin="2"/>
     </net>
-    <net code="56" name="Net-(D102-Pad~)">
-      <node ref="R102" pin="1"/>
-      <node ref="D102" pin="~"/>
+    <net code="49" name="Net-(C104-Pad2)">
+      <node ref="P107" pin="2"/>
+      <node ref="C104" pin="2"/>
+    </net>
+    <net code="50" name="Net-(U105-JP101-Pad14)">
+      <node ref="U105-JP101" pin="14"/>
+    </net>
+    <net code="51" name="Net-(D109-Pad~)">
+      <node ref="R101" pin="1"/>
       <node ref="U102" pin="1"/>
     </net>
-    <net code="57" name="Net-(D101-Pad~)">
-      <node ref="U101" pin="1"/>
-      <node ref="D101" pin="~"/>
-      <node ref="R101" pin="1"/>
+    <net code="52" name="Net-(D109-Pad~)">
+      <node ref="U105" pin="2"/>
+      <node ref="U103" pin="2"/>
+      <node ref="P104" pin="1"/>
+      <node ref="D109" pin="~"/>
+      <node ref="U102" pin="2"/>
+      <node ref="U104" pin="2"/>
+    </net>
+    <net code="53" name="Net-(U105-JP101-Pad7)">
+      <node ref="U105-JP101" pin="7"/>
+    </net>
+    <net code="54" name="Net-(U105-JP101-Pad8)">
+      <node ref="U105-JP101" pin="8"/>
+    </net>
+    <net code="55" name="Net-(U105-JP101-Pad9)">
+      <node ref="U105-JP101" pin="9"/>
+    </net>
+    <net code="56" name="Net-(U105-JP101-Pad10)">
+      <node ref="U105-JP101" pin="10"/>
+    </net>
+    <net code="57" name="Net-(U105-JP101-Pad11)">
+      <node ref="U105-JP101" pin="11"/>
+    </net>
+    <net code="58" name="Net-(U105-JP101-Pad16)">
+      <node ref="U105-JP101" pin="16"/>
+    </net>
+    <net code="59" name="Net-(U105-JP101-Pad6)">
+      <node ref="U105-JP101" pin="6"/>
+    </net>
+    <net code="60" name="Net-(D112-Pad~)">
+      <node ref="R104" pin="1"/>
+      <node ref="D112" pin="~"/>
+      <node ref="U105" pin="1"/>
+    </net>
+    <net code="61" name="Net-(D111-Pad~)">
+      <node ref="D111" pin="~"/>
+      <node ref="U104" pin="1"/>
+      <node ref="R103" pin="1"/>
+    </net>
+    <net code="62" name="Net-(D110-Pad~)">
+      <node ref="R102" pin="1"/>
+      <node ref="D110" pin="~"/>
+      <node ref="U103" pin="1"/>
     </net>
   </nets>
 </export>

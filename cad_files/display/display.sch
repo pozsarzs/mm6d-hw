@@ -195,7 +195,7 @@ F 1 "CONN_01X02" V 3725 1850 50  0001 C CNN
 F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 3625 1850 50  0001 C CNN
 F 3 "" H 3625 1850 50  0000 C CNN
 	1    3625 1850
-	0    1    -1   0   
+	0    -1   -1   0   
 $EndComp
 $Comp
 L LED-CIRCLE D209
@@ -536,7 +536,7 @@ F 1 "CONN_01X03" V 6525 1850 50  0001 C CNN
 F 2 "Socket_Strips:Socket_Strip_Straight_1x03" H 6425 1850 50  0001 C CNN
 F 3 "" H 6425 1850 50  0000 C CNN
 	1    6425 1850
-	0    1    -1   0   
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	6325 2275 6325 2050
