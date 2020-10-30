@@ -1,6 +1,6 @@
 Source,/home/pozsarzs/Git/mm6d-hw/cad_files/mainboard/mainboard.sch
 Kicad Rev,Eeschema 4.0.5+dfsg1-4
-Generated Date,2020. okt. 29., csütörtök, 19:48:44 CET
+Generated Date,2020. okt. 30., péntek, 20:43:04 CET
 
 Title,MM6D Remote controlled switching device
 Company,Pozsar Zsolt - http://www.szerafingomba.hu
@@ -11,39 +11,31 @@ Comment,Draw no.: 59/11/2
 
 Reference,Value,Library,Library Ref
 C104,2.2u,mainboard-cache,device:CP_Small
-P102,CONN_01X02,conn,CONN_01X02
-P107,CONN_01X02,conn,CONN_01X02
+P104,CONN_01X02,conn,CONN_01X02
+P106,CONN_01X02,conn,CONN_01X02
 U105-JP102,CONN_01X12,conn,CONN_01X12
 U105-JP101,CONN_01X16,conn,CONN_01X16
 R101,1.5k,device,R
-D109,1N4001,pzs_others,diode
 U102,4N25,opto,4N25
 R102,1.5k,device,R
-D110,1N4001,pzs_others,diode
 U103,4N25,opto,4N25
 R103,1.5k,device,R
-D111,1N4001,pzs_others,diode
 U104,4N25,opto,4N25
 R104,1.5k,device,R
-D112,1N4001,pzs_others,diode
 U105,4N25,opto,4N25
 R105,4.7k,device,R
 R106,4.7k,device,R
 R107,4.7k,device,R
 R108,4.7k,device,R
-P104,CONN_01X05,conn,CONN_01X05
+P101,CONN_01X05,conn,CONN_01X05
 R111,1k,device,R
-D113,1N4007,pzs_others,diode
 R112,1k,device,R
-D114,1N4007,pzs_others,diode
 R113,1k,device,R
-D115,1N4007,pzs_others,diode
 R114,1k,device,R
-D116,1N4007,pzs_others,diode
-P105,CONN_01X05,conn,CONN_01X05
+P109,CONN_01X05,conn,CONN_01X05
 R110,390,device,R
-P106,CONN_01X03,conn,CONN_01X03
-P108,CONN_01X02,conn,CONN_01X02
+P105,CONN_01X03,conn,CONN_01X03
+P107,CONN_01X02,conn,CONN_01X02
 Q107,BD137,device,Q_NPN_ECB
 Q108,BD137,device,Q_NPN_ECB
 Q106,BD137,device,Q_NPN_ECB
@@ -53,18 +45,26 @@ Q102,BC182,device,Q_NPN_EBC
 Q103,BC182,device,Q_NPN_EBC
 Q104,BC182,device,Q_NPN_EBC
 R109,1.8k,device,R
-P109,CONN_01X02,conn,CONN_01X02
+P108,CONN_01X02,conn,CONN_01X02
 U101,7805,regul,7805
 C103,4.7u,mainboard-cache,device:CP_Small
-D101,1N4001,pzs_others,diode
 C101,470u,mainboard-cache,device:CP_Small
 C102,470u,mainboard-cache,device:CP_Small
-P101,CONN_01X02,conn,CONN_01X02
 P103,CONN_01X02,conn,CONN_01X02
-D103,1N4001,pzs_others,diode
-D105,1N4001,pzs_others,diode
-D107,1N4001,pzs_others,diode
-D108,1N4001,pzs_others,diode
-D106,1N4001,pzs_others,diode
-D102,1N4001,pzs_others,diode
-D104,1N4001,pzs_others,diode
+P102,CONN_01X02,conn,CONN_01X02
+D109,1N4001,device,D
+D101,1N4001,device,D
+D103,1N4001,device,D
+D105,1N4001,device,D
+D107,1N4001,device,D
+D108,1N4001,device,D
+D106,1N4001,device,D
+D104,1N4001,device,D
+D102,1N4001,device,D
+D110,1N4001,device,D
+D111,1N4001,device,D
+D112,1N4001,device,D
+D113,1N4007,device,D
+D114,1N4007,device,D
+D115,1N4007,device,D
+D116,1N4007,device,D
