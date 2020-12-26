@@ -1,6 +1,6 @@
 Source,/home/pozsarzs/Git/mm6d-hw/cad_files/mainboard/mainboard.sch
 Kicad Rev,Eeschema 4.0.5+dfsg1-4
-Generated Date,2020. nov.  1., vasárnap, 08:02:38 CET
+Generated Date,2020. dec. 26., szombat, 18:49:33 CET
 
 Title,MM6D Remote controlled switching device
 Company,Pozsar Zsolt - http://www.szerafingomba.hu
@@ -12,7 +12,7 @@ Comment,Draw no.: 59/11/2
 Reference,Value,Library,Library Ref
 C104,2.2u,mainboard-cache,device:CP_Small
 P106,CONN_01X02,conn,CONN_01X02
-R110,390,device,R
+R110,750,device,R
 P107,CONN_01X02,conn,CONN_01X02
 P108,CONN_01X02,conn,CONN_01X02
 R109,1.8k,device,R
@@ -33,9 +33,9 @@ D103,1N4001,device,D
 D101,1N4001,device,D
 P102,CONN_01X02,conn,CONN_01X02
 P103,CONN_01X02,conn,CONN_01X02
-C102,470u,mainboard-cache,device:CP_Small
+C102,1000u,mainboard-cache,device:CP_Small
 C101,470u,mainboard-cache,device:CP_Small
-C103,4.7u,mainboard-cache,device:CP_Small
+C103,1u,mainboard-cache,device:CP_Small
 U101,7805,regul,7805
 P104,CONN_01X02,conn,CONN_01X02
 D112,1N4001,device,D
@@ -44,13 +44,13 @@ D110,1N4001,device,D
 D109,1N4001,device,D
 P101,CONN_01X05,conn,CONN_01X05
 U105,4N25,opto,4N25
-R104,1.5k,device,R
+R104,9.1k,device,R
 U104,4N25,opto,4N25
-R103,1.5k,device,R
+R103,9.1k,device,R
 U103,4N25,opto,4N25
-R102,1.5k,device,R
+R102,9.1k,device,R
 U102,4N25,opto,4N25
-R101,1.5k,device,R
+R101,9.1k,device,R
 D116,1N4007,device,D
 D115,1N4007,device,D
 D114,1N4007,device,D
@@ -60,10 +60,10 @@ Q106,BD137,device,Q_NPN_ECB
 Q108,BD137,device,Q_NPN_ECB
 Q107,BD137,device,Q_NPN_ECB
 P109,CONN_01X05,conn,CONN_01X05
-R114,1k,device,R
-R113,1k,device,R
-R112,1k,device,R
-R111,1k,device,R
+R114,1.5k,device,R
+R113,1.5k,device,R
+R112,1.5k,device,R
+R111,1.5k,device,R
 Q101,BC182,device,Q_NPN_CBE
 Q102,BC182,device,Q_NPN_CBE
 Q103,BC182,device,Q_NPN_CBE

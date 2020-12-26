@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/pozsarzs/Git/mm6d-hw/cad_files/wiring/wiring.sch</source>
-    <date>2020. okt. 29., csütörtök, 19:46:30 CET</date>
+    <date>2020. dec. 26., szombat, 19:00:29 CET</date>
     <tool>Eeschema 4.0.5+dfsg1-4</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -19,25 +19,25 @@
     </sheet>
   </design>
   <components>
-    <comp ref="P107">
+    <comp ref="P106">
       <value>CONN_01X02</value>
       <libsource lib="conn" part="CONN_01X02"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F1AEA68</tstamp>
     </comp>
-    <comp ref="P108">
+    <comp ref="P107">
       <value>CONN_01X02</value>
       <libsource lib="conn" part="CONN_01X02"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F1AEAED</tstamp>
     </comp>
-    <comp ref="P106">
+    <comp ref="P105">
       <value>CONN_01X03</value>
       <libsource lib="conn" part="CONN_01X03"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F1AEB30</tstamp>
     </comp>
-    <comp ref="P105">
+    <comp ref="P109">
       <value>CONN_01X05</value>
       <libsource lib="conn" part="CONN_01X05"/>
       <sheetpath names="/" tstamps="/"/>
@@ -176,19 +176,19 @@
       <tstamp>5F1B85B7</tstamp>
     </comp>
     <comp ref="F6">
-      <value>0.5A</value>
+      <value>0.8A</value>
       <libsource lib="device" part="Fuse"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F1BEB72</tstamp>
     </comp>
     <comp ref="F5">
-      <value>0,5A</value>
+      <value>0,8A</value>
       <libsource lib="device" part="Fuse"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F1BF710</tstamp>
     </comp>
     <comp ref="F4">
-      <value>0.5A</value>
+      <value>0.25A</value>
       <libsource lib="device" part="Fuse"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F1C0102</tstamp>
@@ -268,7 +268,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F1D8D2E</tstamp>
     </comp>
-    <comp ref="P109">
+    <comp ref="P108">
       <value>CONN_01X02</value>
       <libsource lib="conn" part="CONN_01X02"/>
       <sheetpath names="/" tstamps="/"/>
@@ -328,13 +328,13 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F9A31CA</tstamp>
     </comp>
-    <comp ref="P102">
+    <comp ref="P104">
       <value>CONN_01X02</value>
       <libsource lib="conn" part="CONN_01X02"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F9A3518</tstamp>
     </comp>
-    <comp ref="P101">
+    <comp ref="P103">
       <value>CONN_01X02</value>
       <libsource lib="conn" part="CONN_01X02"/>
       <sheetpath names="/" tstamps="/"/>
@@ -394,13 +394,13 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F9A8B33</tstamp>
     </comp>
-    <comp ref="P104">
+    <comp ref="P101">
       <value>CONN_01X05</value>
       <libsource lib="conn" part="CONN_01X05"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F9BE00B</tstamp>
     </comp>
-    <comp ref="P103">
+    <comp ref="P102">
       <value>CONN_01X02</value>
       <libsource lib="conn" part="CONN_01X02"/>
       <sheetpath names="/" tstamps="/"/>
@@ -608,11 +608,11 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="conn">
-      <uri>/usr/share/kicad/library/conn.lib</uri>
-    </library>
     <library logical="pzs_others">
       <uri>/home/pozsarzs/Git/mm6d-hw/cad_files/wiring/pzs_others.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
     </library>
     <library logical="device">
       <uri>/usr/share/kicad/library/device.lib</uri>
@@ -626,110 +626,110 @@
       <node ref="P15" pin="1"/>
     </net>
     <net code="4" name="Net-(K4a1-Pad~)">
-      <node ref="K4a1" pin="~"/>
       <node ref="P16" pin="1"/>
+      <node ref="K4a1" pin="~"/>
     </net>
-    <net code="7" name="Net-(P104-Pad3)">
-      <node ref="P104" pin="3"/>
+    <net code="7" name="Net-(P103-Pad2)">
+      <node ref="P103" pin="2"/>
     </net>
-    <net code="8" name="Net-(P101-Pad2)">
-      <node ref="P101" pin="2"/>
-    </net>
-    <net code="9" name="Net-(P101-Pad1)">
-      <node ref="P101" pin="1"/>
+    <net code="8" name="Net-(P103-Pad1)">
+      <node ref="P103" pin="1"/>
       <node ref="Tr1" pin="~"/>
     </net>
-    <net code="10" name="Net-(P102-Pad2)">
-      <node ref="P102" pin="2"/>
+    <net code="9" name="Net-(P104-Pad2)">
+      <node ref="P104" pin="2"/>
     </net>
-    <net code="11" name="Net-(P102-Pad1)">
+    <net code="10" name="Net-(P104-Pad1)">
       <node ref="Tr2" pin="~"/>
-      <node ref="P102" pin="1"/>
+      <node ref="P104" pin="1"/>
     </net>
-    <net code="12" name="Net-(P209-Pad1)">
-      <node ref="P209" pin="1"/>
+    <net code="11" name="Net-(P209-Pad1)">
       <node ref="SW'1" pin="~"/>
+      <node ref="P209" pin="1"/>
       <node ref="SW'2" pin="~"/>
     </net>
-    <net code="13" name="Net-(SW'2-Pad~)">
+    <net code="12" name="Net-(SW'2-Pad~)">
+      <node ref="SW'2" pin="~"/>
       <node ref="SW'3" pin="~"/>
-      <node ref="SW'2" pin="~"/>
     </net>
-    <net code="14" name="Net-(K3a1-Pad~)">
+    <net code="13" name="Net-(K3a1-Pad~)">
       <node ref="P10" pin="1"/>
     </net>
-    <net code="15" name="Net-(P12-Pad1)">
-      <node ref="P12" pin="1"/>
-      <node ref="P9" pin="1"/>
-      <node ref="P6" pin="1"/>
+    <net code="14" name="Net-(P12-Pad1)">
       <node ref="P3" pin="1"/>
+      <node ref="P6" pin="1"/>
+      <node ref="P9" pin="1"/>
+      <node ref="P12" pin="1"/>
     </net>
-    <net code="16" name="Net-(K2a1-Pad~)">
-      <node ref="K2a1" pin="~"/>
+    <net code="15" name="Net-(K2a1-Pad~)">
       <node ref="P7" pin="1"/>
+      <node ref="K2a1" pin="~"/>
     </net>
-    <net code="17" name="Net-(K1-Pad1)">
+    <net code="16" name="Net-(K1-Pad1)">
       <node ref="K1" pin="1"/>
       <node ref="K2" pin="1"/>
       <node ref="K3" pin="1"/>
     </net>
-    <net code="18" name="Net-(F3-Pad~)">
+    <net code="17" name="Net-(F3-Pad~)">
       <node ref="K3a1" pin="~"/>
     </net>
-    <net code="19" name="Net-(P106-Pad2)">
+    <net code="18" name="Net-(P105-Pad2)">
       <node ref="P18" pin="3"/>
+      <node ref="P105" pin="2"/>
+    </net>
+    <net code="19" name="Net-(P105-Pad1)">
+      <node ref="P18" pin="5"/>
+      <node ref="P105" pin="1"/>
+    </net>
+    <net code="20" name="Net-(LS1-Pad2)">
+      <node ref="LS1" pin="2"/>
       <node ref="P106" pin="2"/>
     </net>
-    <net code="20" name="Net-(P106-Pad1)">
-      <node ref="P18" pin="5"/>
+    <net code="21" name="Net-(LS1-Pad1)">
+      <node ref="LS1" pin="1"/>
       <node ref="P106" pin="1"/>
     </net>
-    <net code="21" name="Net-(LS1-Pad2)">
+    <net code="22" name="Net-(BT1-Pad1)">
       <node ref="P107" pin="2"/>
-      <node ref="LS1" pin="2"/>
-    </net>
-    <net code="22" name="Net-(LS1-Pad1)">
-      <node ref="P107" pin="1"/>
-      <node ref="LS1" pin="1"/>
-    </net>
-    <net code="23" name="Net-(BT1-Pad1)">
       <node ref="BT1" pin="1"/>
-      <node ref="P108" pin="2"/>
     </net>
-    <net code="24" name="Net-(BT1-Pad2)">
-      <node ref="P108" pin="1"/>
+    <net code="23" name="Net-(BT1-Pad2)">
+      <node ref="P107" pin="1"/>
       <node ref="BT1" pin="2"/>
     </net>
-    <net code="25" name="Net-(F5-Pad1)">
+    <net code="24" name="Net-(F5-Pad1)">
       <node ref="F5" pin="1"/>
       <node ref="K4a1" pin="~"/>
     </net>
-    <net code="26" name="Net-(K1a1-Pad~)">
+    <net code="25" name="Net-(K1a1-Pad~)">
       <node ref="K1a1" pin="~"/>
       <node ref="P4" pin="1"/>
     </net>
-    <net code="27" name="Net-(F5-Pad2)">
+    <net code="26" name="Net-(F5-Pad2)">
       <node ref="F5" pin="2"/>
-      <node ref="P103" pin="2"/>
       <node ref="F6" pin="2"/>
+      <node ref="P102" pin="2"/>
     </net>
-    <net code="28" name="GND">
-      <node ref="P207" pin="3"/>
-      <node ref="P103" pin="1"/>
-      <node ref="P104" pin="1"/>
+    <net code="27" name="GND">
+      <node ref="P101" pin="1"/>
+      <node ref="P102" pin="1"/>
       <node ref="P17" pin="1"/>
+      <node ref="P207" pin="3"/>
     </net>
-    <net code="29" name="Net-(P104-Pad5)">
-      <node ref="P104" pin="5"/>
+    <net code="28" name="Net-(P101-Pad5)">
       <node ref="P13" pin="1"/>
+      <node ref="P101" pin="5"/>
     </net>
-    <net code="30" name="Net-(P104-Pad2)">
+    <net code="29" name="Net-(P14-Pad1)">
+      <node ref="P202" pin="1"/>
+      <node ref="P14" pin="1"/>
+    </net>
+    <net code="30" name="Net-(P101-Pad2)">
+      <node ref="P101" pin="2"/>
+    </net>
+    <net code="31" name="Net-(P101-Pad3)">
+      <node ref="P101" pin="3"/>
       <node ref="SW'1" pin="~"/>
-      <node ref="P104" pin="2"/>
-    </net>
-    <net code="31" name="Net-(P204-Pad2)">
-      <node ref="SW1" pin="~"/>
-      <node ref="P204" pin="2"/>
     </net>
     <net code="32" name="Net-(P207-Pad2)">
       <node ref="P207" pin="2"/>
@@ -745,17 +745,17 @@
       <node ref="P204" pin="4"/>
       <node ref="SW2" pin="~"/>
     </net>
-    <net code="36" name="Net-(P106-Pad3)">
-      <node ref="P106" pin="3"/>
-      <node ref="P18" pin="2"/>
+    <net code="36" name="Net-(P204-Pad2)">
+      <node ref="P204" pin="2"/>
+      <node ref="SW1" pin="~"/>
     </net>
     <net code="37" name="Net-(F1-Pad~)">
       <node ref="P1" pin="1"/>
       <node ref="F4" pin="2"/>
-      <node ref="F2" pin="~"/>
+      <node ref="P205" pin="3"/>
       <node ref="F3" pin="~"/>
       <node ref="F1" pin="~"/>
-      <node ref="P205" pin="3"/>
+      <node ref="F2" pin="~"/>
     </net>
     <net code="38" name="Net-(F4-Pad1)">
       <node ref="F4" pin="1"/>
@@ -764,24 +764,24 @@
     </net>
     <net code="39" name="Net-(P11-Pad1)">
       <node ref="P11" pin="1"/>
+      <node ref="Tr1" pin="~"/>
       <node ref="P5" pin="1"/>
       <node ref="P8" pin="1"/>
+      <node ref="Tr2" pin="~"/>
       <node ref="P2" pin="1"/>
       <node ref="P205" pin="1"/>
-      <node ref="Tr2" pin="~"/>
-      <node ref="Tr1" pin="~"/>
     </net>
-    <net code="40" name="Net-(P14-Pad1)">
-      <node ref="P14" pin="1"/>
-      <node ref="P202" pin="1"/>
+    <net code="40" name="Net-(P105-Pad3)">
+      <node ref="P105" pin="3"/>
+      <node ref="P18" pin="2"/>
     </net>
-    <net code="41" name="Net-(P109-Pad2)">
+    <net code="41" name="Net-(P108-Pad2)">
+      <node ref="P108" pin="2"/>
       <node ref="P201" pin="2"/>
-      <node ref="P109" pin="2"/>
     </net>
-    <net code="42" name="Net-(P109-Pad1)">
-      <node ref="P109" pin="1"/>
+    <net code="42" name="Net-(P108-Pad1)">
       <node ref="P201" pin="1"/>
+      <node ref="P108" pin="1"/>
     </net>
     <net code="43" name="Net-(P206-Pad2)">
       <node ref="SW'3" pin="~"/>
@@ -796,18 +796,18 @@
     </net>
     <net code="46" name="Net-(K3-Pad2)">
       <node ref="P204" pin="5"/>
-      <node ref="P105" pin="5"/>
+      <node ref="P109" pin="5"/>
       <node ref="K3" pin="2"/>
     </net>
     <net code="47" name="Net-(K2-Pad2)">
-      <node ref="P105" pin="4"/>
-      <node ref="K2" pin="2"/>
       <node ref="P204" pin="3"/>
+      <node ref="P109" pin="4"/>
+      <node ref="K2" pin="2"/>
     </net>
     <net code="48" name="Net-(K1-Pad2)">
       <node ref="P204" pin="1"/>
       <node ref="K1" pin="2"/>
-      <node ref="P105" pin="3"/>
+      <node ref="P109" pin="3"/>
     </net>
     <net code="49" name="Net-(P18-Pad7)">
       <node ref="P18" pin="7"/>
@@ -831,28 +831,28 @@
       <node ref="P18" pin="8"/>
     </net>
     <net code="57" name="Net-(AK1-Pad~)">
-      <node ref="P104" pin="4"/>
+      <node ref="P101" pin="4"/>
     </net>
     <net code="58" name="Net-(AK1-Pad~)">
-      <node ref="AK1" pin="~"/>
       <node ref="AK2" pin="~"/>
+      <node ref="AK1" pin="~"/>
     </net>
     <net code="59" name="Net-(AK1-Pad~)">
+      <node ref="P208" pin="1"/>
       <node ref="AK1" pin="~"/>
       <node ref="AK3" pin="~"/>
       <node ref="AK2" pin="~"/>
-      <node ref="P208" pin="1"/>
     </net>
     <net code="60" name="Net-(AK3-Pad~)">
-      <node ref="P206" pin="3"/>
-      <node ref="P105" pin="1"/>
-      <node ref="F6" pin="1"/>
       <node ref="AK3" pin="~"/>
+      <node ref="P109" pin="1"/>
+      <node ref="F6" pin="1"/>
       <node ref="K4" pin="1"/>
+      <node ref="P206" pin="3"/>
     </net>
     <net code="61" name="Net-(K4-Pad2)">
       <node ref="K4" pin="2"/>
-      <node ref="P105" pin="2"/>
+      <node ref="P109" pin="2"/>
       <node ref="P203" pin="1"/>
     </net>
     <net code="62" name="Net-(P205-Pad2)">

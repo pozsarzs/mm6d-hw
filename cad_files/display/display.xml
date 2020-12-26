@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/pozsarzs/Git/mm6d-hw/cad_files/display/display.sch</source>
-    <date>2020. okt. 26., hétfő, 12:19:54 CET</date>
+    <date>2020. dec. 26., szombat, 18:51:55 CET</date>
     <tool>Eeschema 4.0.5+dfsg1-4</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -20,7 +20,7 @@
   </design>
   <components>
     <comp ref="R201">
-      <value>47k</value>
+      <value>220k</value>
       <footprint>Resistors_THT:Resistor_Horizontal_RM15mm</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -41,7 +41,7 @@
       <tstamp>5F1AF03C</tstamp>
     </comp>
     <comp ref="R208">
-      <value>1,5k</value>
+      <value>9.1k</value>
       <footprint>Resistors_THT:Resistor_Horizontal_RM15mm</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -55,7 +55,7 @@
       <tstamp>5F1BBBBC</tstamp>
     </comp>
     <comp ref="R203">
-      <value>1.5k</value>
+      <value>9.1k</value>
       <footprint>Resistors_THT:Resistor_Horizontal_RM15mm</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -69,7 +69,7 @@
       <tstamp>5F1C1910</tstamp>
     </comp>
     <comp ref="R207">
-      <value>1,5k</value>
+      <value>9.1k</value>
       <footprint>Resistors_THT:Resistor_Horizontal_RM15mm</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -121,7 +121,7 @@
       <tstamp>5F81AC4E</tstamp>
     </comp>
     <comp ref="R206">
-      <value>1,5k</value>
+      <value>9.1k</value>
       <footprint>Resistors_THT:Resistor_Horizontal_RM15mm</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -135,7 +135,7 @@
       <tstamp>5F7E9A8F</tstamp>
     </comp>
     <comp ref="R205">
-      <value>1,5k</value>
+      <value>9.1k</value>
       <footprint>Resistors_THT:Resistor_Horizontal_RM15mm</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -149,7 +149,7 @@
       <tstamp>5F7E9BE9</tstamp>
     </comp>
     <comp ref="R204">
-      <value>1,5k</value>
+      <value>9.1k</value>
       <footprint>Resistors_THT:Resistor_Horizontal_RM15mm</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -170,7 +170,7 @@
       <tstamp>5F7F615E</tstamp>
     </comp>
     <comp ref="R202">
-      <value>1.5k</value>
+      <value>9.1k</value>
       <footprint>Resistors_THT:Resistor_Horizontal_RM15mm</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -368,14 +368,14 @@
     </libpart>
   </libparts>
   <libraries>
+    <library logical="pzs_devices">
+      <uri>/home/pozsarzs/Git/mm6d-hw/cad_files/display/pzs_devices.lib</uri>
+    </library>
     <library logical="conn">
       <uri>/usr/share/kicad/library/conn.lib</uri>
     </library>
     <library logical="device">
       <uri>/usr/share/kicad/library/device.lib</uri>
-    </library>
-    <library logical="pzs_devices">
-      <uri>/home/pozsarzs/Git/mm6d-hw/cad_files/display/pzs_devices.lib</uri>
     </library>
   </libraries>
   <nets>

@@ -1,6 +1,6 @@
 Source,/home/pozsarzs/Git/mm6d-hw/cad_files/wiring/wiring.sch
 Kicad Rev,Eeschema 4.0.5+dfsg1-4
-Generated Date,2020. okt. 29., csütörtök, 19:46:30 CET
+Generated Date,2020. dec. 26., szombat, 19:00:29 CET
 
 Title,MM6D Remote controlled switching device
 Company,Pozsar Zsolt - http://www.szerafingomba.hu
@@ -10,10 +10,10 @@ Comment,Internal wiring
 Comment,Draw no.: 59/11/6
 
 Reference,Value,Field4,Library,Library Ref
+P106,CONN_01X02,conn,CONN_01X02
 P107,CONN_01X02,conn,CONN_01X02
-P108,CONN_01X02,conn,CONN_01X02
-P106,CONN_01X03,conn,CONN_01X03
-P105,CONN_01X05,conn,CONN_01X05
+P105,CONN_01X03,conn,CONN_01X03
+P109,CONN_01X05,conn,CONN_01X05
 P18,DB9,conn,DB9
 P1,screw_conn,pzs_others,screw_conn
 P2,screw_conn,pzs_others,screw_conn
@@ -36,9 +36,9 @@ P17,screw_conn,pzs_others,screw_conn
 AK3,auxcontalt,pzs_others,auxcontalt
 AK1,auxcontalt,pzs_others,auxcontalt
 AK2,auxcontalt,pzs_others,auxcontalt
-F6,0.5A,device,Fuse
-F5,0,5A,device,Fuse
-F4,0.5A,device,Fuse
+F6,0.8A,device,Fuse
+F5,0,8A,device,Fuse
+F4,0.25A,device,Fuse
 BT1,3.7V 500mAh,LiPoly accu,device,Battery
 LS1,Piezo,device,Speaker_Ultrasound
 K1,Finder 40.51.9.012.0000,pzs_others,electromagnetic_actor_1
@@ -51,7 +51,7 @@ K1a1,auxcontalt,pzs_others,auxcontalt
 K2a1,auxcontalt,pzs_others,auxcontalt
 K3a1,auxcontalt,pzs_others,auxcontalt
 P16,screw_conn,pzs_others,screw_conn
-P109,CONN_01X02,conn,CONN_01X02
+P108,CONN_01X02,conn,CONN_01X02
 SW1,auxcontalt,pzs_others,auxcontalt
 SW'1,auxcontalt,pzs_others,auxcontalt
 SW2,auxcontalt,pzs_others,auxcontalt
@@ -61,8 +61,8 @@ SW'3,auxcontalt,pzs_others,auxcontalt
 SW4,auxcontalt,pzs_others,auxcontalt
 Tr2,230V/12V 8VA,pzs_others,transformer_1P_1S
 Tr1,230V/12V 8VA,pzs_others,transformer_1P_1S
-P102,CONN_01X02,conn,CONN_01X02
-P101,CONN_01X02,conn,CONN_01X02
+P104,CONN_01X02,conn,CONN_01X02
+P103,CONN_01X02,conn,CONN_01X02
 P201,CONN_01X02,conn,CONN_01X02
 P202,CONN_01X01,conn,CONN_01X01
 P208,CONN_01X01,conn,CONN_01X01
@@ -72,5 +72,5 @@ P207,CONN_01X03,conn,CONN_01X03
 P206,CONN_01X03,conn,CONN_01X03
 P205,CONN_01X03,conn,CONN_01X03
 P204,CONN_01X06,conn,CONN_01X06
-P104,CONN_01X05,conn,CONN_01X05
-P103,CONN_01X02,conn,CONN_01X02
+P101,CONN_01X05,conn,CONN_01X05
+P102,CONN_01X02,conn,CONN_01X02
