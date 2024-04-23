@@ -1,11 +1,8 @@
-(kicad_pcb (version 4) (host pcbnew 4.0.5+dfsg1-4)
+(kicad_pcb (version 20171130) (host pcbnew 5.1.5+dfsg1-2build2)
 
   (general
-    (links 39)
-    (no_connects 6)
-    (area 104.689 58.090999 185.241001 129.361001)
     (thickness 1.6)
-    (drawings 12)
+    (drawings 11)
     (tracks 66)
     (zones 0)
     (modules 33)
@@ -14,12 +11,11 @@
 
   (page A4)
   (title_block
-    (title "MM6D Remote controlled switching device")
-    (date 2020-10-26)
-    (rev 200612)
-    (company "Pozsar Zsolt - http://www.szerafingomba.hu")
+    (title "MM6D Grow house control device")
+    (date 2024-04-23)
+    (rev 231006)
+    (company "Pozsar Zsolt - http://www.pozsarzs.hu")
     (comment 1 "Display board")
-    (comment 4 "Draw no.: 59/11/5")
   )
 
   (layers
@@ -52,8 +48,6 @@
     (zone_clearance 0.508)
     (zone_45_only no)
     (trace_min 0.2)
-    (segment_width 0.2)
-    (edge_width 0.15)
     (via_size 0.6)
     (via_drill 0.4)
     (via_min_size 0.4)
@@ -63,6 +57,8 @@
     (uvias_allowed no)
     (uvia_min_size 0.2)
     (uvia_min_drill 0.1)
+    (edge_width 0.15)
+    (segment_width 0.2)
     (pcb_text_width 0.3)
     (pcb_text_size 1.5 1.5)
     (mod_edge_width 0.15)
@@ -74,18 +70,20 @@
     (aux_axis_origin 0 0)
     (visible_elements 7FFFFFFF)
     (pcbplotparams
-      (layerselection 0x00020_00000000)
+      (layerselection 0x010e0_ffffffff)
       (usegerberextensions false)
+      (usegerberattributes false)
+      (usegerberadvancedattributes false)
+      (creategerberjobfile false)
       (excludeedgelayer false)
       (linewidth 0.100000)
-      (plotframeref true)
+      (plotframeref false)
       (viasonmask false)
       (mode 1)
       (useauxorigin false)
       (hpglpennumber 1)
       (hpglpenspeed 20)
-      (hpglpendiameter 15)
-      (hpglpenoverlay 2)
+      (hpglpendiameter 15.000000)
       (psnegative false)
       (psa4output false)
       (plotreference true)
@@ -93,9 +91,9 @@
       (plotinvisibletext false)
       (padsonsilk false)
       (subtractmaskfromsilk false)
-      (outputformat 4)
+      (outputformat 1)
       (mirror false)
-      (drillshape 2)
+      (drillshape 0)
       (scaleselection 1)
       (outputdirectory ""))
   )
@@ -201,7 +199,7 @@
     (pad 2 thru_hole oval (at 2.54 0 90) (size 2.032 2.032) (drill 1.00076) (layers *.Cu *.Mask)
       (net 2 "Net-(BT201-Pad2)"))
     (model Socket_Strips.3dshapes/Socket_Strip_Straight_1x02.wrl
-      (at (xyz 0.05 0 0))
+      (offset (xyz 1.269999980926514 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 180))
     )
@@ -231,7 +229,7 @@
     (pad 2 thru_hole circle (at 2.54 0) (size 1.9 1.9) (drill 1.00076) (layers *.Cu *.Mask)
       (net 4 "Net-(D201-Pad2)"))
     (model LEDs.3dshapes/LED-5MM.wrl
-      (at (xyz 0.05 0 0))
+      (offset (xyz 1.269999980926514 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -261,7 +259,7 @@
     (pad 2 thru_hole circle (at 2.54 0) (size 1.9 1.9) (drill 1.00076) (layers *.Cu *.Mask)
       (net 6 "Net-(D202-Pad2)"))
     (model LEDs.3dshapes/LED-5MM.wrl
-      (at (xyz 0.05 0 0))
+      (offset (xyz 1.269999980926514 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -291,7 +289,7 @@
     (pad 2 thru_hole circle (at 2.54 0) (size 1.9 1.9) (drill 1.00076) (layers *.Cu *.Mask)
       (net 7 "Net-(D203-Pad2)"))
     (model LEDs.3dshapes/LED-5MM.wrl
-      (at (xyz 0.05 0 0))
+      (offset (xyz 1.269999980926514 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -321,7 +319,7 @@
     (pad 2 thru_hole circle (at 2.54 0) (size 1.9 1.9) (drill 1.00076) (layers *.Cu *.Mask)
       (net 9 "Net-(D204-Pad2)"))
     (model LEDs.3dshapes/LED-5MM.wrl
-      (at (xyz 0.05 0 0))
+      (offset (xyz 1.269999980926514 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -351,7 +349,7 @@
     (pad 2 thru_hole circle (at 2.54 0) (size 1.9 1.9) (drill 1.00076) (layers *.Cu *.Mask)
       (net 11 "Net-(D205-Pad2)"))
     (model LEDs.3dshapes/LED-5MM.wrl
-      (at (xyz 0.05 0 0))
+      (offset (xyz 1.269999980926514 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -381,7 +379,7 @@
     (pad 2 thru_hole circle (at 2.54 0) (size 1.9 1.9) (drill 1.00076) (layers *.Cu *.Mask)
       (net 13 "Net-(D206-Pad2)"))
     (model LEDs.3dshapes/LED-5MM.wrl
-      (at (xyz 0.05 0 0))
+      (offset (xyz 1.269999980926514 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -411,7 +409,7 @@
     (pad 2 thru_hole circle (at 2.54 0) (size 1.9 1.9) (drill 1.00076) (layers *.Cu *.Mask)
       (net 14 "Net-(D207-Pad2)"))
     (model LEDs.3dshapes/LED-5MM.wrl
-      (at (xyz 0.05 0 0))
+      (offset (xyz 1.269999980926514 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -441,7 +439,7 @@
     (pad 2 thru_hole circle (at 2.54 0) (size 1.9 1.9) (drill 1.00076) (layers *.Cu *.Mask)
       (net 15 "Net-(D208-Pad2)"))
     (model LEDs.3dshapes/LED-5MM.wrl
-      (at (xyz 0.05 0 0))
+      (offset (xyz 1.269999980926514 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -471,7 +469,7 @@
     (pad 2 thru_hole circle (at 2.54 0) (size 1.9 1.9) (drill 1.00076) (layers *.Cu *.Mask)
       (net 17 "Net-(D209-Pad2)"))
     (model LEDs.3dshapes/LED-5MM.wrl
-      (at (xyz 0.05 0 0))
+      (offset (xyz 1.269999980926514 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -597,7 +595,7 @@
     (pad 2 thru_hole oval (at 2.54 0 90) (size 2.032 2.032) (drill 1.00076) (layers *.Cu *.Mask)
       (net 17 "Net-(D209-Pad2)"))
     (model Socket_Strips.3dshapes/Socket_Strip_Straight_1x02.wrl
-      (at (xyz 0.05 0 0))
+      (offset (xyz 1.269999980926514 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 180))
     )
@@ -636,10 +634,10 @@
     (descr "Through hole socket strip")
     (tags "socket strip")
     (path /5F95EDE5)
-    (fp_text reference P203 (at -2.54 0 360) (layer F.SilkS)
+    (fp_text reference P203 (at -2.54 0) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value CONN_01X01 (at 2.54 0 360) (layer F.Fab) hide
+    (fp_text value CONN_01X01 (at 2.54 0) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -1.75 -1.75) (end -1.75 1.75) (layer F.CrtYd) (width 0.05))
@@ -694,7 +692,7 @@
     (pad 6 thru_hole oval (at 12.7 0 270) (size 1.7272 2.032) (drill 1.00076) (layers *.Cu *.Mask)
       (net 12 "Net-(D206-Pad1)"))
     (model Socket_Strips.3dshapes/Socket_Strip_Straight_1x06.wrl
-      (at (xyz 0.25 0 0))
+      (offset (xyz 6.349999904632568 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 180))
     )
@@ -729,7 +727,7 @@
     (pad 3 thru_hole oval (at 5.08 0) (size 1.7272 2.032) (drill 1.00076) (layers *.Cu *.Mask)
       (net 18 /+12V))
     (model Socket_Strips.3dshapes/Socket_Strip_Straight_1x03.wrl
-      (at (xyz 0.1 0 0))
+      (offset (xyz 2.539999961853027 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 180))
     )
@@ -764,7 +762,7 @@
     (pad 3 thru_hole oval (at 5.08 0 270) (size 1.7272 2.032) (drill 1.00076) (layers *.Cu *.Mask)
       (net 2 "Net-(BT201-Pad2)"))
     (model Socket_Strips.3dshapes/Socket_Strip_Straight_1x03.wrl
-      (at (xyz 0.1 0 0))
+      (offset (xyz 2.539999961853027 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 180))
     )
@@ -852,7 +850,7 @@
     (pad 2 thru_hole circle (at 15 0) (size 1.99898 1.99898) (drill 1.00076) (layers *.Cu *.SilkS *.Mask)
       (net 21 "Net-(D212-Pad1)"))
     (model Resistors_ThroughHole.3dshapes/Resistor_Horizontal_RM15mm.wrl
-      (at (xyz 0.295 0 0))
+      (offset (xyz 7.49299988746643 0 0))
       (scale (xyz 0.395 0.4 0.4))
       (rotate (xyz 0 0 0))
     )
@@ -884,7 +882,7 @@
     (pad 2 thru_hole circle (at 15 0) (size 1.99898 1.99898) (drill 1.00076) (layers *.Cu *.SilkS *.Mask)
       (net 18 /+12V))
     (model Resistors_ThroughHole.3dshapes/Resistor_Horizontal_RM15mm.wrl
-      (at (xyz 0.295 0 0))
+      (offset (xyz 7.49299988746643 0 0))
       (scale (xyz 0.395 0.4 0.4))
       (rotate (xyz 0 0 0))
     )
@@ -916,7 +914,7 @@
     (pad 2 thru_hole circle (at 15 0) (size 1.99898 1.99898) (drill 1.00076) (layers *.Cu *.SilkS *.Mask)
       (net 18 /+12V))
     (model Resistors_ThroughHole.3dshapes/Resistor_Horizontal_RM15mm.wrl
-      (at (xyz 0.295 0 0))
+      (offset (xyz 7.49299988746643 0 0))
       (scale (xyz 0.395 0.4 0.4))
       (rotate (xyz 0 0 0))
     )
@@ -948,7 +946,7 @@
     (pad 2 thru_hole circle (at 15 0) (size 1.99898 1.99898) (drill 1.00076) (layers *.Cu *.SilkS *.Mask)
       (net 18 /+12V))
     (model Resistors_ThroughHole.3dshapes/Resistor_Horizontal_RM15mm.wrl
-      (at (xyz 0.295 0 0))
+      (offset (xyz 7.49299988746643 0 0))
       (scale (xyz 0.395 0.4 0.4))
       (rotate (xyz 0 0 0))
     )
@@ -980,7 +978,7 @@
     (pad 2 thru_hole circle (at 15 0) (size 1.99898 1.99898) (drill 1.00076) (layers *.Cu *.SilkS *.Mask)
       (net 18 /+12V))
     (model Resistors_ThroughHole.3dshapes/Resistor_Horizontal_RM15mm.wrl
-      (at (xyz 0.295 0 0))
+      (offset (xyz 7.49299988746643 0 0))
       (scale (xyz 0.395 0.4 0.4))
       (rotate (xyz 0 0 0))
     )
@@ -1012,7 +1010,7 @@
     (pad 2 thru_hole circle (at 15 0) (size 1.99898 1.99898) (drill 1.00076) (layers *.Cu *.SilkS *.Mask)
       (net 18 /+12V))
     (model Resistors_ThroughHole.3dshapes/Resistor_Horizontal_RM15mm.wrl
-      (at (xyz 0.295 0 0))
+      (offset (xyz 7.49299988746643 0 0))
       (scale (xyz 0.395 0.4 0.4))
       (rotate (xyz 0 0 0))
     )
@@ -1044,7 +1042,7 @@
     (pad 2 thru_hole circle (at 15 0 180) (size 1.99898 1.99898) (drill 1.00076) (layers *.Cu *.SilkS *.Mask)
       (net 14 "Net-(D207-Pad2)"))
     (model Resistors_ThroughHole.3dshapes/Resistor_Horizontal_RM15mm.wrl
-      (at (xyz 0.295 0 0))
+      (offset (xyz 7.49299988746643 0 0))
       (scale (xyz 0.395 0.4 0.4))
       (rotate (xyz 0 0 0))
     )
@@ -1076,7 +1074,7 @@
     (pad 2 thru_hole circle (at 15 0) (size 1.99898 1.99898) (drill 1.00076) (layers *.Cu *.SilkS *.Mask)
       (net 23 "Net-(P209-Pad1)"))
     (model Resistors_ThroughHole.3dshapes/Resistor_Horizontal_RM15mm.wrl
-      (at (xyz 0.295 0 0))
+      (offset (xyz 7.49299988746643 0 0))
       (scale (xyz 0.395 0.4 0.4))
       (rotate (xyz 0 0 0))
     )
@@ -1111,7 +1109,7 @@
     (pad 3 thru_hole oval (at 5.08 0 90) (size 1.7272 2.032) (drill 1.00076) (layers *.Cu *.Mask)
       (net 20 "Net-(D212-Pad2)"))
     (model Socket_Strips.3dshapes/Socket_Strip_Straight_1x03.wrl
-      (at (xyz 0.1 0 0))
+      (offset (xyz 2.539999961853027 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 180))
     )
@@ -1147,11 +1145,8 @@
     (pad 1 thru_hole circle (at 0 0) (size 6.4 6.4) (drill 3.2) (layers *.Cu *.Mask))
   )
 
-  (gr_text "MM6D    2020" (at 163.068 124.46) (layer B.Cu)
+  (gr_text "MM6D    2023" (at 163.068 124.46) (layer B.Cu)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
-  )
-  (gr_text "DN: 59/11/5" (at 163.576 124.46) (layer F.SilkS)
-    (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (gr_text "Battery\n6F22" (at 165.608 69.088) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))

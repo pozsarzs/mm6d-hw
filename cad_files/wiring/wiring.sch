@@ -1,52 +1,20 @@
-EESchema Schematic File Version 2
-LIBS:pzs_others
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:pzs_devices
-LIBS:wiring-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "MM6D Remote controlled switching device"
-Date "2020-06-12"
-Rev "200612"
-Comp "Pozsar Zsolt - http://www.szerafingomba.hu"
+Title "MM6D Grow house control device"
+Date "2024-04-23"
+Rev "231006"
+Comp "Pozsar Zsolt - http://www.pozsarzs.hu"
 Comment1 "Internal wiring"
 Comment2 ""
 Comment3 ""
-Comment4 "Draw no.: 59/11/6"
+Comment4 ""
 $EndDescr
 $Comp
-L CONN_01X02 P106
+L wiring-rescue:CONN_01X02 P106
 U 1 1 5F1AEA68
 P 2600 4925
 F 0 "P106" V 2700 4925 50  0000 C CNN
@@ -57,7 +25,7 @@ F 3 "" H 2600 4925 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 P107
+L wiring-rescue:CONN_01X02 P107
 U 1 1 5F1AEAED
 P 2600 4525
 F 0 "P107" V 2700 4525 50  0000 C CNN
@@ -68,7 +36,7 @@ F 3 "" H 2600 4525 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L CONN_01X03 P105
+L wiring-rescue:CONN_01X03 P105
 U 1 1 5F1AEB30
 P 1850 5925
 F 0 "P105" V 1950 5925 50  0000 C CNN
@@ -79,7 +47,7 @@ F 3 "" H 1850 5925 50  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L CONN_01X05 P109
+L wiring-rescue:CONN_01X05 P109
 U 1 1 5F1AEB6F
 P 2600 5500
 F 0 "P109" V 2700 5500 50  0000 C CNN
@@ -90,7 +58,7 @@ F 3 "" H 2600 5500 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L DB9 P18
+L wiring-rescue:DB9 P18
 U 1 1 5F1AEBB0
 P 1000 5925
 F 0 "P18" H 950 5350 50  0000 C CNN
@@ -101,7 +69,7 @@ F 3 "" H 1000 5925 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L screw_conn P1
+L pzs_others:screw_conn P1
 U 1 1 5F1AECB1
 P 975 1300
 F 0 "P1" H 825 1250 40  0000 L CNN
@@ -112,7 +80,7 @@ F 3 "" H 975 1300 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L screw_conn P2
+L pzs_others:screw_conn P2
 U 1 1 5F1AEDC4
 P 975 1500
 F 0 "P2" H 825 1450 40  0000 L CNN
@@ -123,7 +91,7 @@ F 3 "" H 975 1500 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L screw_conn P3
+L pzs_others:screw_conn P3
 U 1 1 5F1AEDF3
 P 975 1700
 F 0 "P3" H 825 1650 40  0000 L CNN
@@ -134,7 +102,7 @@ F 3 "" H 975 1700 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L overcurrent_breaker F1
+L pzs_others:overcurrent_breaker F1
 U 1 1 5F1AF3B1
 P 8225 2800
 F 0 "F1" V 8375 2900 50  0000 C CNN
@@ -145,7 +113,7 @@ F 3 "" H 8250 2800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L overcurrent_breaker F2
+L pzs_others:overcurrent_breaker F2
 U 1 1 5F1AF4A3
 P 9325 2800
 F 0 "F2" V 9475 2900 50  0000 C CNN
@@ -156,7 +124,7 @@ F 3 "" H 9350 2800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L overcurrent_breaker F3
+L pzs_others:overcurrent_breaker F3
 U 1 1 5F1AF4EC
 P 10425 2800
 F 0 "F3" V 10575 2900 50  0000 C CNN
@@ -167,7 +135,7 @@ F 3 "" H 10450 2800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L electromagnetic_actor_1 K4
+L pzs_others:electromagnetic_actor_1 K4
 U 1 1 5F1AF755
 P 6725 3700
 F 0 "K4" H 6800 3875 50  0000 L CNN
@@ -178,7 +146,7 @@ F 3 "" V 6700 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L screw_conn P10
+L pzs_others:screw_conn P10
 U 1 1 5F1B024C
 P 10425 6100
 F 0 "P10" H 10250 6025 40  0000 L CNN
@@ -189,7 +157,7 @@ F 3 "" H 10425 6100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L screw_conn P7
+L pzs_others:screw_conn P7
 U 1 1 5F1B0433
 P 9325 6100
 F 0 "P7" H 9150 6025 40  0000 L CNN
@@ -200,7 +168,7 @@ F 3 "" H 9325 6100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L screw_conn P4
+L pzs_others:screw_conn P4
 U 1 1 5F1B04A4
 P 8225 6100
 F 0 "P4" H 8050 6050 40  0000 L CNN
@@ -211,7 +179,7 @@ F 3 "" H 8225 6100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L screw_conn P15
+L pzs_others:screw_conn P15
 U 1 1 5F1B051A
 P 7525 6100
 F 0 "P15" H 7350 6050 40  0000 L CNN
@@ -222,7 +190,7 @@ F 3 "" H 7525 6100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L screw_conn P11
+L pzs_others:screw_conn P11
 U 1 1 5F1B1C6E
 P 10225 6100
 F 0 "P11" H 10050 6025 40  0000 L CNN
@@ -233,7 +201,7 @@ F 3 "" H 10225 6100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L screw_conn P12
+L pzs_others:screw_conn P12
 U 1 1 5F1B1CF4
 P 10025 6100
 F 0 "P12" H 9850 6025 40  0000 L CNN
@@ -244,7 +212,7 @@ F 3 "" H 10025 6100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L screw_conn P8
+L pzs_others:screw_conn P8
 U 1 1 5F1B28D6
 P 9125 6100
 F 0 "P8" H 8950 6025 40  0000 L CNN
@@ -255,7 +223,7 @@ F 3 "" H 9125 6100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L screw_conn P9
+L pzs_others:screw_conn P9
 U 1 1 5F1B28DC
 P 8925 6100
 F 0 "P9" H 8750 6025 40  0000 L CNN
@@ -266,7 +234,7 @@ F 3 "" H 8925 6100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L screw_conn P5
+L pzs_others:screw_conn P5
 U 1 1 5F1B2B80
 P 8025 6100
 F 0 "P5" H 7850 6050 40  0000 L CNN
@@ -277,7 +245,7 @@ F 3 "" H 8025 6100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L screw_conn P6
+L pzs_others:screw_conn P6
 U 1 1 5F1B2B86
 P 7825 6100
 F 0 "P6" H 7650 6050 40  0000 L CNN
@@ -288,7 +256,7 @@ F 3 "" H 7825 6100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L screw_conn P17
+L pzs_others:screw_conn P17
 U 1 1 5F1B2D00
 P 7125 6100
 F 0 "P17" H 6950 6025 40  0000 L CNN
@@ -299,7 +267,7 @@ F 3 "" H 7125 6100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L auxcontalt AK3
+L pzs_others:auxcontalt AK3
 U 1 1 5F1B8257
 P 10675 2800
 F 0 "AK3" V 10475 2700 50  0000 C CNN
@@ -310,7 +278,7 @@ F 3 "" H 10700 2800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L auxcontalt AK1
+L pzs_others:auxcontalt AK1
 U 1 1 5F1B84F4
 P 8475 2800
 F 0 "AK1" V 8275 2675 50  0000 C CNN
@@ -321,7 +289,7 @@ F 3 "" H 8500 2800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L auxcontalt AK2
+L pzs_others:auxcontalt AK2
 U 1 1 5F1B85B7
 P 9575 2800
 F 0 "AK2" V 9375 2675 50  0000 C CNN
@@ -332,7 +300,7 @@ F 3 "" H 9600 2800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Fuse F6
+L wiring-rescue:Fuse F6
 U 1 1 5F1BEB72
 P 2200 2350
 F 0 "F6" V 2275 2275 50  0000 C CNN
@@ -343,7 +311,7 @@ F 3 "" H 2200 2350 50  0000 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Fuse F5
+L wiring-rescue:Fuse F5
 U 1 1 5F1BF710
 P 2200 2150
 F 0 "F5" V 2275 2075 50  0000 C CNN
@@ -354,7 +322,7 @@ F 3 "" H 2200 2150 50  0000 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Fuse F4
+L wiring-rescue:Fuse F4
 U 1 1 5F1C0102
 P 4275 2800
 F 0 "F4" V 4350 2800 50  0000 C CNN
@@ -365,7 +333,7 @@ F 3 "" H 4275 2800 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 0V #PWR01
+L pzs_others:0V #PWR01
 U 1 1 5F1C363E
 P 7025 5850
 F 0 "#PWR01" H 7025 5600 50  0001 C CNN
@@ -376,7 +344,7 @@ F 3 "" H 7025 5850 50  0000 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L Battery BT1
+L wiring-rescue:Battery BT1
 U 1 1 5F1CEF2B
 P 3475 4575
 F 0 "BT1" V 3525 4100 50  0000 L CNN
@@ -388,7 +356,7 @@ F 4 "LiPoly accu" V 3775 4550 50  0000 C CNN "Field4"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Speaker_Ultrasound LS1
+L wiring-rescue:Speaker_Ultrasound LS1
 U 1 1 5F1CF608
 P 3575 4875
 F 0 "LS1" H 3925 4900 50  0000 R CNN
@@ -401,7 +369,7 @@ $EndComp
 Text Notes 750  1725 0    60   ~ 0
 Mains (230V AC)\n\nL\n\nN\n\nPE
 $Comp
-L electromagnetic_actor_1 K1
+L pzs_others:electromagnetic_actor_1 K1
 U 1 1 5F1C165C
 P 6725 4300
 F 0 "K1" H 6800 4475 50  0000 L CNN
@@ -412,7 +380,7 @@ F 3 "" V 6700 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L electromagnetic_actor_1 K2
+L pzs_others:electromagnetic_actor_1 K2
 U 1 1 5F1C1732
 P 6725 4900
 F 0 "K2" H 6800 5075 50  0000 L CNN
@@ -423,7 +391,7 @@ F 3 "" V 6700 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L electromagnetic_actor_1 K3
+L pzs_others:electromagnetic_actor_1 K3
 U 1 1 5F1C1811
 P 6725 5500
 F 0 "K3" H 6800 5675 50  0000 L CNN
@@ -440,7 +408,7 @@ NoConn ~ 1450 6025
 NoConn ~ 1450 6125
 NoConn ~ 1450 6225
 $Comp
-L screw_conn P14
+L pzs_others:screw_conn P14
 U 1 1 5F1CAA50
 P 1000 6950
 F 0 "P14" H 800 6900 40  0000 L CNN
@@ -451,7 +419,7 @@ F 3 "" H 1000 6950 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L screw_conn P13
+L pzs_others:screw_conn P13
 U 1 1 5F1CB87C
 P 1000 6775
 F 0 "P13" H 800 6725 40  0000 L CNN
@@ -461,8 +429,8 @@ F 3 "" H 1000 6775 60  0000 C CNN
 	1    1000 6775
 	-1   0    0    1   
 $EndComp
-Text Notes 800  6050 1    60   ~ 0
-Console
+Text Notes 800  6150 1    60   ~ 0
+RS-232 TTL
 Text Notes 800  7150 1    60   ~ 0
 Alarm sensor
 Text Notes 10100 6375 0    60   ~ 0
@@ -478,7 +446,7 @@ Ventilator
 Text Notes 7925 6375 0    60   ~ 0
 Lamp
 $Comp
-L auxcontalt K4a1
+L pzs_others:auxcontalt K4a1
 U 1 1 5F1D5FA0
 P 7425 3650
 F 0 "K4a1" V 7375 3825 50  0000 C CNN
@@ -489,7 +457,7 @@ F 3 "" H 7450 3650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L auxcontalt K1a1
+L pzs_others:auxcontalt K1a1
 U 1 1 5F1D61A6
 P 8225 4225
 F 0 "K1a1" V 8175 4400 50  0000 C CNN
@@ -500,7 +468,7 @@ F 3 "" H 8250 4225 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L auxcontalt K2a1
+L pzs_others:auxcontalt K2a1
 U 1 1 5F1D629D
 P 9325 4825
 F 0 "K2a1" V 9275 5025 50  0000 C CNN
@@ -511,7 +479,7 @@ F 3 "" H 9350 4825 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 $Comp
-L auxcontalt K3a1
+L pzs_others:auxcontalt K3a1
 U 1 1 5F1D63A1
 P 10425 5450
 F 0 "K3a1" V 10375 5650 50  0000 C CNN
@@ -525,7 +493,7 @@ NoConn ~ 10525 5300
 NoConn ~ 9425 4675
 NoConn ~ 8325 4075
 $Comp
-L screw_conn P16
+L pzs_others:screw_conn P16
 U 1 1 5F1D8D2E
 P 7325 6100
 F 0 "P16" H 7150 6025 40  0000 L CNN
@@ -540,7 +508,7 @@ C   R   G
 Text Notes 7075 6375 0    60   ~ 0
 Status lamp
 $Comp
-L CONN_01X02 P108
+L wiring-rescue:CONN_01X02 P108
 U 1 1 5F81A1FB
 P 2600 4000
 F 0 "P108" V 2700 4000 50  0000 C CNN
@@ -551,10 +519,10 @@ F 3 "" H 2600 4000 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L auxcontalt SW1
+L pzs_others:auxcontalt SW1
 U 1 1 5F9A2469
 P 3450 6675
-F 0 "SW1" V 2975 6675 50  0000 C CNN
+F 0 "SW1" V 3325 6475 50  0000 C CNN
 F 1 "auxcontalt" H 3400 6525 50  0001 C CNN
 F 2 "" H 3475 6675 50  0001 C CNN
 F 3 "" H 3475 6675 50  0001 C CNN
@@ -562,7 +530,7 @@ F 3 "" H 3475 6675 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L auxcontalt SW'1
+L pzs_others:auxcontalt SW'1
 U 1 1 5F9A246F
 P 3850 6675
 F 0 "SW'1" V 3375 6675 50  0001 C CNN
@@ -573,10 +541,10 @@ F 3 "" H 3875 6675 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L auxcontalt SW2
+L pzs_others:auxcontalt SW2
 U 1 1 5F9A2475
 P 4250 6675
-F 0 "SW2" V 3775 6675 50  0000 C CNN
+F 0 "SW2" V 4125 6500 50  0000 C CNN
 F 1 "auxcontalt" H 4200 6525 50  0001 C CNN
 F 2 "" H 4275 6675 50  0001 C CNN
 F 3 "" H 4275 6675 50  0001 C CNN
@@ -584,7 +552,7 @@ F 3 "" H 4275 6675 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L auxcontalt SW'2
+L pzs_others:auxcontalt SW'2
 U 1 1 5F9A247B
 P 4650 6675
 F 0 "SW'2" V 4175 6675 50  0001 C CNN
@@ -595,10 +563,10 @@ F 3 "" H 4675 6675 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L auxcontalt SW3
+L pzs_others:auxcontalt SW3
 U 1 1 5F9A2481
 P 5050 6675
-F 0 "SW3" V 4575 6675 50  0000 C CNN
+F 0 "SW3" V 4925 6500 50  0000 C CNN
 F 1 "auxcontalt" H 5000 6525 50  0001 C CNN
 F 2 "" H 5075 6675 50  0001 C CNN
 F 3 "" H 5075 6675 50  0001 C CNN
@@ -606,7 +574,7 @@ F 3 "" H 5075 6675 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L auxcontalt SW'3
+L pzs_others:auxcontalt SW'3
 U 1 1 5F9A2487
 P 5450 6675
 F 0 "SW'3" V 4975 6675 50  0001 C CNN
@@ -619,24 +587,23 @@ $EndComp
 Text Notes 3925 7525 0    60   ~ 0
 Manual operation mode
 $Comp
-L auxcontalt SW4
+L pzs_others:auxcontalt SW4
 U 1 1 5F9A248E
 P 6050 6675
-F 0 "SW4" V 5575 6675 50  0000 C CNN
+F 0 "SW4" V 5925 6525 50  0000 C CNN
 F 1 "auxcontalt" H 6000 6525 50  0001 C CNN
 F 2 "" H 6075 6675 50  0001 C CNN
 F 3 "" H 6075 6675 50  0001 C CNN
 	1    6050 6675
 	0    -1   -1   0   
 $EndComp
-Text Notes 6100 7000 0    60   ~ 0
+Text Notes 5850 7450 0    60   ~ 0
 Operation\n  mode
-NoConn ~ 6150 6525
 NoConn ~ 4950 6525
 NoConn ~ 4150 6525
 NoConn ~ 3350 6525
 $Comp
-L transformer_1P_1S Tr2
+L pzs_others:transformer_1P_1S Tr2
 U 1 1 5F9A2ECD
 P 3475 3000
 F 0 "Tr2" H 3350 2750 50  0000 C CNN
@@ -647,7 +614,7 @@ F 3 "" H 3475 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L transformer_1P_1S Tr1
+L pzs_others:transformer_1P_1S Tr1
 U 1 1 5F9A31CA
 P 3475 3550
 F 0 "Tr1" H 3600 3800 50  0000 C CNN
@@ -658,7 +625,7 @@ F 3 "" H 3475 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 P104
+L wiring-rescue:CONN_01X02 P104
 U 1 1 5F9A3518
 P 2600 3150
 F 0 "P104" V 2700 3150 50  0000 C CNN
@@ -669,7 +636,7 @@ F 3 "" H 2600 3150 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 P103
+L wiring-rescue:CONN_01X02 P103
 U 1 1 5F9A38F0
 P 2600 3400
 F 0 "P103" V 2700 3400 50  0000 C CNN
@@ -680,7 +647,7 @@ F 3 "" H 2600 3400 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 P201
+L wiring-rescue:CONN_01X02 P201
 U 1 1 5F9A7E15
 P 4275 4475
 F 0 "P201" V 4375 4475 50  0000 C CNN
@@ -691,7 +658,7 @@ F 3 "" H 4275 4475 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L CONN_01X01 P202
+L wiring-rescue:CONN_01X01 P202
 U 1 1 5F9A8153
 P 4450 5025
 F 0 "P202" V 4550 5025 50  0000 C CNN
@@ -702,7 +669,7 @@ F 3 "" H 4450 5025 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CONN_01X01 P208
+L wiring-rescue:CONN_01X01 P208
 U 1 1 5F9A8291
 P 5875 4475
 F 0 "P208" V 5975 4475 50  0000 C CNN
@@ -713,7 +680,7 @@ F 3 "" H 5875 4475 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L CONN_01X01 P209
+L wiring-rescue:CONN_01X01 P209
 U 1 1 5F9A8547
 P 5650 5025
 F 0 "P209" V 5750 5025 50  0000 C CNN
@@ -724,7 +691,7 @@ F 3 "" H 5650 5025 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CONN_01X01 P203
+L wiring-rescue:CONN_01X01 P203
 U 1 1 5F9A8759
 P 4225 5025
 F 0 "P203" V 4325 5025 50  0000 C CNN
@@ -735,7 +702,7 @@ F 3 "" H 4225 5025 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CONN_01X03 P207
+L wiring-rescue:CONN_01X03 P207
 U 1 1 5F9A8815
 P 4700 4475
 F 0 "P207" V 4800 4475 50  0000 C CNN
@@ -746,7 +713,7 @@ F 3 "" H 4700 4475 50  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L CONN_01X03 P206
+L wiring-rescue:CONN_01X03 P206
 U 1 1 5F9A894D
 P 5125 4475
 F 0 "P206" V 5225 4475 50  0000 C CNN
@@ -757,7 +724,7 @@ F 3 "" H 5125 4475 50  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L CONN_01X03 P205
+L wiring-rescue:CONN_01X03 P205
 U 1 1 5F9A8A6F
 P 5550 4475
 F 0 "P205" V 5650 4475 50  0000 C CNN
@@ -768,7 +735,7 @@ F 3 "" H 5550 4475 50  0000 C CNN
 	0    -1   1    0   
 $EndComp
 $Comp
-L CONN_01X06 P204
+L wiring-rescue:CONN_01X06 P204
 U 1 1 5F9A8B33
 P 5175 5025
 F 0 "P204" V 5275 5025 50  0000 C CNN
@@ -779,7 +746,7 @@ F 3 "" H 5175 5025 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 0V #PWR02
+L pzs_others:0V #PWR02
 U 1 1 5F9B1178
 P 4800 4175
 F 0 "#PWR02" H 4800 3925 50  0001 C CNN
@@ -793,7 +760,7 @@ NoConn ~ 5550 4275
 Text Notes 4775 4775 0    60   ~ 0
 Display board
 $Comp
-L CONN_01X05 P101
+L wiring-rescue:CONN_01X05 P101
 U 1 1 5F9BE00B
 P 2600 6175
 F 0 "P101" V 2700 6200 50  0000 C CNN
@@ -804,7 +771,7 @@ F 3 "" H 2600 6175 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L 0V #PWR03
+L pzs_others:0V #PWR03
 U 1 1 5F9C5C93
 P 3800 5975
 F 0 "#PWR03" H 3800 5725 50  0001 C CNN
@@ -1080,12 +1047,7 @@ Connection ~ 4750 6325
 Wire Wire Line
 	5450 6975 5800 6975
 Wire Wire Line
-	5800 6975 6050 6975
-Wire Wire Line
 	5450 6975 5450 6875
-Wire Wire Line
-	6050 6975 6050 6875
-Connection ~ 5800 6975
 Wire Wire Line
 	5800 5900 5800 6975
 Wire Wire Line
@@ -1170,7 +1132,7 @@ Wire Wire Line
 Wire Wire Line
 	5875 4275 5875 2250
 Wire Wire Line
-	5800 5900 6150 5900
+	5800 5900 5950 5900
 Wire Wire Line
 	6150 5900 6150 4125
 Wire Wire Line
@@ -1218,8 +1180,6 @@ Wire Wire Line
 Wire Wire Line
 	2800 6175 3750 6175
 Wire Wire Line
-	2800 6075 5950 6075
-Wire Wire Line
 	2800 6275 3100 6275
 Wire Wire Line
 	3100 6275 3100 7075
@@ -1242,10 +1202,6 @@ Wire Wire Line
 Wire Wire Line
 	3000 5400 3000 6950
 Wire Wire Line
-	2800 6375 2900 6375
-Wire Wire Line
-	2900 6375 2900 6775
-Wire Wire Line
 	2900 6775 1150 6775
 Text Notes 2275 4400 3    60   ~ 0
 Main board
@@ -1256,7 +1212,7 @@ Wire Notes Line
 Wire Notes Line
 	2000 3025 2450 3025
 $Comp
-L CONN_01X02 P102
+L wiring-rescue:CONN_01X02 P102
 U 1 1 5F9AF9FB
 P 1850 3150
 F 0 "P102" V 1950 3150 50  0000 C CNN
@@ -1285,7 +1241,7 @@ Wire Wire Line
 	2525 2350 2350 2350
 Connection ~ 5225 1100
 $Comp
-L 0V #PWR04
+L pzs_others:0V #PWR04
 U 1 1 5F9B1138
 P 1475 3200
 F 0 "#PWR04" H 1475 2950 50  0001 C CNN
@@ -1335,10 +1291,39 @@ NoConn ~ 5025 4275
 NoConn ~ 4700 4275
 Wire Wire Line
 	3750 6175 3750 6525
-Wire Wire Line
-	5950 6075 5950 6525
 Text Notes 3550 7350 0    60   ~ 0
 Lamp          Ventilator          Heater
 Wire Wire Line
 	7025 3400 6725 3400
+Wire Wire Line
+	2900 6775 2900 6075
+Wire Wire Line
+	2900 6075 2800 6075
+Wire Wire Line
+	2800 7175 6050 7175
+Wire Wire Line
+	6050 6875 6050 7175
+Wire Wire Line
+	2800 6375 2800 7175
+Wire Wire Line
+	6150 6525 6150 5900
+Connection ~ 6150 5900
+$Comp
+L Device:R R201
+U 1 1 662E8E42
+P 5950 6225
+F 0 "R201" H 6175 6300 50  0000 L CNN
+F 1 "15k" H 6175 6200 50  0000 L CNN
+F 2 "" V 5880 6225 50  0001 C CNN
+F 3 "~" H 5950 6225 50  0001 C CNN
+	1    5950 6225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 6075 5950 5900
+Connection ~ 5950 5900
+Wire Wire Line
+	5950 5900 6150 5900
+Wire Wire Line
+	5950 6375 5950 6525
 $EndSCHEMATC
